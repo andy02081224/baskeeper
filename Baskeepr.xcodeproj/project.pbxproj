@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1D65D74148E37EA003901B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D73148E37EA003901B3 /* UIKit.framework */; };
+		B1D65D76148E37EA003901B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D75148E37EA003901B3 /* Foundation.framework */; };
+		B1D65D78148E37EA003901B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D77148E37EA003901B3 /* CoreGraphics.framework */; };
+		B1D65D7E148E37EA003901B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1D65D7C148E37EA003901B3 /* InfoPlist.strings */; };
+		B1D65D80148E37EA003901B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D65D7F148E37EA003901B3 /* main.m */; };
+		B1D65D84148E37EA003901B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D65D83148E37EA003901B3 /* AppDelegate.m */; };
+		B1D65D87148E37EA003901B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D65D86148E37EA003901B3 /* ViewController.m */; };
+		B1D65D8A148E37EA003901B3 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D65D88148E37EA003901B3 /* ViewController_iPhone.xib */; };
+		B1D65D8D148E37EA003901B3 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D65D8B148E37EA003901B3 /* ViewController_iPad.xib */; };
+		B1D65D95148E37EA003901B3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D94148E37EA003901B3 /* SenTestingKit.framework */; };
+		B1D65D96148E37EA003901B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D73148E37EA003901B3 /* UIKit.framework */; };
+		B1D65D97148E37EA003901B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D75148E37EA003901B3 /* Foundation.framework */; };
+		B1D65D9F148E37EA003901B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1D65D9D148E37EA003901B3 /* InfoPlist.strings */; };
+		B1D65DA2148E37EA003901B3 /* BaskeeprTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D65DA1148E37EA003901B3 /* BaskeeprTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1D65D98148E37EA003901B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1D65D66148E37EA003901B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1D65D6E148E37EA003901B3;
+			remoteInfo = Baskeepr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B1D65D6F148E37EA003901B3 /* Baskeepr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baskeepr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D65D73148E37EA003901B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B1D65D75148E37EA003901B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B1D65D77148E37EA003901B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B1D65D7B148E37EA003901B3 /* Baskeepr-Info.plist */ = {isa = PBXFileReference; path = "Baskeepr-Info.plist"; sourceTree = "<group>"; };
+		B1D65D7D148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1D65D7F148E37EA003901B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1D65D81148E37EA003901B3 /* Baskeepr-Prefix.pch */ = {isa = PBXFileReference; path = "Baskeepr-Prefix.pch"; sourceTree = "<group>"; };
+		B1D65D82148E37EA003901B3 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B1D65D83148E37EA003901B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B1D65D85148E37EA003901B3 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		B1D65D86148E37EA003901B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B1D65D89148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		B1D65D8C148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		B1D65D93148E37EA003901B3 /* BaskeeprTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaskeeprTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D65D94148E37EA003901B3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B1D65D9C148E37EA003901B3 /* BaskeeprTests-Info.plist */ = {isa = PBXFileReference; path = "BaskeeprTests-Info.plist"; sourceTree = "<group>"; };
+		B1D65D9E148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1D65DA0148E37EA003901B3 /* BaskeeprTests.h */ = {isa = PBXFileReference; path = BaskeeprTests.h; sourceTree = "<group>"; };
+		B1D65DA1148E37EA003901B3 /* BaskeeprTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaskeeprTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1D65D6C148E37EA003901B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1D65D74148E37EA003901B3 /* UIKit.framework in Frameworks */,
+				B1D65D76148E37EA003901B3 /* Foundation.framework in Frameworks */,
+				B1D65D78148E37EA003901B3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1D65D8F148E37EA003901B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1D65D95148E37EA003901B3 /* SenTestingKit.framework in Frameworks */,
+				B1D65D96148E37EA003901B3 /* UIKit.framework in Frameworks */,
+				B1D65D97148E37EA003901B3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1D65D64148E37EA003901B3 = {
+			isa = PBXGroup;
+			children = (
+				B1D65D79148E37EA003901B3 /* Baskeepr */,
+				B1D65D9A148E37EA003901B3 /* BaskeeprTests */,
+				B1D65D72148E37EA003901B3 /* Frameworks */,
+				B1D65D70148E37EA003901B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1D65D70148E37EA003901B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1D65D6F148E37EA003901B3 /* Baskeepr.app */,
+				B1D65D93148E37EA003901B3 /* BaskeeprTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1D65D72148E37EA003901B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1D65D73148E37EA003901B3 /* UIKit.framework */,
+				B1D65D75148E37EA003901B3 /* Foundation.framework */,
+				B1D65D77148E37EA003901B3 /* CoreGraphics.framework */,
+				B1D65D94148E37EA003901B3 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1D65D79148E37EA003901B3 /* Baskeepr */ = {
+			isa = PBXGroup;
+			children = (
+				B1D65D82148E37EA003901B3 /* AppDelegate.h */,
+				B1D65D83148E37EA003901B3 /* AppDelegate.m */,
+				B1D65D85148E37EA003901B3 /* ViewController.h */,
+				B1D65D86148E37EA003901B3 /* ViewController.m */,
+				B1D65D88148E37EA003901B3 /* ViewController_iPhone.xib */,
+				B1D65D8B148E37EA003901B3 /* ViewController_iPad.xib */,
+				B1D65D7A148E37EA003901B3 /* Supporting Files */,
+			);
+			path = Baskeepr;
+			sourceTree = "<group>";
+		};
+		B1D65D7A148E37EA003901B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1D65D7B148E37EA003901B3 /* Baskeepr-Info.plist */,
+				B1D65D7C148E37EA003901B3 /* InfoPlist.strings */,
+				B1D65D7F148E37EA003901B3 /* main.m */,
+				B1D65D81148E37EA003901B3 /* Baskeepr-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1D65D9A148E37EA003901B3 /* BaskeeprTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1D65DA0148E37EA003901B3 /* BaskeeprTests.h */,
+				B1D65DA1148E37EA003901B3 /* BaskeeprTests.m */,
+				B1D65D9B148E37EA003901B3 /* Supporting Files */,
+			);
+			path = BaskeeprTests;
+			sourceTree = "<group>";
+		};
+		B1D65D9B148E37EA003901B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1D65D9C148E37EA003901B3 /* BaskeeprTests-Info.plist */,
+				B1D65D9D148E37EA003901B3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1D65D6E148E37EA003901B3 /* Baskeepr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1D65DA5148E37EA003901B3 /* Build configuration list for PBXNativeTarget "Baskeepr" */;
+			buildPhases = (
+				B1D65D6B148E37EA003901B3 /* Sources */,
+				B1D65D6C148E37EA003901B3 /* Frameworks */,
+				B1D65D6D148E37EA003901B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Baskeepr;
+			productName = Baskeepr;
+			productReference = B1D65D6F148E37EA003901B3 /* Baskeepr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B1D65D92148E37EA003901B3 /* BaskeeprTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1D65DA8148E37EA003901B3 /* Build configuration list for PBXNativeTarget "BaskeeprTests" */;
+			buildPhases = (
+				B1D65D8E148E37EA003901B3 /* Sources */,
+				B1D65D8F148E37EA003901B3 /* Frameworks */,
+				B1D65D90148E37EA003901B3 /* Resources */,
+				B1D65D91148E37EA003901B3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1D65D99148E37EA003901B3 /* PBXTargetDependency */,
+			);
+			name = BaskeeprTests;
+			productName = BaskeeprTests;
+			productReference = B1D65D93148E37EA003901B3 /* BaskeeprTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1D65D66148E37EA003901B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B1D65D69148E37EA003901B3 /* Build configuration list for PBXProject "Baskeepr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B1D65D64148E37EA003901B3;
+			productRefGroup = B1D65D70148E37EA003901B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1D65D6E148E37EA003901B3 /* Baskeepr */,
+				B1D65D92148E37EA003901B3 /* BaskeeprTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1D65D6D148E37EA003901B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1D65D7E148E37EA003901B3 /* InfoPlist.strings in Resources */,
+				B1D65D8A148E37EA003901B3 /* ViewController_iPhone.xib in Resources */,
+				B1D65D8D148E37EA003901B3 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1D65D90148E37EA003901B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1D65D9F148E37EA003901B3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B1D65D91148E37EA003901B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1D65D6B148E37EA003901B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1D65D80148E37EA003901B3 /* main.m in Sources */,
+				B1D65D84148E37EA003901B3 /* AppDelegate.m in Sources */,
+				B1D65D87148E37EA003901B3 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1D65D8E148E37EA003901B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1D65DA2148E37EA003901B3 /* BaskeeprTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1D65D99148E37EA003901B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1D65D6E148E37EA003901B3 /* Baskeepr */;
+			targetProxy = B1D65D98148E37EA003901B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B1D65D7C148E37EA003901B3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1D65D7D148E37EA003901B3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B1D65D88148E37EA003901B3 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1D65D89148E37EA003901B3 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		B1D65D8B148E37EA003901B3 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1D65D8C148E37EA003901B3 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		B1D65D9D148E37EA003901B3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1D65D9E148E37EA003901B3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B1D65DA3148E37EA003901B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1D65DA4148E37EA003901B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1D65DA6148E37EA003901B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Baskeepr/Baskeepr-Prefix.pch";
+				INFOPLIST_FILE = "Baskeepr/Baskeepr-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B1D65DA7148E37EA003901B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Baskeepr/Baskeepr-Prefix.pch";
+				INFOPLIST_FILE = "Baskeepr/Baskeepr-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B1D65DA9148E37EA003901B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Baskeepr.app/Baskeepr";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Baskeepr/Baskeepr-Prefix.pch";
+				INFOPLIST_FILE = "BaskeeprTests/BaskeeprTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B1D65DAA148E37EA003901B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Baskeepr.app/Baskeepr";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Baskeepr/Baskeepr-Prefix.pch";
+				INFOPLIST_FILE = "BaskeeprTests/BaskeeprTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1D65D69148E37EA003901B3 /* Build configuration list for PBXProject "Baskeepr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1D65DA3148E37EA003901B3 /* Debug */,
+				B1D65DA4148E37EA003901B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1D65DA5148E37EA003901B3 /* Build configuration list for PBXNativeTarget "Baskeepr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1D65DA6148E37EA003901B3 /* Debug */,
+				B1D65DA7148E37EA003901B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B1D65DA8148E37EA003901B3 /* Build configuration list for PBXNativeTarget "BaskeeprTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1D65DA9148E37EA003901B3 /* Debug */,
+				B1D65DAA148E37EA003901B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1D65D66148E37EA003901B3 /* Project object */;
+}
