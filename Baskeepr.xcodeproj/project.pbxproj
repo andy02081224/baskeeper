@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B15F3154149366DF00FC52AE /* Cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F3153149366DF00FC52AE /* Cover.jpg */; };
+		B15F31581493692800FC52AE /* Cover3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F31571493692800FC52AE /* Cover3.jpg */; };
+		B15F316014936FF100FC52AE /* Cover1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F315F14936FF100FC52AE /* Cover1.jpg */; };
+		B15F31621493735700FC52AE /* basketball-wallpaper-960x600.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F31611493735700FC52AE /* basketball-wallpaper-960x600.jpg */; };
+		B15F316B14937CA300FC52AE /* scoreboardMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B15F316914937CA300FC52AE /* scoreboardMainPageViewController.m */; };
+		B15F316C14937CA300FC52AE /* scoreboardMainPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B15F316A14937CA300FC52AE /* scoreboardMainPageViewController.xib */; };
+		B15F316E1493832D00FC52AE /* basketball-court.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F316D1493832D00FC52AE /* basketball-court.jpg */; };
+		B1C5170A14946F670099E41E /* home-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C5170914946F670099E41E /* home-icons.png */; };
+		B1C5170C149470800099E41E /* options-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C5170B149470800099E41E /* options-icons.png */; };
 		B1D65D74148E37EA003901B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D73148E37EA003901B3 /* UIKit.framework */; };
 		B1D65D76148E37EA003901B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D75148E37EA003901B3 /* Foundation.framework */; };
 		B1D65D78148E37EA003901B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D77148E37EA003901B3 /* CoreGraphics.framework */; };
@@ -34,25 +43,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B15F3153149366DF00FC52AE /* Cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover.jpg; sourceTree = "<group>"; };
+		B15F31571493692800FC52AE /* Cover3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover3.jpg; sourceTree = "<group>"; };
+		B15F315F14936FF100FC52AE /* Cover1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover1.jpg; sourceTree = "<group>"; };
+		B15F31611493735700FC52AE /* basketball-wallpaper-960x600.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "basketball-wallpaper-960x600.jpg"; sourceTree = "<group>"; };
+		B15F316814937CA300FC52AE /* scoreboardMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoreboardMainPageViewController.h; sourceTree = "<group>"; };
+		B15F316914937CA300FC52AE /* scoreboardMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreboardMainPageViewController.m; sourceTree = "<group>"; };
+		B15F316A14937CA300FC52AE /* scoreboardMainPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreboardMainPageViewController.xib; sourceTree = "<group>"; };
+		B15F316D1493832D00FC52AE /* basketball-court.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "basketball-court.jpg"; sourceTree = "<group>"; };
+		B1C5170914946F670099E41E /* home-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icons.png"; sourceTree = "<group>"; };
+		B1C5170B149470800099E41E /* options-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "options-icons.png"; sourceTree = "<group>"; };
 		B1D65D6F148E37EA003901B3 /* Baskeepr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baskeepr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D65D73148E37EA003901B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B1D65D75148E37EA003901B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B1D65D77148E37EA003901B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B1D65D7B148E37EA003901B3 /* Baskeepr-Info.plist */ = {isa = PBXFileReference; path = "Baskeepr-Info.plist"; sourceTree = "<group>"; };
+		B1D65D7B148E37EA003901B3 /* Baskeepr-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baskeepr-Info.plist"; sourceTree = "<group>"; };
 		B1D65D7D148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1D65D7F148E37EA003901B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B1D65D81148E37EA003901B3 /* Baskeepr-Prefix.pch */ = {isa = PBXFileReference; path = "Baskeepr-Prefix.pch"; sourceTree = "<group>"; };
-		B1D65D82148E37EA003901B3 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B1D65D81148E37EA003901B3 /* Baskeepr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Baskeepr-Prefix.pch"; sourceTree = "<group>"; };
+		B1D65D82148E37EA003901B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1D65D83148E37EA003901B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B1D65D85148E37EA003901B3 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		B1D65D85148E37EA003901B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B1D65D86148E37EA003901B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B1D65D89148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		B1D65D8C148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		B1D65D93148E37EA003901B3 /* BaskeeprTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaskeeprTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D65D94148E37EA003901B3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		B1D65D9C148E37EA003901B3 /* BaskeeprTests-Info.plist */ = {isa = PBXFileReference; path = "BaskeeprTests-Info.plist"; sourceTree = "<group>"; };
+		B1D65D9C148E37EA003901B3 /* BaskeeprTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaskeeprTests-Info.plist"; sourceTree = "<group>"; };
 		B1D65D9E148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B1D65DA0148E37EA003901B3 /* BaskeeprTests.h */ = {isa = PBXFileReference; path = BaskeeprTests.h; sourceTree = "<group>"; };
+		B1D65DA0148E37EA003901B3 /* BaskeeprTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaskeeprTests.h; sourceTree = "<group>"; };
 		B1D65DA1148E37EA003901B3 /* BaskeeprTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaskeeprTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +99,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B15F316714937C1B00FC52AE /* Media Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1C5170914946F670099E41E /* home-icons.png */,
+				B15F316D1493832D00FC52AE /* basketball-court.jpg */,
+				B15F31611493735700FC52AE /* basketball-wallpaper-960x600.jpg */,
+				B1C5170B149470800099E41E /* options-icons.png */,
+				B15F3153149366DF00FC52AE /* Cover.jpg */,
+				B15F315F14936FF100FC52AE /* Cover1.jpg */,
+				B15F31571493692800FC52AE /* Cover3.jpg */,
+			);
+			name = "Media Files";
+			sourceTree = "<group>";
+		};
 		B1D65D64148E37EA003901B3 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +151,11 @@
 				B1D65D85148E37EA003901B3 /* ViewController.h */,
 				B1D65D86148E37EA003901B3 /* ViewController.m */,
 				B1D65D88148E37EA003901B3 /* ViewController_iPhone.xib */,
+				B15F316814937CA300FC52AE /* scoreboardMainPageViewController.h */,
+				B15F316914937CA300FC52AE /* scoreboardMainPageViewController.m */,
+				B15F316A14937CA300FC52AE /* scoreboardMainPageViewController.xib */,
 				B1D65D8B148E37EA003901B3 /* ViewController_iPad.xib */,
+				B15F316714937C1B00FC52AE /* Media Files */,
 				B1D65D7A148E37EA003901B3 /* Supporting Files */,
 			);
 			path = Baskeepr;
@@ -227,6 +264,14 @@
 				B1D65D7E148E37EA003901B3 /* InfoPlist.strings in Resources */,
 				B1D65D8A148E37EA003901B3 /* ViewController_iPhone.xib in Resources */,
 				B1D65D8D148E37EA003901B3 /* ViewController_iPad.xib in Resources */,
+				B15F3154149366DF00FC52AE /* Cover.jpg in Resources */,
+				B15F31581493692800FC52AE /* Cover3.jpg in Resources */,
+				B15F316014936FF100FC52AE /* Cover1.jpg in Resources */,
+				B15F31621493735700FC52AE /* basketball-wallpaper-960x600.jpg in Resources */,
+				B15F316C14937CA300FC52AE /* scoreboardMainPageViewController.xib in Resources */,
+				B15F316E1493832D00FC52AE /* basketball-court.jpg in Resources */,
+				B1C5170A14946F670099E41E /* home-icons.png in Resources */,
+				B1C5170C149470800099E41E /* options-icons.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +309,7 @@
 				B1D65D80148E37EA003901B3 /* main.m in Sources */,
 				B1D65D84148E37EA003901B3 /* AppDelegate.m in Sources */,
 				B1D65D87148E37EA003901B3 /* ViewController.m in Sources */,
+				B15F316B14937CA300FC52AE /* scoreboardMainPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +489,7 @@
 				B1D65DA7148E37EA003901B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1D65DA8148E37EA003901B3 /* Build configuration list for PBXNativeTarget "BaskeeprTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +498,7 @@
 				B1D65DAA148E37EA003901B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

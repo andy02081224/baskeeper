@@ -10,4 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property(strong, nonatomic)IBOutlet UIButton *scoreoardButton;
+@property(strong, nonatomic)IBOutlet UIButton *teamButton;
+@property(strong, nonatomic)IBOutlet UIButton *optionButton;
+
+-(IBAction)scoreboardButtonClicked:(id)sender;
 @end
