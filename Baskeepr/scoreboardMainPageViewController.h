@@ -22,7 +22,7 @@
 -(IBAction)dismissButtonClicked:(id)sender;
 -(IBAction)addHomeScoreCliked:(id)sender;
 -(IBAction)addGuestScoreClicked:(id)sender;
-
+-(IBAction)countDownClockClicked:(id)sender;
 -(void)countDown;
 
 @end

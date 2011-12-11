@@ -41,8 +41,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    countDownTimer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
-    [countDownTimer invalidate];
+
 
 }
 
@@ -98,10 +97,24 @@
     GuestScore.text=[NSString stringWithFormat:@"%d",guestScore];
 }
 
+-(IBAction)countDownClockClicked:(id)sender{
+    
+    if([countDownTimer isValid]){
+
+        [countDownTimer invalidate];
+    }
+    else if(time>0){
+        countDownTimer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
+    }
+}
+
 -(void)countDown{
     time-=1;
     int seconds=time%60;
     int minutes=(time-seconds)/60;
     countDownClock.text=[NSString stringWithFormat:@"%d:%.2d",minutes,seconds];
+    if(time==0){
+        [countDownTimer invalidate];
+    }
 }
 @end
