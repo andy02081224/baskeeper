@@ -7,7 +7,9 @@
 //
 
 #import "scoreboardMainPageViewController.h"
+#import "scoreboardOptionPageViewController.h"
 #import <QuartzCore/QuartzCore.h>
+
 
 @implementation scoreboardMainPageViewController
 @synthesize HomeScore;
@@ -91,12 +93,28 @@
     HomeScore.text=[NSString stringWithFormat:@"%d",homeScore];
 
 }
+
+-(IBAction)minusHomeScore:(id)sender{
+    int homeScore=[HomeScore.text intValue];
+    if(homeScore>0){
+    homeScore--;
+    HomeScore.text=[NSString stringWithFormat:@"%d",homeScore];
+    }
+}
+
 -(IBAction)addGuestScoreClicked:(id)sender{
     int guestScore=[GuestScore.text intValue];
     guestScore++;
     GuestScore.text=[NSString stringWithFormat:@"%d",guestScore];
 }
 
+-(IBAction)minusGuestScore:(id)sender{
+    int guestScore=[GuestScore.text intValue];
+    if(guestScore>0){
+    guestScore--;
+    GuestScore.text=[NSString stringWithFormat:@"%d",guestScore];
+    }
+}
 -(IBAction)countDownClockClicked:(id)sender{
     
     if([countDownTimer isValid]){
@@ -107,6 +125,14 @@
         countDownTimer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     }
 }
+
+-(IBAction)optionClicked:(id)sender{
+    scoreboardOptionPageViewController *modalViewController=[[scoreboardOptionPageViewController alloc]initWithNibName:@"scoreboardOptionPageViewController" bundle:nil];
+    [modalViewController setModalTransitionStyle:UIModalTransitionStylePartialCurl];
+    [self presentModalViewController:modalViewController animated:YES];
+}
+
+
 
 -(void)countDown{
     time-=1;

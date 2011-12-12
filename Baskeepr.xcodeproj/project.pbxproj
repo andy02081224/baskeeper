@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B14DF8551495ABAD00B84F8F /* minus-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B14DF8541495ABAD00B84F8F /* minus-icons.png */; };
+		B14DF8581495B07700B84F8F /* radio-button_on-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B14DF8571495B07700B84F8F /* radio-button_on-icons.png */; };
+		B14DF85A1495B07B00B84F8F /* radio-button_off-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B14DF8591495B07B00B84F8F /* radio-button_off-icons.png */; };
 		B15F3154149366DF00FC52AE /* Cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F3153149366DF00FC52AE /* Cover.jpg */; };
 		B15F31581493692800FC52AE /* Cover3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F31571493692800FC52AE /* Cover3.jpg */; };
 		B15F316014936FF100FC52AE /* Cover1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F315F14936FF100FC52AE /* Cover1.jpg */; };
@@ -14,6 +17,8 @@
 		B15F316B14937CA300FC52AE /* scoreboardMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B15F316914937CA300FC52AE /* scoreboardMainPageViewController.m */; };
 		B15F316C14937CA300FC52AE /* scoreboardMainPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B15F316A14937CA300FC52AE /* scoreboardMainPageViewController.xib */; };
 		B15F316E1493832D00FC52AE /* basketball-court.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F316D1493832D00FC52AE /* basketball-court.jpg */; };
+		B17A310C1495065A0038328C /* scoreboardOptionPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B17A310A1495065A0038328C /* scoreboardOptionPageViewController.m */; };
+		B17A310D1495065A0038328C /* scoreboardOptionPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17A310B1495065A0038328C /* scoreboardOptionPageViewController.xib */; };
 		B1C5170A14946F670099E41E /* home-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C5170914946F670099E41E /* home-icons.png */; };
 		B1C5170C149470800099E41E /* options-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C5170B149470800099E41E /* options-icons.png */; };
 		B1D65D74148E37EA003901B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D73148E37EA003901B3 /* UIKit.framework */; };
@@ -43,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B14DF8541495ABAD00B84F8F /* minus-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus-icons.png"; sourceTree = "<group>"; };
+		B14DF8571495B07700B84F8F /* radio-button_on-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-button_on-icons.png"; sourceTree = "<group>"; };
+		B14DF8591495B07B00B84F8F /* radio-button_off-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-button_off-icons.png"; sourceTree = "<group>"; };
 		B15F3153149366DF00FC52AE /* Cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover.jpg; sourceTree = "<group>"; };
 		B15F31571493692800FC52AE /* Cover3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover3.jpg; sourceTree = "<group>"; };
 		B15F315F14936FF100FC52AE /* Cover1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover1.jpg; sourceTree = "<group>"; };
@@ -51,6 +59,9 @@
 		B15F316914937CA300FC52AE /* scoreboardMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreboardMainPageViewController.m; sourceTree = "<group>"; };
 		B15F316A14937CA300FC52AE /* scoreboardMainPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreboardMainPageViewController.xib; sourceTree = "<group>"; };
 		B15F316D1493832D00FC52AE /* basketball-court.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "basketball-court.jpg"; sourceTree = "<group>"; };
+		B17A31091495065A0038328C /* scoreboardOptionPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoreboardOptionPageViewController.h; sourceTree = "<group>"; };
+		B17A310A1495065A0038328C /* scoreboardOptionPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreboardOptionPageViewController.m; sourceTree = "<group>"; };
+		B17A310B1495065A0038328C /* scoreboardOptionPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreboardOptionPageViewController.xib; sourceTree = "<group>"; };
 		B1C5170914946F670099E41E /* home-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icons.png"; sourceTree = "<group>"; };
 		B1C5170B149470800099E41E /* options-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "options-icons.png"; sourceTree = "<group>"; };
 		B1D65D6F148E37EA003901B3 /* Baskeepr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baskeepr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +115,9 @@
 			children = (
 				B1C5170914946F670099E41E /* home-icons.png */,
 				B15F316D1493832D00FC52AE /* basketball-court.jpg */,
+				B14DF8591495B07B00B84F8F /* radio-button_off-icons.png */,
+				B14DF8541495ABAD00B84F8F /* minus-icons.png */,
+				B14DF8571495B07700B84F8F /* radio-button_on-icons.png */,
 				B15F31611493735700FC52AE /* basketball-wallpaper-960x600.jpg */,
 				B1C5170B149470800099E41E /* options-icons.png */,
 				B15F3153149366DF00FC52AE /* Cover.jpg */,
@@ -154,6 +168,9 @@
 				B15F316814937CA300FC52AE /* scoreboardMainPageViewController.h */,
 				B15F316914937CA300FC52AE /* scoreboardMainPageViewController.m */,
 				B15F316A14937CA300FC52AE /* scoreboardMainPageViewController.xib */,
+				B17A31091495065A0038328C /* scoreboardOptionPageViewController.h */,
+				B17A310A1495065A0038328C /* scoreboardOptionPageViewController.m */,
+				B17A310B1495065A0038328C /* scoreboardOptionPageViewController.xib */,
 				B1D65D8B148E37EA003901B3 /* ViewController_iPad.xib */,
 				B15F316714937C1B00FC52AE /* Media Files */,
 				B1D65D7A148E37EA003901B3 /* Supporting Files */,
@@ -272,6 +289,10 @@
 				B15F316E1493832D00FC52AE /* basketball-court.jpg in Resources */,
 				B1C5170A14946F670099E41E /* home-icons.png in Resources */,
 				B1C5170C149470800099E41E /* options-icons.png in Resources */,
+				B17A310D1495065A0038328C /* scoreboardOptionPageViewController.xib in Resources */,
+				B14DF8551495ABAD00B84F8F /* minus-icons.png in Resources */,
+				B14DF8581495B07700B84F8F /* radio-button_on-icons.png in Resources */,
+				B14DF85A1495B07B00B84F8F /* radio-button_off-icons.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +331,7 @@
 				B1D65D84148E37EA003901B3 /* AppDelegate.m in Sources */,
 				B1D65D87148E37EA003901B3 /* ViewController.m in Sources */,
 				B15F316B14937CA300FC52AE /* scoreboardMainPageViewController.m in Sources */,
+				B17A310C1495065A0038328C /* scoreboardOptionPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

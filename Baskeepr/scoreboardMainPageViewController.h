@@ -19,10 +19,14 @@
 @property(strong, nonatomic)IBOutlet UILabel *countDownClock;
 
 
+
 -(IBAction)dismissButtonClicked:(id)sender;
 -(IBAction)addHomeScoreCliked:(id)sender;
 -(IBAction)addGuestScoreClicked:(id)sender;
 -(IBAction)countDownClockClicked:(id)sender;
+-(IBAction)optionClicked:(id)sender;
+-(IBAction)minusHomeScore:(id)sender;
+-(IBAction)minusGuestScore:(id)sender;
 -(void)countDown;
 
 @end
