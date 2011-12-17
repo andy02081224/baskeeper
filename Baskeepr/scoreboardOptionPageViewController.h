@@ -7,6 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameMode.h"
+@protocol scoreboardOptionPageViewControllerDelegate <NSObject>
+
+-(void)modeSelected:(int)gameMode;
+
+
+@end
 
 @interface scoreboardOptionPageViewController : UIViewController
 
@@ -15,10 +22,14 @@
 @property(strong, nonatomic) IBOutlet UIButton *ncaaButton;
 @property(strong, nonatomic) IBOutlet UIButton *customButton;
 @property(strong, nonatomic)NSString *gameMode;
+@property(strong, nonatomic)id<scoreboardOptionPageViewControllerDelegate>delegate;
 
 -(IBAction)nbaButtonClicked:(id)sender;
 -(IBAction)fibaButtonClicked:(id)sender;
 -(IBAction)ncaaButtonClicked:(id)sender;
 -(IBAction)customButtonClicked:(id)sender;
+
+
+
 
 @end

@@ -10,6 +10,11 @@
 		B14DF8551495ABAD00B84F8F /* minus-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B14DF8541495ABAD00B84F8F /* minus-icons.png */; };
 		B14DF8581495B07700B84F8F /* radio-button_on-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B14DF8571495B07700B84F8F /* radio-button_on-icons.png */; };
 		B14DF85A1495B07B00B84F8F /* radio-button_off-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B14DF8591495B07B00B84F8F /* radio-button_off-icons.png */; };
+		B156626A149C534B004F7651 /* GameMode.m in Sources */ = {isa = PBXBuildFile; fileRef = B1566269149C534B004F7651 /* GameMode.m */; };
+		B156626F149C6F1F004F7651 /* scoreboardStatisticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B156626D149C6F1E004F7651 /* scoreboardStatisticViewController.m */; };
+		B1566270149C6F1F004F7651 /* scoreboardStatisticViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B156626E149C6F1F004F7651 /* scoreboardStatisticViewController.xib */; };
+		B156627C149CD530004F7651 /* scoreboardStatisticOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B156627A149CD530004F7651 /* scoreboardStatisticOptionViewController.m */; };
+		B156627D149CD530004F7651 /* scoreboardStatisticOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B156627B149CD530004F7651 /* scoreboardStatisticOptionViewController.xib */; };
 		B15F3154149366DF00FC52AE /* Cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F3153149366DF00FC52AE /* Cover.jpg */; };
 		B15F31581493692800FC52AE /* Cover3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F31571493692800FC52AE /* Cover3.jpg */; };
 		B15F316014936FF100FC52AE /* Cover1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F315F14936FF100FC52AE /* Cover1.jpg */; };
@@ -51,6 +56,14 @@
 		B14DF8541495ABAD00B84F8F /* minus-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus-icons.png"; sourceTree = "<group>"; };
 		B14DF8571495B07700B84F8F /* radio-button_on-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-button_on-icons.png"; sourceTree = "<group>"; };
 		B14DF8591495B07B00B84F8F /* radio-button_off-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-button_off-icons.png"; sourceTree = "<group>"; };
+		B1566268149C534B004F7651 /* GameMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMode.h; sourceTree = "<group>"; };
+		B1566269149C534B004F7651 /* GameMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameMode.m; sourceTree = "<group>"; };
+		B156626C149C6F1E004F7651 /* scoreboardStatisticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoreboardStatisticViewController.h; sourceTree = "<group>"; };
+		B156626D149C6F1E004F7651 /* scoreboardStatisticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreboardStatisticViewController.m; sourceTree = "<group>"; };
+		B156626E149C6F1F004F7651 /* scoreboardStatisticViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreboardStatisticViewController.xib; sourceTree = "<group>"; };
+		B1566279149CD530004F7651 /* scoreboardStatisticOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoreboardStatisticOptionViewController.h; sourceTree = "<group>"; };
+		B156627A149CD530004F7651 /* scoreboardStatisticOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreboardStatisticOptionViewController.m; sourceTree = "<group>"; };
+		B156627B149CD530004F7651 /* scoreboardStatisticOptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreboardStatisticOptionViewController.xib; sourceTree = "<group>"; };
 		B15F3153149366DF00FC52AE /* Cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover.jpg; sourceTree = "<group>"; };
 		B15F31571493692800FC52AE /* Cover3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover3.jpg; sourceTree = "<group>"; };
 		B15F315F14936FF100FC52AE /* Cover1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover1.jpg; sourceTree = "<group>"; };
@@ -172,6 +185,12 @@
 				B17A310A1495065A0038328C /* scoreboardOptionPageViewController.m */,
 				B17A310B1495065A0038328C /* scoreboardOptionPageViewController.xib */,
 				B1D65D8B148E37EA003901B3 /* ViewController_iPad.xib */,
+				B156626C149C6F1E004F7651 /* scoreboardStatisticViewController.h */,
+				B156626D149C6F1E004F7651 /* scoreboardStatisticViewController.m */,
+				B156626E149C6F1F004F7651 /* scoreboardStatisticViewController.xib */,
+				B1566279149CD530004F7651 /* scoreboardStatisticOptionViewController.h */,
+				B156627A149CD530004F7651 /* scoreboardStatisticOptionViewController.m */,
+				B156627B149CD530004F7651 /* scoreboardStatisticOptionViewController.xib */,
 				B15F316714937C1B00FC52AE /* Media Files */,
 				B1D65D7A148E37EA003901B3 /* Supporting Files */,
 			);
@@ -185,6 +204,8 @@
 				B1D65D7C148E37EA003901B3 /* InfoPlist.strings */,
 				B1D65D7F148E37EA003901B3 /* main.m */,
 				B1D65D81148E37EA003901B3 /* Baskeepr-Prefix.pch */,
+				B1566268149C534B004F7651 /* GameMode.h */,
+				B1566269149C534B004F7651 /* GameMode.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -293,6 +314,8 @@
 				B14DF8551495ABAD00B84F8F /* minus-icons.png in Resources */,
 				B14DF8581495B07700B84F8F /* radio-button_on-icons.png in Resources */,
 				B14DF85A1495B07B00B84F8F /* radio-button_off-icons.png in Resources */,
+				B1566270149C6F1F004F7651 /* scoreboardStatisticViewController.xib in Resources */,
+				B156627D149CD530004F7651 /* scoreboardStatisticOptionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +355,9 @@
 				B1D65D87148E37EA003901B3 /* ViewController.m in Sources */,
 				B15F316B14937CA300FC52AE /* scoreboardMainPageViewController.m in Sources */,
 				B17A310C1495065A0038328C /* scoreboardOptionPageViewController.m in Sources */,
+				B156626A149C534B004F7651 /* GameMode.m in Sources */,
+				B156626F149C6F1F004F7651 /* scoreboardStatisticViewController.m in Sources */,
+				B156627C149CD530004F7651 /* scoreboardStatisticOptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

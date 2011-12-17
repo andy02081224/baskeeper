@@ -8,6 +8,7 @@
 
 #import "scoreboardMainPageViewController.h"
 #import "scoreboardOptionPageViewController.h"
+#import "scoreboardStatisticViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 
@@ -15,14 +16,18 @@
 @synthesize HomeScore;
 @synthesize GuestScore;
 @synthesize countDownClock;
+@synthesize HomeFouls;
+@synthesize GuestFouls;
+@synthesize HomeTOL;
+@synthesize GuestTOL;
+@synthesize pageControl;
+@synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-
-        time=600;
     //[UIApplication sharedApplication].statusBarOrientation = UIInterfaceOrientationLandscapeRight;
         
     }
@@ -43,7 +48,25 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    pageControl.numberOfPages=2;
+    pageControl.currentPage=0;
+    [pageControl addTarget:self action:@selector(pageAction) forControlEvents:UIControlEventTouchUpInside];
+    
 
+    CGRect frame;
+    //frame2.origin.x = self.scrollView.frame.size.width * 1;
+//    frame.origin.x=self.scrollView.frame.size.width * 1;
+//    frame.origin.y =0;
+    frame.origin.x=0;
+    frame.origin.y =self.scrollView.frame.size.height*1;
+    frame.size = self.scrollView.frame.size;
+        scoreboardStatisticViewController *ScoreboardStatisticViewController= [[scoreboardStatisticViewController alloc]initWithNibName:@"scoreboardStatisticViewController" bundle:nil];
+    ScoreboardStatisticViewController.view.frame = frame; 
+    [self.scrollView addSubview:ScoreboardStatisticViewController.view];
+     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height*2);
+         
+
+    
 
 }
 
@@ -128,6 +151,7 @@
 
 -(IBAction)optionClicked:(id)sender{
     scoreboardOptionPageViewController *modalViewController=[[scoreboardOptionPageViewController alloc]initWithNibName:@"scoreboardOptionPageViewController" bundle:nil];
+    modalViewController.delegate=self;
     [modalViewController setModalTransitionStyle:UIModalTransitionStylePartialCurl];
     [self presentModalViewController:modalViewController animated:YES];
 }
@@ -142,5 +166,40 @@
     if(time==0){
         [countDownTimer invalidate];
     }
+}
+
+-(void)modeSelected:(int)gameMode{
+    switch (gameMode) {
+        case 0:
+            time=600;
+            [self countDown];
+            break;
+        case 1:
+            time=720;
+            [self countDown];
+            break;
+        case 2:
+            time=1200;
+            [self countDown];
+            break;
+        case 11:
+            break;
+            
+        default:
+            break;
+    }
+}
+
+-(void)pageAction{
+//    scoreboardOptionPageViewController *modalViewController=[[scoreboardOptionPageViewController alloc]initWithNibName:@"scoreboardOptionPageViewController" bundle:nil];
+//
+//    [self presentModalViewController:modalViewController animated:YES];
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    // Update the page when more than 50% of the previous/next page is visible
+//    CGFloat pageWidth = self.scrollView.frame.size.width;
+//    int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+//    self.pageControl.currentPage = page;
 }
 @end

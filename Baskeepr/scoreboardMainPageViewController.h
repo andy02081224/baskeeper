@@ -7,16 +7,38 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "scoreboardOptionPageViewController.h"
 
-@interface scoreboardMainPageViewController : UIViewController{
+
+
+
+@interface scoreboardMainPageViewController : UIViewController<scoreboardOptionPageViewControllerDelegate,UIScrollViewDelegate>{
     int time;
+    int period;
     NSTimer *countDownTimer;
+    UIPageControl *pageControl;
+    UIScrollView *scrollView;
 }
 
+
+
+
 @property(strong, nonatomic)UIViewController *parent;
+
+
+
+
+
 @property(strong, nonatomic)IBOutlet UILabel *HomeScore;
 @property(strong, nonatomic)IBOutlet UILabel *GuestScore;
 @property(strong, nonatomic)IBOutlet UILabel *countDownClock;
+@property(strong, nonatomic)IBOutlet UILabel *HomeFouls;
+@property(strong, nonatomic)IBOutlet UILabel *GuestFouls;
+@property(strong, nonatomic)IBOutlet UILabel *HomeTOL;
+@property(strong, nonatomic)IBOutlet UILabel *GuestTOL;
+
+@property(strong, nonatomic)IBOutlet UIPageControl *pageControl;
+@property(strong, nonatomic)IBOutlet UIScrollView *scrollView;
 
 
 
@@ -27,6 +49,10 @@
 -(IBAction)optionClicked:(id)sender;
 -(IBAction)minusHomeScore:(id)sender;
 -(IBAction)minusGuestScore:(id)sender;
+
+
 -(void)countDown;
+-(void)modeSelected:(int)gameMode;
+-(void)pageAction;
 
 @end
