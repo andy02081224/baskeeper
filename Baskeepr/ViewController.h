@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "scoreboardOptionPageViewController.h"
+#import "teamMainPageViewController.h"
 
 @interface ViewController : UIViewController
 
@@ -15,5 +16,8 @@
 @property(strong, nonatomic)IBOutlet UIButton *teamButton;
 @property(strong, nonatomic)IBOutlet UIButton *optionButton;
 
+@property(strong, nonatomic)teamMainPageViewController *teamViewController;
+
 -(IBAction)scoreboardButtonClicked:(id)sender;
+-(IBAction)teamButtonClicked:(id)sender;
 @end

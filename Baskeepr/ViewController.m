@@ -9,12 +9,14 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "scoreboardMainPageViewController.h"
+#import "teamMainPageViewController.h"
 
 @implementation ViewController
 
 @synthesize scoreoardButton;
 @synthesize teamButton;
 @synthesize optionButton;
+@synthesize teamViewController;
 
 
 - (void)didReceiveMemoryWarning
@@ -105,15 +107,16 @@
     scoreboardMainPageViewController *modalViewController=[[scoreboardMainPageViewController alloc]initWithNibName:@"scoreboardMainPageViewController" bundle:nil];
     [modalViewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
     [self presentModalViewController:modalViewController animated:YES];
-    //[modalViewController release];
-    
-//    [self performSelector:@selector(displayModalVC) withObject:self afterDelay:1.5];
-//    
-//    -(void)displayModalVC {
-//        // LoginViewController code goes here
-//    }
-      
+}
 
+-(IBAction)teamButtonClicked:(id)sender{
+    self.teamViewController=[[teamMainPageViewController alloc]initWithStyle:UITableViewStyleGrouped];
+//    teamMainPageViewController *modalViewController=[[teamMainPageViewController 
+//                                                      alloc]initWithNibName:@"teamMainPageViewController" bundle:nil];
+    UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:self.teamViewController];
+    [navController  setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentModalViewController:navController animated:YES];
+    
 }
 
 @end

@@ -1,19 +1,14 @@
 //
-//  scoreboardStatisticViewController.m
+//  teamAddTeamViewController.m
 //  Baskeepr
 //
-//  Created by andy on 11/12/17.
+//  Created by andy on 11/12/19.
 //  Copyright (c) 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "scoreboardStatisticViewController.h"
-#import "scoreboardStatisticOptionViewController.h"
-#import "scoreboardOptionPageViewController.h"
+#import "teamAddTeamViewController.h"
 
-
-@implementation scoreboardStatisticViewController
-@synthesize scrollView;
-
+@implementation teamAddTeamViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,8 +33,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width*1.6, self.scrollView.frame.size.height);
-    [self.view addSubview:scrollView];
 }
 
 - (void)viewDidUnload
@@ -61,18 +54,7 @@
     else{
         return NO;
     }
+
 }
-
--(IBAction)optionButtonClicked:(id)sender{
-    
-    scoreboardStatisticOptionViewController *modalViewController=[[scoreboardStatisticOptionViewController alloc]initWithNibName:@"scoreboardStatisticOptionViewController" bundle:nil];
-        [modalViewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    [(UIViewController *)[[[[self view] superview] superview] nextResponder] presentModalViewController:modalViewController animated:YES];
-    
-}
-
-
-
-
 
 @end

@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "scoreboardStatisticOptionViewController.h"
 
 @interface scoreboardStatisticViewController : UIViewController{
     UIScrollView *scrollView;
+
 }
 
 @property(strong, nonatomic)IBOutlet UIScrollView *scrollView;
 
--(IBAction)optionClicked:(id)sender;
+
+-(IBAction)optionButtonClicked:(id)sender;
+
 @end

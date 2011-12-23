@@ -9,26 +9,39 @@
 #import "scoreboardMainPageViewController.h"
 #import "scoreboardOptionPageViewController.h"
 #import "scoreboardStatisticViewController.h"
-#import <QuartzCore/QuartzCore.h>
+#import "scoreboardStatisticOptionViewController.h"
+#import "scoreboardTeamStatsViewController.h"
+//#import <QuartzCore/QuartzCore.h>
 
 
 @implementation scoreboardMainPageViewController
 @synthesize HomeScore;
 @synthesize GuestScore;
-@synthesize countDownClock;
 @synthesize HomeFouls;
 @synthesize GuestFouls;
 @synthesize HomeTOL;
 @synthesize GuestTOL;
-@synthesize pageControl;
+@synthesize labelPeriod;
+@synthesize Mode;
+
+@synthesize periodControl;
+
 @synthesize scrollView;
+@synthesize countDownClock;
+@synthesize statisticViewController;
+@synthesize teamStatsViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        //Time=600;
+        [self loadMode];
+
     //[UIApplication sharedApplication].statusBarOrientation = UIInterfaceOrientationLandscapeRight;
+                statisticViewController= [[scoreboardStatisticViewController alloc]initWithNibName:@"scoreboardStatisticViewController" bundle:nil];
+                        teamStatsViewController= [[scoreboardTeamStatsViewController alloc]initWithNibName:@"scoreboardTeamStatsViewController" bundle:nil];
         
     }
     return self;
@@ -48,22 +61,27 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    pageControl.numberOfPages=2;
-    pageControl.currentPage=0;
-    [pageControl addTarget:self action:@selector(pageAction) forControlEvents:UIControlEventTouchUpInside];
     
-
+    [self setClock];
     CGRect frame;
-    //frame2.origin.x = self.scrollView.frame.size.width * 1;
+    CGRect frame2;
 //    frame.origin.x=self.scrollView.frame.size.width * 1;
 //    frame.origin.y =0;
     frame.origin.x=0;
     frame.origin.y =self.scrollView.frame.size.height*1;
     frame.size = self.scrollView.frame.size;
-        scoreboardStatisticViewController *ScoreboardStatisticViewController= [[scoreboardStatisticViewController alloc]initWithNibName:@"scoreboardStatisticViewController" bundle:nil];
-    ScoreboardStatisticViewController.view.frame = frame; 
-    [self.scrollView addSubview:ScoreboardStatisticViewController.view];
-     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height*2);
+    
+    frame2.origin.x=0;
+    frame2.origin.y =self.scrollView.frame.size.height*2;
+    frame2.size = self.scrollView.frame.size;
+    
+    statisticViewController.view.frame = frame; 
+    teamStatsViewController.view.frame= frame2;
+    
+    [self.scrollView addSubview:statisticViewController.view];
+    [self.scrollView addSubview:teamStatsViewController.view];
+    
+     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width*1, self.scrollView.frame.size.height*3);
          
 
     
@@ -98,6 +116,31 @@
     
 }
 
+-(NSString*)modeFilePath{
+    // 找資料夾
+    NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [dirs objectAtIndex:0];
+    
+    // 回傳資料夾 + 檔案名稱
+    return [documentsPath stringByAppendingPathComponent:@"mode.archivedObject"];
+}
+
+-(void)loadMode{
+    NSDictionary *modeLoaded=[NSKeyedUnarchiver unarchiveObjectWithFile:[self modeFilePath]];
+    if(modeLoaded){
+        self.Mode=[NSMutableDictionary dictionaryWithDictionary:modeLoaded]; 
+        Time=[[self.Mode objectForKey:@"time"]intValue];
+        [self setClock];
+    }
+    else{
+        self.Mode=[NSMutableDictionary dictionaryWithCapacity:1]; 
+    }
+}
+
+-(void)saveMode:(NSDictionary*)GameMode{
+    [NSKeyedArchiver archiveRootObject:GameMode toFile:[self modeFilePath]];
+}
+
 -(IBAction)dismissButtonClicked:(id)sender{
     [self dismissModalViewControllerAnimated:YES];
 }
@@ -111,40 +154,93 @@
 }
 
 -(IBAction)addHomeScoreCliked:(id)sender{
-    int homeScore=[HomeScore.text intValue];
+    int homeScore=[self.HomeScore.text intValue];
     homeScore++;
-    HomeScore.text=[NSString stringWithFormat:@"%d",homeScore];
+    self.HomeScore.text=[NSString stringWithFormat:@"%d",homeScore];
 
 }
 
 -(IBAction)minusHomeScore:(id)sender{
-    int homeScore=[HomeScore.text intValue];
+    int homeScore=[self.HomeScore.text intValue];
     if(homeScore>0){
     homeScore--;
-    HomeScore.text=[NSString stringWithFormat:@"%d",homeScore];
+    self.HomeScore.text=[NSString stringWithFormat:@"%d",homeScore];
     }
 }
 
 -(IBAction)addGuestScoreClicked:(id)sender{
-    int guestScore=[GuestScore.text intValue];
+    int guestScore=[self.GuestScore.text intValue];
     guestScore++;
-    GuestScore.text=[NSString stringWithFormat:@"%d",guestScore];
+    self.GuestScore.text=[NSString stringWithFormat:@"%d",guestScore];
 }
 
 -(IBAction)minusGuestScore:(id)sender{
-    int guestScore=[GuestScore.text intValue];
+    int guestScore=[self.GuestScore.text intValue];
     if(guestScore>0){
     guestScore--;
-    GuestScore.text=[NSString stringWithFormat:@"%d",guestScore];
+    self.GuestScore.text=[NSString stringWithFormat:@"%d",guestScore];
     }
 }
+
+-(IBAction)addHomeFoul:(id)sender{
+    int f=[self.HomeFouls.text intValue];
+    f++;
+    self.HomeFouls.text=[NSString stringWithFormat:@"%d",f];
+}
+
+-(IBAction)minusHomeFoul:(id)sender{
+    int f=[self.HomeFouls.text intValue];
+    if(f>0){
+    f--;
+        self.HomeFouls.text=[NSString stringWithFormat:@"%d",f];}  
+}
+
+-(IBAction)addGuestFoul:(id)sender{
+    int f=[self.GuestFouls.text intValue];
+    f++;
+    self.GuestFouls.text=[NSString stringWithFormat:@"%d",f];
+}
+
+-(IBAction)minusGuestFoul:(id)sender{
+    int f=[self.GuestFouls.text intValue];
+    if(f>0){
+    f--;
+        self.GuestFouls.text=[NSString stringWithFormat:@"%d",f];}  
+}
+
+-(IBAction)addHomeTOL:(id)sender{
+    int tol=[self.HomeTOL.text intValue];
+    tol++;
+    self.HomeTOL.text=[NSString stringWithFormat:@"%d",tol];
+}
+
+-(IBAction)minusHomeTOL:(id)sender{
+    int tol=[self.HomeTOL.text intValue];
+    if(tol>0){
+    tol--;
+        self.HomeTOL.text=[NSString stringWithFormat:@"%d",tol]; } 
+}
+
+-(IBAction)addGuestTOL:(id)sender{
+    int tol=[self.GuestTOL.text intValue];
+    tol++;
+    self.GuestTOL.text=[NSString stringWithFormat:@"%d",tol];
+}
+
+-(IBAction)minusGuestTOL:(id)sender{
+    int tol=[self.GuestTOL.text intValue];
+    if(tol>0){
+    tol--;
+        self.GuestTOL.text=[NSString stringWithFormat:@"%d",tol];}
+}
+
 -(IBAction)countDownClockClicked:(id)sender{
     
     if([countDownTimer isValid]){
 
         [countDownTimer invalidate];
     }
-    else if(time>0){
+    else if(Time>0){
         countDownTimer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     }
 }
@@ -152,49 +248,46 @@
 -(IBAction)optionClicked:(id)sender{
     scoreboardOptionPageViewController *modalViewController=[[scoreboardOptionPageViewController alloc]initWithNibName:@"scoreboardOptionPageViewController" bundle:nil];
     modalViewController.delegate=self;
-    [modalViewController setModalTransitionStyle:UIModalTransitionStylePartialCurl];
+    //[modalViewController setModalTransitionStyle:UIModalTransitionStylePartialCurl];
     [self presentModalViewController:modalViewController animated:YES];
+}
+
+-(IBAction)periodChanged:(id)sender{
+    self.labelPeriod.text=[NSString stringWithFormat:@"%.0f",periodControl.value];
 }
 
 
 
 -(void)countDown{
-    time-=1;
-    int seconds=time%60;
-    int minutes=(time-seconds)/60;
+    Time-=1;
+    int seconds=Time%60;
+    int minutes=(Time-seconds)/60;
     countDownClock.text=[NSString stringWithFormat:@"%d:%.2d",minutes,seconds];
-    if(time==0){
+    if(Time==0){
         [countDownTimer invalidate];
     }
 }
 
--(void)modeSelected:(int)gameMode{
-    switch (gameMode) {
-        case 0:
-            time=600;
-            [self countDown];
-            break;
-        case 1:
-            time=720;
-            [self countDown];
-            break;
-        case 2:
-            time=1200;
-            [self countDown];
-            break;
-        case 11:
-            break;
-            
-        default:
-            break;
-    }
+-(void)setClock{
+    int seconds=Time%60;
+    int minutes=(Time-seconds)/60; 
+    countDownClock.text=[NSString stringWithFormat:@"%d:%.2d",minutes,seconds];
+
 }
 
--(void)pageAction{
-//    scoreboardOptionPageViewController *modalViewController=[[scoreboardOptionPageViewController alloc]initWithNibName:@"scoreboardOptionPageViewController" bundle:nil];
-//
-//    [self presentModalViewController:modalViewController animated:YES];
+-(void)modeSelected:(NSDictionary*)gameMode{
+    Time=[[gameMode objectForKey:@"time"]intValue];
+    [self setClock];
+    Period=[[gameMode objectForKey:@"period"]doubleValue];
+    [periodControl setMaximumValue:Period];
+    [periodControl setValue:1.0];
+    [self periodChanged:nil];
+    [self saveMode:gameMode];
+    
+
 }
+
+
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     // Update the page when more than 50% of the previous/next page is visible
@@ -202,4 +295,8 @@
 //    int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
 //    self.pageControl.currentPage = page;
 }
+
+
+
+
 @end

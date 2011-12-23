@@ -24,8 +24,18 @@
 		B15F316E1493832D00FC52AE /* basketball-court.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B15F316D1493832D00FC52AE /* basketball-court.jpg */; };
 		B17A310C1495065A0038328C /* scoreboardOptionPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B17A310A1495065A0038328C /* scoreboardOptionPageViewController.m */; };
 		B17A310D1495065A0038328C /* scoreboardOptionPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17A310B1495065A0038328C /* scoreboardOptionPageViewController.xib */; };
+		B1863922149DF2BC009E0863 /* teamMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1863920149DF2BC009E0863 /* teamMainPageViewController.m */; };
+		B1863923149DF2BC009E0863 /* teamMainPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1863921149DF2BC009E0863 /* teamMainPageViewController.xib */; };
+		B186393C149E341B009E0863 /* scoreboardTeamStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B186393A149E341B009E0863 /* scoreboardTeamStatsViewController.m */; };
+		B186393D149E341B009E0863 /* scoreboardTeamStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B186393B149E341B009E0863 /* scoreboardTeamStatsViewController.xib */; };
 		B1C5170A14946F670099E41E /* home-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C5170914946F670099E41E /* home-icons.png */; };
 		B1C5170C149470800099E41E /* options-icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C5170B149470800099E41E /* options-icons.png */; };
+		B1C70D15149F11D40071E893 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C70D14149F11D30071E893 /* Team.m */; };
+		B1C70D1A149F16F90071E893 /* teamAddTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C70D18149F16F80071E893 /* teamAddTeamViewController.m */; };
+		B1C70D1B149F16F90071E893 /* teamAddTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C70D19149F16F90071E893 /* teamAddTeamViewController.xib */; };
+		B1D1546514A2094F0070627E /* scoreboardOptionCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D1546314A2094F0070627E /* scoreboardOptionCustomViewController.m */; };
+		B1D1546614A2094F0070627E /* scoreboardOptionCustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D1546414A2094F0070627E /* scoreboardOptionCustomViewController.xib */; };
+		B1D1546914A223060070627E /* go-back-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B1D1546814A223060070627E /* go-back-icon.png */; };
 		B1D65D74148E37EA003901B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D73148E37EA003901B3 /* UIKit.framework */; };
 		B1D65D76148E37EA003901B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D75148E37EA003901B3 /* Foundation.framework */; };
 		B1D65D78148E37EA003901B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D77148E37EA003901B3 /* CoreGraphics.framework */; };
@@ -75,8 +85,23 @@
 		B17A31091495065A0038328C /* scoreboardOptionPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoreboardOptionPageViewController.h; sourceTree = "<group>"; };
 		B17A310A1495065A0038328C /* scoreboardOptionPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreboardOptionPageViewController.m; sourceTree = "<group>"; };
 		B17A310B1495065A0038328C /* scoreboardOptionPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreboardOptionPageViewController.xib; sourceTree = "<group>"; };
+		B186391F149DF2BC009E0863 /* teamMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamMainPageViewController.h; sourceTree = "<group>"; };
+		B1863920149DF2BC009E0863 /* teamMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamMainPageViewController.m; sourceTree = "<group>"; };
+		B1863921149DF2BC009E0863 /* teamMainPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = teamMainPageViewController.xib; sourceTree = "<group>"; };
+		B1863939149E341B009E0863 /* scoreboardTeamStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoreboardTeamStatsViewController.h; path = ../scoreboardTeamStatsViewController.h; sourceTree = "<group>"; };
+		B186393A149E341B009E0863 /* scoreboardTeamStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = scoreboardTeamStatsViewController.m; path = ../scoreboardTeamStatsViewController.m; sourceTree = "<group>"; };
+		B186393B149E341B009E0863 /* scoreboardTeamStatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = scoreboardTeamStatsViewController.xib; path = ../scoreboardTeamStatsViewController.xib; sourceTree = "<group>"; };
 		B1C5170914946F670099E41E /* home-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icons.png"; sourceTree = "<group>"; };
 		B1C5170B149470800099E41E /* options-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "options-icons.png"; sourceTree = "<group>"; };
+		B1C70D13149F11D30071E893 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		B1C70D14149F11D30071E893 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		B1C70D17149F16F80071E893 /* teamAddTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teamAddTeamViewController.h; sourceTree = "<group>"; };
+		B1C70D18149F16F80071E893 /* teamAddTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teamAddTeamViewController.m; sourceTree = "<group>"; };
+		B1C70D19149F16F90071E893 /* teamAddTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = teamAddTeamViewController.xib; sourceTree = "<group>"; };
+		B1D1546214A2094F0070627E /* scoreboardOptionCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoreboardOptionCustomViewController.h; sourceTree = "<group>"; };
+		B1D1546314A2094F0070627E /* scoreboardOptionCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreboardOptionCustomViewController.m; sourceTree = "<group>"; };
+		B1D1546414A2094F0070627E /* scoreboardOptionCustomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreboardOptionCustomViewController.xib; sourceTree = "<group>"; };
+		B1D1546814A223060070627E /* go-back-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go-back-icon.png"; sourceTree = "<group>"; };
 		B1D65D6F148E37EA003901B3 /* Baskeepr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baskeepr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D65D73148E37EA003901B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B1D65D75148E37EA003901B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -126,6 +151,7 @@
 		B15F316714937C1B00FC52AE /* Media Files */ = {
 			isa = PBXGroup;
 			children = (
+				B1D1546814A223060070627E /* go-back-icon.png */,
 				B1C5170914946F670099E41E /* home-icons.png */,
 				B15F316D1493832D00FC52AE /* basketball-court.jpg */,
 				B14DF8591495B07B00B84F8F /* radio-button_off-icons.png */,
@@ -178,19 +204,31 @@
 				B1D65D85148E37EA003901B3 /* ViewController.h */,
 				B1D65D86148E37EA003901B3 /* ViewController.m */,
 				B1D65D88148E37EA003901B3 /* ViewController_iPhone.xib */,
+				B1D65D8B148E37EA003901B3 /* ViewController_iPad.xib */,
+				B1863939149E341B009E0863 /* scoreboardTeamStatsViewController.h */,
+				B186393A149E341B009E0863 /* scoreboardTeamStatsViewController.m */,
+				B186393B149E341B009E0863 /* scoreboardTeamStatsViewController.xib */,
 				B15F316814937CA300FC52AE /* scoreboardMainPageViewController.h */,
 				B15F316914937CA300FC52AE /* scoreboardMainPageViewController.m */,
 				B15F316A14937CA300FC52AE /* scoreboardMainPageViewController.xib */,
 				B17A31091495065A0038328C /* scoreboardOptionPageViewController.h */,
 				B17A310A1495065A0038328C /* scoreboardOptionPageViewController.m */,
 				B17A310B1495065A0038328C /* scoreboardOptionPageViewController.xib */,
-				B1D65D8B148E37EA003901B3 /* ViewController_iPad.xib */,
+				B1D1546214A2094F0070627E /* scoreboardOptionCustomViewController.h */,
+				B1D1546314A2094F0070627E /* scoreboardOptionCustomViewController.m */,
+				B1D1546414A2094F0070627E /* scoreboardOptionCustomViewController.xib */,
 				B156626C149C6F1E004F7651 /* scoreboardStatisticViewController.h */,
 				B156626D149C6F1E004F7651 /* scoreboardStatisticViewController.m */,
 				B156626E149C6F1F004F7651 /* scoreboardStatisticViewController.xib */,
 				B1566279149CD530004F7651 /* scoreboardStatisticOptionViewController.h */,
 				B156627A149CD530004F7651 /* scoreboardStatisticOptionViewController.m */,
 				B156627B149CD530004F7651 /* scoreboardStatisticOptionViewController.xib */,
+				B186391F149DF2BC009E0863 /* teamMainPageViewController.h */,
+				B1863920149DF2BC009E0863 /* teamMainPageViewController.m */,
+				B1863921149DF2BC009E0863 /* teamMainPageViewController.xib */,
+				B1C70D17149F16F80071E893 /* teamAddTeamViewController.h */,
+				B1C70D18149F16F80071E893 /* teamAddTeamViewController.m */,
+				B1C70D19149F16F90071E893 /* teamAddTeamViewController.xib */,
 				B15F316714937C1B00FC52AE /* Media Files */,
 				B1D65D7A148E37EA003901B3 /* Supporting Files */,
 			);
@@ -200,6 +238,8 @@
 		B1D65D7A148E37EA003901B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B1C70D13149F11D30071E893 /* Team.h */,
+				B1C70D14149F11D30071E893 /* Team.m */,
 				B1D65D7B148E37EA003901B3 /* Baskeepr-Info.plist */,
 				B1D65D7C148E37EA003901B3 /* InfoPlist.strings */,
 				B1D65D7F148E37EA003901B3 /* main.m */,
@@ -316,6 +356,11 @@
 				B14DF85A1495B07B00B84F8F /* radio-button_off-icons.png in Resources */,
 				B1566270149C6F1F004F7651 /* scoreboardStatisticViewController.xib in Resources */,
 				B156627D149CD530004F7651 /* scoreboardStatisticOptionViewController.xib in Resources */,
+				B1863923149DF2BC009E0863 /* teamMainPageViewController.xib in Resources */,
+				B186393D149E341B009E0863 /* scoreboardTeamStatsViewController.xib in Resources */,
+				B1C70D1B149F16F90071E893 /* teamAddTeamViewController.xib in Resources */,
+				B1D1546614A2094F0070627E /* scoreboardOptionCustomViewController.xib in Resources */,
+				B1D1546914A223060070627E /* go-back-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +403,11 @@
 				B156626A149C534B004F7651 /* GameMode.m in Sources */,
 				B156626F149C6F1F004F7651 /* scoreboardStatisticViewController.m in Sources */,
 				B156627C149CD530004F7651 /* scoreboardStatisticOptionViewController.m in Sources */,
+				B1863922149DF2BC009E0863 /* teamMainPageViewController.m in Sources */,
+				B186393C149E341B009E0863 /* scoreboardTeamStatsViewController.m in Sources */,
+				B1C70D15149F11D40071E893 /* Team.m in Sources */,
+				B1C70D1A149F16F90071E893 /* teamAddTeamViewController.m in Sources */,
+				B1D1546514A2094F0070627E /* scoreboardOptionCustomViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

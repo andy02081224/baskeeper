@@ -13,5 +13,5 @@
 @property(strong, nonatomic)NSString *time;
 @property(strong, nonatomic)NSString *period;
 @property(strong, nonatomic)NSString *foul;
-@property(strong, nonatomic)NSString *timeout;
+@property(strong, nonatomic)NSString *timeOutLeft;
 @end

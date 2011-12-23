@@ -12,14 +12,14 @@
 @synthesize time;
 @synthesize period;
 @synthesize foul;
-@synthesize timeout;
+@synthesize timeOutLeft;
 
 -(id)initWithCoder:(NSCoder *)aDecoder{
     if ((self = [super init])) {
         self.time = [aDecoder decodeObjectForKey:@"time"];
         self.period = [aDecoder decodeObjectForKey:@"period"];
         self.foul=[aDecoder decodeObjectForKey:@"foul"];
-        self.timeout=[aDecoder decodeObjectForKey:@"timout"];
+        self.timeOutLeft=[aDecoder decodeObjectForKey:@"timout"];
     }
     return self;
 }
@@ -28,7 +28,7 @@
     [aCoder encodeObject:self.time forKey:@"time"];
     [aCoder encodeObject:self.period forKey:@"period"];
     [aCoder encodeObject:self.foul forKey:@"foul"];
-    [aCoder encodeObject:self.timeout forKey:@"timeout"];
+    [aCoder encodeObject:self.timeOutLeft forKey:@"timeout"];
 
 }
 
