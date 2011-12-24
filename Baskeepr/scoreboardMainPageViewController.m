@@ -15,12 +15,19 @@
 
 
 @implementation scoreboardMainPageViewController
+
+@synthesize HomeName;
+@synthesize GuestName;
 @synthesize HomeScore;
 @synthesize GuestScore;
 @synthesize HomeFouls;
 @synthesize GuestFouls;
 @synthesize HomeTOL;
 @synthesize GuestTOL;
+@synthesize HomeBonus;
+@synthesize GuestBonus;
+@synthesize ncaaHomeBonus;
+@synthesize ncaaGuestBonus;
 @synthesize labelPeriod;
 @synthesize Mode;
 
@@ -31,13 +38,14 @@
 @synthesize statisticViewController;
 @synthesize teamStatsViewController;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
         //Time=600;
-        [self loadMode];
+        [self loadMode];//Question:Why it doesn't work here but do work in viewDidLoad?
 
     //[UIApplication sharedApplication].statusBarOrientation = UIInterfaceOrientationLandscapeRight;
                 statisticViewController= [[scoreboardStatisticViewController alloc]initWithNibName:@"scoreboardStatisticViewController" bundle:nil];
@@ -61,8 +69,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    [self setClock];
+    [self loadMode];
     CGRect frame;
     CGRect frame2;
 //    frame.origin.x=self.scrollView.frame.size.width * 1;
@@ -131,9 +138,16 @@
         self.Mode=[NSMutableDictionary dictionaryWithDictionary:modeLoaded]; 
         Time=[[self.Mode objectForKey:@"time"]intValue];
         [self setClock];
+        Period=[[self.Mode objectForKey:@"period"]doubleValue];
+        [self setPeriod];
+        Foul=[[self.Mode objectForKey:@"foul"]intValue];
+        [self setFoul];
+        TOL=[[self.Mode objectForKey:@"tol"]intValue];
+        [self setTOL];
+        
     }
     else{
-        self.Mode=[NSMutableDictionary dictionaryWithCapacity:1]; 
+        self.Mode=[NSMutableDictionary dictionaryWithCapacity:4]; 
     }
 }
 
@@ -186,26 +200,32 @@
     int f=[self.HomeFouls.text intValue];
     f++;
     self.HomeFouls.text=[NSString stringWithFormat:@"%d",f];
+        [self setBonus:@"home" forFoul:f];
 }
 
 -(IBAction)minusHomeFoul:(id)sender{
     int f=[self.HomeFouls.text intValue];
     if(f>0){
     f--;
-        self.HomeFouls.text=[NSString stringWithFormat:@"%d",f];}  
+        self.HomeFouls.text=[NSString stringWithFormat:@"%d",f];
+            [self setBonus:@"home" forFoul:f];
+    }  
 }
 
 -(IBAction)addGuestFoul:(id)sender{
     int f=[self.GuestFouls.text intValue];
     f++;
     self.GuestFouls.text=[NSString stringWithFormat:@"%d",f];
+        [self setBonus:@"guest" forFoul:f];
 }
 
 -(IBAction)minusGuestFoul:(id)sender{
     int f=[self.GuestFouls.text intValue];
     if(f>0){
     f--;
-        self.GuestFouls.text=[NSString stringWithFormat:@"%d",f];}  
+        self.GuestFouls.text=[NSString stringWithFormat:@"%d",f];
+            [self setBonus:@"guest" forFoul:f];
+    }  
 }
 
 -(IBAction)addHomeTOL:(id)sender{
@@ -275,16 +295,83 @@
 
 }
 
+-(void)setPeriod{
+    [periodControl setMaximumValue:Period];
+    [periodControl setValue:1.0];
+    [self periodChanged:nil];  
+}
+
+-(void)setFoul{
+    self.HomeFouls.text=@"0";
+    self.GuestFouls.text=@"0";
+    [self setBonus:@"home" forFoul:0];
+    [self setBonus:@"guest" forFoul:0];
+}
+
+-(void)setTOL{
+ 
+    self.HomeTOL.text=[NSString stringWithFormat:@"%d",TOL]; 
+    self.GuestTOL.text=[NSString stringWithFormat:@"%d",TOL];
+}
+
+-(void)setBonus:(NSString*)team forFoul:(int)foul{
+    if([team isEqualToString:@"home"]&&foul>Foul){
+        
+        HomeBonus.hidden=NO;
+        //因應NCAA比較特殊的團隊犯規規則
+        if(Foul==6&&foul<10){
+            ncaaHomeBonus.text=@"1-1";
+            ncaaHomeBonus.hidden=NO;
+        }
+        if(Foul==6&&foul>9){
+            ncaaHomeBonus.text=@"2";
+        }
+    }
+    if([team isEqualToString:@"guest"]&&foul>Foul){
+        GuestBonus.hidden=NO;
+        if(Foul==6&&foul<10){
+            ncaaGuestBonus.text=@"1-1";
+            ncaaGuestBonus.hidden=NO;
+        }
+        if(Foul==6&&foul>9){
+            ncaaGuestBonus.text=@"2";
+        }
+    }
+    if([team isEqualToString:@"home"]&&foul<=Foul){
+        HomeBonus.hidden=YES;
+        if(Foul==6){
+            ncaaHomeBonus.hidden=YES;
+        }
+    }
+    if([team isEqualToString:@"guest"]&&foul<=Foul){
+        GuestBonus.hidden=YES;
+        if(Foul==6){
+            ncaaGuestBonus.hidden=YES;
+        }
+    }
+
+    
+}
+
 -(void)modeSelected:(NSDictionary*)gameMode{
+    
     Time=[[gameMode objectForKey:@"time"]intValue];
     [self setClock];
     Period=[[gameMode objectForKey:@"period"]doubleValue];
-    [periodControl setMaximumValue:Period];
-    [periodControl setValue:1.0];
-    [self periodChanged:nil];
-    [self saveMode:gameMode];
+    [self setPeriod];
+    Foul=[[gameMode objectForKey:@"foul"]intValue];
+    [self setFoul];
+    TOL=[[gameMode objectForKey:@"tol"]intValue];
+    [self setTOL];
+    if([gameMode objectForKey:@"homeName"]){
+        HomeName.text=[gameMode objectForKey:@"homeName"];
+    } 
+    if([gameMode objectForKey:@"guestName"]){
+        GuestName.text=[gameMode objectForKey:@"guestName"];
+    }
     
-
+    
+    [self saveMode:gameMode];
 }
 
 

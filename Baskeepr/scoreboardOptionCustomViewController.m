@@ -7,28 +7,22 @@
 //
 
 #import "scoreboardOptionCustomViewController.h"
+#import "GameMode.h"
 
 @implementation scoreboardOptionCustomViewController
+@synthesize delegate;
+
 @synthesize labelHomeName;
 @synthesize homeName;
-@synthesize labelHomeScore;
-@synthesize homeScoreControl;
-@synthesize labelHomeFoul;
-@synthesize homeFoulControl;
-@synthesize labelHomeTOL;
-@synthesize homeTOLControl;
 
 @synthesize labelGuestName;
 @synthesize guestName;
-@synthesize labelGuestScore;
-@synthesize guestScoreControl;
-@synthesize labelGuestFoul;
-@synthesize guestFoulControl;
-@synthesize labelGuestTOL;
-@synthesize guestTOLControl;
+@synthesize foulControl;
+@synthesize tolControl;
+@synthesize foulLimit;
+@synthesize timeOutLeft;
 
 @synthesize labelName;
-@synthesize labelScore;
 @synthesize labelFoul;
 @synthesize labelTOL;
 
@@ -43,6 +37,9 @@
 @synthesize seconds;
 @synthesize period;
 
+@synthesize test;
+
+//@synthesize custom;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -52,12 +49,9 @@
         seconds=[[NSMutableArray alloc]init];
         period=[[NSMutableArray alloc]init];
         
-        homeScoreControl=[[UIStepper alloc]init];
-        homeFoulControl=[[UIStepper alloc]init];
-        homeTOLControl=[[UIStepper alloc]init];
-        guestScoreControl=[[UIStepper alloc]init];
-        guestFoulControl=[[UIStepper alloc]init];
-        guestTOLControl=[[UIStepper alloc]init];
+        foulControl=[[UIStepper alloc]init];
+        tolControl=[[UIStepper alloc]init];
+
     }
     return self;
 }
@@ -76,7 +70,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-                
+    //[self loadSettings];
     //將值加入NSMutableArray
     for(int i=0;i<100;i++){
         NSString *min;
@@ -97,6 +91,13 @@
         
 
     }
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    homeName.text=[defaults objectForKey:@"homeName"];
+    guestName.text=[defaults objectForKey:@"guestName"];
+    foulLimit.text=[defaults objectForKey:@"foul"];
+    timeOutLeft.text=[defaults objectForKey:@"tol"];
+    int minuteSelected=[[defaults objectForKey:@"minutes"]intValue];
+    [timePicker selectRow:minuteSelected inComponent:0 animated:YES];
     
     //設定stepper範圍與起始值
 //    [homeScoreControl setMaximumValue:999.0];
@@ -131,6 +132,14 @@
     }
 }
 
+-(void)loadSettings{
+    
+    
+
+
+}
+
+
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 3;
 }
@@ -161,32 +170,43 @@
         }
 }
 
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    if(component==0){
+        timeSelected+=[[minutes objectAtIndex:row]intValue]*60;
+        test.text=[NSString stringWithFormat:@"%d",row];
+        NSString *Row=[NSString stringWithFormat:@"%d",row];
+        [defaults setObject:Row forKey:@"minutes"];
+    }
+    if(component==1){
+        timeSelected+=[[seconds objectAtIndex:row]intValue];
+        NSString *Row=[NSString stringWithFormat:@"%d",row];
+        [defaults setObject:Row forKey:@"seconds"];
+    }
+    if(component==2){
+        periodSelected=[[period objectAtIndex:row]intValue];
+        NSString *Row=[NSString stringWithFormat:@"%d",row];
+        [defaults setObject:Row forKey:@"period"];
+    }
+}
+
 -(IBAction)customItemClicked:(id)sender{
     switch (customItem.selectedSegmentIndex) {
         case 0:
             timePicker.hidden=YES;
             labelHomeName.hidden=NO;
             homeName.hidden=NO;
-            labelHomeScore.hidden=NO;
-            homeScoreControl.hidden=NO;
-            labelHomeFoul.hidden=NO;
-            homeFoulControl.hidden=NO;
-            labelHomeTOL.hidden=NO;
-            homeTOLControl.hidden=NO;
-            
             labelGuestName.hidden=NO;
             guestName.hidden=NO;
-            labelGuestScore.hidden=NO;
-            guestScoreControl.hidden=NO;
-            labelGuestFoul.hidden=NO;
-            guestFoulControl.hidden=NO;
-            labelGuestTOL.hidden=NO;
-            guestTOLControl.hidden=NO;
             
             labelName.hidden=NO;
-            labelScore.hidden=NO;
             labelFoul.hidden=NO;
             labelTOL.hidden=NO;
+            
+            foulControl.hidden=NO;
+            tolControl.hidden=NO;
+            foulLimit.hidden=NO;
+            timeOutLeft.hidden=NO;
             
             labelMin.hidden=YES;
             labelSec.hidden=YES;
@@ -196,24 +216,15 @@
             timePicker.hidden=NO;
             labelHomeName.hidden=YES;
             homeName.hidden=YES;
-            labelHomeScore.hidden=YES;
-            homeScoreControl.hidden=YES;
-            labelHomeFoul.hidden=YES;
-            homeFoulControl.hidden=YES;
-            labelHomeTOL.hidden=YES;
-            homeTOLControl.hidden=YES;
-            
             labelGuestName.hidden=YES;
             guestName.hidden=YES;
-            labelGuestScore.hidden=YES;
-            guestScoreControl.hidden=YES;
-            labelGuestFoul.hidden=YES;
-            guestFoulControl.hidden=YES;
-            labelGuestTOL.hidden=YES;
-            guestTOLControl.hidden=YES;
+            
+            foulControl.hidden=YES;
+            tolControl.hidden=YES;
+            foulLimit.hidden=YES;
+            timeOutLeft.hidden=YES;
             
             labelName.hidden=YES;
-            labelScore.hidden=YES;
             labelFoul.hidden=YES;
             labelTOL.hidden=YES;
             
@@ -227,7 +238,21 @@
 }
 
 -(IBAction)backButtonClicked:(id)sender{
+
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    [defaults setObject:homeName.text forKey:@"homeName"];
+    [defaults setObject:guestName.text forKey:@"guestName"];
+    [defaults setObject:foulLimit.text forKey:@"foul"];
+    [defaults setObject:timeOutLeft.text forKey:@"tol"];
+    NSString *Time=[NSString stringWithFormat:@"%d",timeSelected];
+    NSString *Period=[NSString stringWithFormat:@"%d",periodSelected];
+    NSMutableDictionary *custom=[NSMutableDictionary dictionaryWithObjectsAndKeys:homeName.text,@"homeName",guestName.text,@"guestName",Time,@"time",Period,@"period",foulLimit.text,@"foul",timeOutLeft.text,@"tol", nil];
+
+    [delegate setCustomMode:custom];
     [self dismissModalViewControllerAnimated:YES];
+    
+
 }
 
 -(IBAction)doEditField:(id)sender{
@@ -239,30 +264,15 @@
     [guestName resignFirstResponder];
 }
 
-
--(IBAction)changeHomeScore:(id)sender{
-    labelHomeScore.text=[NSString stringWithFormat:@"%.0f",homeScoreControl.value];
+-(IBAction)changeFoul:(id)sender{
+    self.foulLimit.text=[NSString stringWithFormat:@"%.0f",foulControl.value]; 
 }
 
--(IBAction)changeHomeFoul:(id)sender{
-    labelHomeFoul.text=[NSString stringWithFormat:@"%.0f",homeFoulControl.value];
+-(IBAction)changeTOL:(id)sender{
+    self.timeOutLeft.text=[NSString stringWithFormat:@"%.0f",tolControl.value];
 }
 
--(IBAction)changeHomeTOL:(id)sender{
-    labelHomeTOL.text=[NSString stringWithFormat:@"%.0f",homeTOLControl.value];
-}
 
--(IBAction)changeGuestScore:(id)sender{
-    labelGuestScore.text=[NSString stringWithFormat:@"%.0f",guestScoreControl.value];
-}
-
--(IBAction)changeGuestFoul:(id)sender{
-    labelGuestFoul.text=[NSString stringWithFormat:@"%.0f",guestFoulControl.value];
-}
-
--(IBAction)changeGuestTOL:(id)sender{
-    labelGuestTOL.text=[NSString stringWithFormat:@"%.0f",guestTOLControl.value];
-}
 
 
 @end

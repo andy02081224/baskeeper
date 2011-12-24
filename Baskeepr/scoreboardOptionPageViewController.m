@@ -20,8 +20,9 @@
 @synthesize fiba;
 @synthesize nba;
 @synthesize ncaa;
+@synthesize custom;
 
-@synthesize labelGameMode;
+@synthesize test;
 
 @synthesize save;
 
@@ -30,9 +31,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        fiba=[NSDictionary dictionaryWithObjectsAndKeys:@"600",@"time",@"5",@"foul",@"4",@"period",@"1",@"timeoutForFirstThree",@"2",@"timeoutInFourth" ,nil];
-        nba=[NSDictionary dictionaryWithObjectsAndKeys:@"720",@"time",@"5",@"foul",@"4",@"period" ,nil];
-        ncaa=[NSDictionary dictionaryWithObjectsAndKeys:@"1200",@"time",@"7",@"foul",@"2",@"period" ,nil];
+        fiba=[NSDictionary dictionaryWithObjectsAndKeys:@"600",@"time",@"4",@"foul",@"4",@"period",@"5",@"tol",nil];
+        nba=[NSDictionary dictionaryWithObjectsAndKeys:@"720",@"time",@"4",@"foul",@"4",@"period",@"8",@"tol" ,nil];
+        ncaa=[NSDictionary dictionaryWithObjectsAndKeys:@"1200",@"time",@"6",@"foul",@"2",@"period",@"6",@"tol" ,nil];
+        
         
     }
     return self;
@@ -55,7 +57,7 @@
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     gameMode=[defaults objectForKey:@"gameMode"];
     [self loadGameMode:gameMode];
-    labelGameMode.text=gameMode;
+    
     
     [[save layer]setBorderWidth:2.0f];
     [[save layer]setCornerRadius:8.0f];
@@ -137,7 +139,7 @@
 }
 
 -(IBAction)fibaButtonClicked:(id)sender{
-    if(![gameMode isEqual:@"fiba"]){
+    if(![gameMode isEqualToString:@"fiba"]){
         UIImage *imgOn=[UIImage imageNamed:@"radio-button_on-icons.png"];
         UIImage *imgOff=[UIImage imageNamed:@"radio-button_off-icons.png"];
         [fibaButton setImage:imgOn forState:UIControlStateNormal];
@@ -151,7 +153,7 @@
 
 -(IBAction)nbaButtonClicked:(id)sender{
     
-    if(![gameMode isEqual:@"nba"]){
+    if(![gameMode isEqualToString:@"nba"]){
     UIImage *imgOn=[UIImage imageNamed:@"radio-button_on-icons.png"];
     UIImage *imgOff=[UIImage imageNamed:@"radio-button_off-icons.png"];
     [nbaButton setImage:imgOn forState:UIControlStateNormal];
@@ -167,7 +169,7 @@
 
 
 -(IBAction)ncaaButtonClicked:(id)sender{
-    if(![gameMode isEqual:@"ncaa"]){
+    if(![gameMode isEqualToString:@"ncaa"]){
         UIImage *imgOn=[UIImage imageNamed:@"radio-button_on-icons.png"];
         UIImage *imgOff=[UIImage imageNamed:@"radio-button_off-icons.png"];
         [ncaaButton setImage:imgOn forState:UIControlStateNormal];
@@ -181,6 +183,7 @@
 
 -(IBAction)customButtonClicked:(id)sender{
     scoreboardOptionCustomViewController *modalViewController=[[scoreboardOptionCustomViewController alloc]initWithNibName:@"scoreboardOptionCustomViewController" bundle:nil];
+    modalViewController.delegate=self;
     [self presentModalViewController:modalViewController animated:YES];
     
     if(![gameMode isEqual:@"custom"]){
@@ -191,28 +194,38 @@
         [fibaButton setImage:imgOff forState:UIControlStateNormal];
         [nbaButton setImage:imgOff forState:UIControlStateNormal];
         gameMode=@"custom";
-        //[delegate modeSelected:11];
+
     }
     
     
 }
+
 
 -(IBAction)backButtonClicked:(id)sender{
     [self dismissModalViewControllerAnimated:YES];
 }
 
+-(void)setCustomMode:(NSDictionary*)customData{
+    custom =[NSDictionary dictionaryWithDictionary:customData];
+}
+
 -(IBAction)saveButtonClicked:(id)sender{
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     [defaults setObject:gameMode forKey:@"gameMode"];
-    if([gameMode isEqual:@"fiba"]){
+    if([gameMode isEqualToString:@"fiba"]){
         [delegate modeSelected:fiba]; 
     }
-    if([gameMode isEqual:@"nba"]){
+    if([gameMode isEqualToString:@"nba"]){
         [delegate modeSelected:nba];
     }
-    if([gameMode isEqual:@"ncaa"]){
+    if([gameMode isEqualToString:@"ncaa"]){
         [delegate modeSelected:ncaa]; 
     }
+    if([gameMode isEqualToString:@"custom"]){
+        [delegate modeSelected:custom];
+    }
+
+
 
 
 }

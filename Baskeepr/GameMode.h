@@ -10,6 +10,8 @@
 
 @interface GameMode : NSObject<NSCoding>
 
+@property(strong, nonatomic)NSString *homeName;
+@property(strong, nonatomic)NSString *guestName;
 @property(strong, nonatomic)NSString *time;
 @property(strong, nonatomic)NSString *period;
 @property(strong, nonatomic)NSString *foul;

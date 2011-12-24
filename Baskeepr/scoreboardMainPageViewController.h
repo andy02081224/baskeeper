@@ -16,7 +16,7 @@
 @interface scoreboardMainPageViewController : UIViewController<scoreboardOptionPageViewControllerDelegate,UIScrollViewDelegate>{
     int Time;
     double Period;
-    int Fouls;
+    int Foul;
     int TOL;
     NSTimer *countDownTimer;
     UIScrollView *scrollView;
@@ -32,12 +32,18 @@
 
 
 
+@property(strong, nonatomic)IBOutlet UILabel *HomeName;
+@property(strong, nonatomic)IBOutlet UILabel *GuestName;
 @property(strong, nonatomic)IBOutlet UILabel *HomeScore;
 @property(strong, nonatomic)IBOutlet UILabel *GuestScore;
 @property(strong, nonatomic)IBOutlet UILabel *HomeFouls;
 @property(strong, nonatomic)IBOutlet UILabel *GuestFouls;
 @property(strong, nonatomic)IBOutlet UILabel *HomeTOL;
 @property(strong, nonatomic)IBOutlet UILabel *GuestTOL;
+@property(strong, nonatomic)IBOutlet UILabel *HomeBonus;
+@property(strong, nonatomic)IBOutlet UILabel *GuestBonus;
+@property(strong, nonatomic)IBOutlet UILabel *ncaaHomeBonus;
+@property(strong, nonatomic)IBOutlet UILabel *ncaaGuestBonus;
 @property(strong, nonatomic)IBOutlet UILabel *labelPeriod;
 @property(strong, nonatomic)IBOutlet UILabel *countDownClock;
 @property(strong, nonatomic)IBOutlet UIScrollView *scrollView;
@@ -46,6 +52,9 @@
 @property(strong, nonatomic)scoreboardStatisticViewController *statisticViewController;
 
 @property(strong, nonatomic)scoreboardTeamStatsViewController *teamStatsViewController;
+
+
+
 
 
 -(IBAction)dismissButtonClicked:(id)sender;
@@ -69,6 +78,10 @@
 -(void)countDown;
 -(void)modeSelected;
 -(void)setClock;
+-(void)setPeriod;
+-(void)setFoul;
+-(void)setTOL;
+-(void)setBonus:(NSString*)team forFoul:(int)foul;
 
 -(NSString*)modeFilePath;
 -(void)loadMode;
