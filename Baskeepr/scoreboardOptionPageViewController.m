@@ -31,9 +31,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        fiba=[NSDictionary dictionaryWithObjectsAndKeys:@"600",@"time",@"4",@"foul",@"4",@"period",@"5",@"tol",nil];
-        nba=[NSDictionary dictionaryWithObjectsAndKeys:@"720",@"time",@"4",@"foul",@"4",@"period",@"8",@"tol" ,nil];
-        ncaa=[NSDictionary dictionaryWithObjectsAndKeys:@"1200",@"time",@"6",@"foul",@"2",@"period",@"6",@"tol" ,nil];
+        fiba=[NSDictionary dictionaryWithObjectsAndKeys:@"fiba",@"modeName",@"600",@"time",@"4",@"foul",@"4",@"period",@"5",@"tol",nil];
+        nba=[NSDictionary dictionaryWithObjectsAndKeys:@"nba",@"modenName",@"720",@"time",@"4",@"foul",@"4",@"period",@"8",@"tol" ,nil];
+        ncaa=[NSDictionary dictionaryWithObjectsAndKeys:@"ncaa",@"modeName",@"1200",@"time",@"6",@"foul",@"2",@"period",@"6",@"tol" ,nil];
         
         
     }

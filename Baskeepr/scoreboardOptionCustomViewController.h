@@ -13,8 +13,10 @@
 
 @end
 @interface scoreboardOptionCustomViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>{
-    int timeSelected;
+    int minSelected;
+    int secSelected;
     int periodSelected;
+    
 }
 @property(strong, nonatomic)id<OptionCustomDelegate>delegate;
 

@@ -49,6 +49,7 @@
 @property(strong, nonatomic)IBOutlet UIScrollView *scrollView;
 @property(strong, nonatomic)IBOutlet UIStepper *periodControl;
 @property(strong, nonatomic)NSMutableDictionary *Mode;
+@property(strong, nonatomic)NSString* modeName;
 @property(strong, nonatomic)scoreboardStatisticViewController *statisticViewController;
 
 @property(strong, nonatomic)scoreboardTeamStatsViewController *teamStatsViewController;

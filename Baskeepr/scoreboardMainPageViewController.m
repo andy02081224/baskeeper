@@ -30,6 +30,7 @@
 @synthesize ncaaGuestBonus;
 @synthesize labelPeriod;
 @synthesize Mode;
+@synthesize modeName;
 
 @synthesize periodControl;
 
@@ -297,6 +298,7 @@
 
 -(void)setPeriod{
     [periodControl setMaximumValue:Period];
+    [periodControl setMinimumValue:1.0];
     [periodControl setValue:1.0];
     [self periodChanged:nil];  
 }
@@ -319,35 +321,33 @@
         
         HomeBonus.hidden=NO;
         //因應NCAA比較特殊的團隊犯規規則
-        if(Foul==6&&foul<10){
+        if([modeName isEqualToString:@"ncaa"]&&foul<10){
             ncaaHomeBonus.text=@"1-1";
             ncaaHomeBonus.hidden=NO;
         }
-        if(Foul==6&&foul>9){
+        if([modeName isEqualToString:@"ncaa"]&&foul>9){
             ncaaHomeBonus.text=@"2";
         }
     }
     if([team isEqualToString:@"guest"]&&foul>Foul){
         GuestBonus.hidden=NO;
-        if(Foul==6&&foul<10){
+        if([modeName isEqualToString:@"ncaa"]&&foul<10){
             ncaaGuestBonus.text=@"1-1";
             ncaaGuestBonus.hidden=NO;
         }
-        if(Foul==6&&foul>9){
+        if([modeName isEqualToString:@"ncaa"]&&foul>9){
             ncaaGuestBonus.text=@"2";
         }
     }
     if([team isEqualToString:@"home"]&&foul<=Foul){
         HomeBonus.hidden=YES;
-        if(Foul==6){
             ncaaHomeBonus.hidden=YES;
-        }
+        
     }
     if([team isEqualToString:@"guest"]&&foul<=Foul){
         GuestBonus.hidden=YES;
-        if(Foul==6){
             ncaaGuestBonus.hidden=YES;
-        }
+        
     }
 
     
@@ -355,6 +355,7 @@
 
 -(void)modeSelected:(NSDictionary*)gameMode{
     
+    self.modeName=[gameMode objectForKey:@"modeName"];
     Time=[[gameMode objectForKey:@"time"]intValue];
     [self setClock];
     Period=[[gameMode objectForKey:@"period"]doubleValue];

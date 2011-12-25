@@ -51,6 +51,28 @@
         
         foulControl=[[UIStepper alloc]init];
         tolControl=[[UIStepper alloc]init];
+        
+        
+        
+        for(int i=0;i<100;i++){
+            NSString *min;
+            min=[NSString stringWithFormat:@"%d",i];
+            [minutes addObject:min];
+        }
+        
+        for(int i=0;i<60;i++){
+            NSString *sec;
+            sec=[NSString stringWithFormat:@"%d",i];
+            [seconds addObject:sec];
+        }
+        
+        for(int i=1;i<11;i++){
+            NSString *prd;
+            prd=[NSString stringWithFormat:@"%d",i];
+            [period addObject:prd];
+            
+            
+        }
 
     }
     return self;
@@ -72,32 +94,21 @@
     // Do any additional setup after loading the view from its nib.
     //[self loadSettings];
     //將值加入NSMutableArray
-    for(int i=0;i<100;i++){
-        NSString *min;
-        min=[NSString stringWithFormat:@"%d",i];
-        [minutes addObject:min];
-    }
-    
-    for(int i=0;i<60;i++){
-        NSString *sec;
-        sec=[NSString stringWithFormat:@"%d",i];
-        [seconds addObject:sec];
-    }
-    
-    for(int i=0;i<11;i++){
-        NSString *prd;
-        prd=[NSString stringWithFormat:@"%d",i];
-        [period addObject:prd];
-        
 
-    }
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     homeName.text=[defaults objectForKey:@"homeName"];
     guestName.text=[defaults objectForKey:@"guestName"];
     foulLimit.text=[defaults objectForKey:@"foul"];
     timeOutLeft.text=[defaults objectForKey:@"tol"];
-    int minuteSelected=[[defaults objectForKey:@"minutes"]intValue];
-    [timePicker selectRow:minuteSelected inComponent:0 animated:YES];
+    int previousMinute=[[defaults objectForKey:@"minutes"]intValue];
+    [timePicker selectRow:previousMinute inComponent:0 animated:YES];
+    [self pickerView:timePicker didSelectRow:previousMinute inComponent:0];
+    int previousSecond=[[defaults objectForKey:@"seconds"]intValue];
+    [timePicker selectRow:previousSecond inComponent:1 animated:YES];
+    [self pickerView:timePicker didSelectRow:previousSecond inComponent:1];
+    int previousPeriod=[[defaults objectForKey:@"period"]intValue];
+    [timePicker selectRow:previousPeriod inComponent:2 animated:YES];
+    [self pickerView:timePicker didSelectRow:previousPeriod inComponent:2];
     
     //設定stepper範圍與起始值
 //    [homeScoreControl setMaximumValue:999.0];
@@ -171,16 +182,18 @@
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     if(component==0){
-        timeSelected+=[[minutes objectAtIndex:row]intValue]*60;
-        test.text=[NSString stringWithFormat:@"%d",row];
+        minSelected=[[minutes objectAtIndex:row]intValue]*60;
+        test.text=[NSString stringWithFormat:@"%d",minSelected];
         NSString *Row=[NSString stringWithFormat:@"%d",row];
         [defaults setObject:Row forKey:@"minutes"];
     }
     if(component==1){
-        timeSelected+=[[seconds objectAtIndex:row]intValue];
+        secSelected=[[seconds objectAtIndex:row]intValue];
         NSString *Row=[NSString stringWithFormat:@"%d",row];
+        test.text=[NSString stringWithFormat:@"%d",secSelected];
         [defaults setObject:Row forKey:@"seconds"];
     }
     if(component==2){
@@ -245,9 +258,9 @@
     [defaults setObject:guestName.text forKey:@"guestName"];
     [defaults setObject:foulLimit.text forKey:@"foul"];
     [defaults setObject:timeOutLeft.text forKey:@"tol"];
-    NSString *Time=[NSString stringWithFormat:@"%d",timeSelected];
+    NSString *Time=[NSString stringWithFormat:@"%d",minSelected+secSelected];
     NSString *Period=[NSString stringWithFormat:@"%d",periodSelected];
-    NSMutableDictionary *custom=[NSMutableDictionary dictionaryWithObjectsAndKeys:homeName.text,@"homeName",guestName.text,@"guestName",Time,@"time",Period,@"period",foulLimit.text,@"foul",timeOutLeft.text,@"tol", nil];
+    NSMutableDictionary *custom=[NSMutableDictionary dictionaryWithObjectsAndKeys:@"custom",@"modeName",homeName.text,@"homeName",guestName.text,@"guestName",Time,@"time",Period,@"period",foulLimit.text,@"foul",timeOutLeft.text,@"tol", nil];
 
     [delegate setCustomMode:custom];
     [self dismissModalViewControllerAnimated:YES];
