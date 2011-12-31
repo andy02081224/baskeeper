@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "scoreboardOptionPageViewController.h"
+#import "scoreboardModeChoiceViewController.h"
 #import "teamMainPageViewController.h"
+
 
 @interface ViewController : UIViewController
 

@@ -40,6 +40,8 @@
 @synthesize teamStatsViewController;
 
 
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -48,9 +50,9 @@
         //Time=600;
         [self loadMode];//Question:Why it doesn't work here but do work in viewDidLoad?
 
-    //[UIApplication sharedApplication].statusBarOrientation = UIInterfaceOrientationLandscapeRight;
-                statisticViewController= [[scoreboardStatisticViewController alloc]initWithNibName:@"scoreboardStatisticViewController" bundle:nil];
-                        teamStatsViewController= [[scoreboardTeamStatsViewController alloc]initWithNibName:@"scoreboardTeamStatsViewController" bundle:nil];
+
+//                statisticViewController= [[scoreboardStatisticViewController alloc]initWithNibName:@"scoreboardStatisticViewController" bundle:nil];
+//                        teamStatsViewController= [[scoreboardTeamStatsViewController alloc]initWithNibName:@"scoreboardTeamStatsViewController" bundle:nil];
         
     }
     return self;
@@ -71,27 +73,31 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self loadMode];
-    CGRect frame;
-    CGRect frame2;
-//    frame.origin.x=self.scrollView.frame.size.width * 1;
-//    frame.origin.y =0;
-    frame.origin.x=0;
-    frame.origin.y =self.scrollView.frame.size.height*1;
-    frame.size = self.scrollView.frame.size;
-    
-    frame2.origin.x=0;
-    frame2.origin.y =self.scrollView.frame.size.height*2;
-    frame2.size = self.scrollView.frame.size;
-    
-    statisticViewController.view.frame = frame; 
-    teamStatsViewController.view.frame= frame2;
-    
-    [self.scrollView addSubview:statisticViewController.view];
-    [self.scrollView addSubview:teamStatsViewController.view];
-    
-     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width*1, self.scrollView.frame.size.height*3);
-         
+//    CGRect frame;
+//    CGRect frame2;
+////    frame.origin.x=self.scrollView.frame.size.width * 1;
+////    frame.origin.y =0;
+//    frame.origin.x=0;
+//    frame.origin.y =self.scrollView.frame.size.height*1;
+//    frame.size = self.scrollView.frame.size;
+//    
+//    frame2.origin.x=0;
+//    frame2.origin.y =self.scrollView.frame.size.height*2;
+//    frame2.size = self.scrollView.frame.size;
+//    
+//
+//    
+//    statisticViewController.view.frame = frame; 
+//    teamStatsViewController.view.frame= frame2;
+//    
+//    [self.scrollView addSubview:statisticViewController.view];
+//    [self.scrollView addSubview:teamStatsViewController.view];
+//    
+//     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width*1, self.scrollView.frame.size.height*3);
+       
 
+
+    
     
 
 }
@@ -283,7 +289,7 @@
     Time-=1;
     int seconds=Time%60;
     int minutes=(Time-seconds)/60;
-    countDownClock.text=[NSString stringWithFormat:@"%d:%.2d",minutes,seconds];
+    countDownClock.text=[NSString stringWithFormat:@"%.2d:%.2d",minutes,seconds];
     if(Time==0){
         [countDownTimer invalidate];
     }
@@ -292,7 +298,7 @@
 -(void)setClock{
     int seconds=Time%60;
     int minutes=(Time-seconds)/60; 
-    countDownClock.text=[NSString stringWithFormat:@"%d:%.2d",minutes,seconds];
+    countDownClock.text=[NSString stringWithFormat:@"%.2d:%.2d",minutes,seconds];
 
 }
 

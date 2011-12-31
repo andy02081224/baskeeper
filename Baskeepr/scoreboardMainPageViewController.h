@@ -20,6 +20,7 @@
     int TOL;
     NSTimer *countDownTimer;
     UIScrollView *scrollView;
+    UIScrollView *scrollView2;
     NSMutableDictionary *Mode;
 }
 
@@ -71,11 +72,10 @@
 -(IBAction)addGuestTOL:(id)sender;
 -(IBAction)minusHomeTOL:(id)sender;
 -(IBAction)minusGuestTOL:(id)sender;
-
 -(IBAction)periodChanged:(id)sender;
-
 -(IBAction)countDownClockClicked:(id)sender;
 -(IBAction)optionClicked:(id)sender;
+
 -(void)countDown;
 -(void)modeSelected;
 -(void)setClock;

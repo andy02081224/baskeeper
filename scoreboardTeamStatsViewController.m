@@ -10,13 +10,17 @@
 
 
 @implementation scoreboardTeamStatsViewController
+@synthesize statsModeControl;
+@synthesize scrollView;
 
+@synthesize labelPoints, labelFG, labelFGPercent, label3P, label3PPercent, labelFT, labelFTPercent, labelOffReb, labelTotalReb, labelAssists, labelFouls, labelSteals, labelTurnouvers, labelBlocks;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+
 
     }
     return self;
@@ -36,6 +40,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.scrollView.contentSize=CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height*1.55);
 
 }
 
@@ -49,7 +54,22 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if(interfaceOrientation==UIInterfaceOrientationLandscapeLeft){
+        return YES;
+    }
+    else if(interfaceOrientation==UIInterfaceOrientationLandscapeRight){
+        return YES;
+    }
+    else{
+        return NO;
+    }
+}
+
+-(IBAction)changeStatsMode:(id)sender{
+    if(statsModeControl.selectedSegmentIndex==0){
+        scoreboardPlayerStatsViewController *modalViewController=[[scoreboardPlayerStatsViewController alloc]initWithNibName:@"scoreboardPlayerStatsViewController" bundle:nil];
+        [self presentModalViewController:modalViewController animated:NO];
+    }
 }
 
 @end

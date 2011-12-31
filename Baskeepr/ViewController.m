@@ -104,7 +104,8 @@
 
 -(IBAction)scoreboardButtonClicked:(id)sender{
     
-    scoreboardMainPageViewController *modalViewController=[[scoreboardMainPageViewController alloc]initWithNibName:@"scoreboardMainPageViewController" bundle:nil];
+
+    scoreboardModeChoiceViewController *modalViewController=[[scoreboardModeChoiceViewController alloc]initWithNibName:@"scoreboardModeChoiceViewController" bundle:nil];
     [modalViewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
     [self presentModalViewController:modalViewController animated:YES];
 }
