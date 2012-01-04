@@ -1,28 +1,20 @@
 //
-//  teamMainPageViewController.m
+//  teamPlayerPageViewController.m
 //  Baskeepr
 //
-//  Created by andy on 11/12/18.
-//  Copyright (c) 2011年 __MyCompanyName__. All rights reserved.
+//  Created by andy on 12/1/4.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "teamMainPageViewController.h"
-#import "teamAddTeamViewController.h"
+#import "teamPlayerPageViewController.h"
 
-@implementation teamMainPageViewController
-@synthesize dataSource;
-@synthesize sectionTitleKey;
-@synthesize teams;
-
+@implementation teamPlayerPageViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        sectionTitleKey=@"sectionTitleKey";
-        self.title=@"Team";
-        [self loadTeams];
     }
     return self;
 }
@@ -40,16 +32,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-self.title=@"Team";
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    //self.dataSource=[[NSMutableArray alloc]initWithObjects:[NSDictionary dictionaryWithObjectsAndKeys:@"Baskeeper", sectionTitleKey,nil],nil];
-      self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(backButtonClicked:)];      
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonClicked:)];
 }
 
 - (void)viewDidUnload
@@ -82,40 +70,23 @@ self.title=@"Team";
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        if(interfaceOrientation==UIInterfaceOrientationLandscapeLeft){
-            return YES;
-        }
-        else if(interfaceOrientation==UIInterfaceOrientationLandscapeRight){
-            return YES;
-        }
-        else{
-            return NO;
-        }
-    } else {
-        return NO;
-    }
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-//#warning Potentially incomplete method implementation.
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return [self.teams count];
-}
-
--(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    Team *team=[self.teams objectAtIndex:section];
-    return team.name;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//#warning Incomplete method implementation.
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 3;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,57 +99,8 @@ self.title=@"Team";
     }
     
     // Configure the cell...
-    //Team *team = [self.teams objectAtIndex:indexPath.section];
-    switch (indexPath.row) {
-        case 0:
-            cell.textLabel.text=@"Introduction";
-            break;
-        case 1:
-            cell.textLabel.text=@"Players";
-            break;
-            case 2:
-            cell.textLabel.text=@"Games";
-            break;
-        default:
-            break;
-    }
-
-    
-    
     
     return cell;
-}
-
--(NSString*)teamFilePath{
-    NSArray *dirs=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString* docPath=[dirs objectAtIndex:0];
-    return [docPath stringByAppendingPathComponent:@"team.archiveObject"];
-}
-
--(void)loadTeams{
-//Delete File
-    //    NSFileManager *manager=[NSFileManager defaultManager];
-//    [manager removeItemAtPath:[self teamFilePath] error:NULL];
-    
-    
-    NSArray *Teams=[NSKeyedUnarchiver unarchiveObjectWithFile:[self teamFilePath]];
-    if(Teams){
-        self.teams=[Teams mutableCopy]; 
-    }
-    else{
-        self.teams=[NSMutableArray array];
-    }
-}
-
--(void)saveTeams{
-    [NSKeyedArchiver archiveRootObject:self.teams toFile:[self teamFilePath]];
-}
-
--(void)newTeamAdded:(Team *)team{
-    [self.teams addObject:team];
-    [self saveTeams];
-    [self.tableView reloadData];
-    [self dismissModalViewControllerAnimated:YES];
 }
 
 /*
@@ -233,14 +155,4 @@ self.title=@"Team";
      */
 }
 
--(void)addButtonClicked:(id)sender{
-    teamAddTeamViewController *addTeamViewController=[[teamAddTeamViewController alloc]initWithNibName:@"teamAddTeamViewController" bundle:nil];
-    UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:addTeamViewController];
-    addTeamViewController.delegate=self;
-    [self presentModalViewController:navController animated:YES];
-}
-
--(void)backButtonClicked:(id)sender{
-    [self dismissModalViewControllerAnimated:YES];
-}
 @end

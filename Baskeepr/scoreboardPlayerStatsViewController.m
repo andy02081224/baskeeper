@@ -12,7 +12,12 @@
 @implementation scoreboardPlayerStatsViewController
 @synthesize statsModeControl;
 @synthesize statsTable;
-
+@synthesize PGStats;
+@synthesize SGStats;
+@synthesize SFStats;
+@synthesize PFStats;
+@synthesize CenterStats;
+@synthesize test;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,7 +74,8 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 17;
+    //return 17;
+    return [PGStats count]+[SGStats count]+1;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -104,10 +110,134 @@
     cell.cell11.text=@"PT";
     }
     else{
-        cell.cell1.text = @"88";
-        cell.cell2.text = @"23";
-        cell.cell3.text = @"11/21";
+//        playerStats *stats=[self.PGStats objectAtIndex:indexPath.row-1];
+//        cell.cell1.text = stats.statsNumber;
+//        cell.cell2.text = [NSString stringWithFormat:@"%@/%@",stats.statsFGM,stats.statsFGA];
+//        cell.cell3.text = [NSString stringWithFormat:@"%@/%@",stats.stats3PM,stats.stats3PA];
+//        cell.cell4.text = [NSString stringWithFormat:@"%@/%@",stats.statsFTM,stats.statsFTA];
+//        cell.cell5.text = [NSString stringWithFormat:@"%@/%@",stats.statsOffReb,stats.statsOffReb];
+//        cell.cell6.text=stats.statsAST;
+//        cell.cell7.text=stats.statsPF;
+//        cell.cell8.text=stats.statsST;
+//        cell.cell9.text=stats.statsTO;
+//        cell.cell10.text=stats.statsBS;
+        
+        
+        while (YES) {
+            
+        /*point為指標，因為是以5的餘數來派斷依序顯示，
+            所以當該位置沒有要顯示的時候需加一來正常運作
+         round是循環，五個位置為一個循環
+         */
+        int i=(point+indexPath.row-1)%5;
+        if(i==0){
+            if(round<[self.PGStats count]){
+                playerStats *pgStats=[self.PGStats objectAtIndex:round];
+                cell.cell1.text=pgStats.statsNumber;
+                cell.cell2.text = [NSString stringWithFormat:@"%@/%@",pgStats.statsFGM,pgStats.statsFGA];
+                cell.cell3.text = [NSString stringWithFormat:@"%@/%@",pgStats.stats3PM,pgStats.stats3PA];
+                cell.cell4.text = [NSString stringWithFormat:@"%@/%@",pgStats.statsFTM,pgStats.statsFTA];
+                cell.cell5.text = [NSString stringWithFormat:@"%@/%@",pgStats.statsOffReb,pgStats.statsOffReb];
+                cell.cell6.text=pgStats.statsAST;
+                cell.cell7.text=pgStats.statsPF;
+                cell.cell8.text=pgStats.statsST;
+                cell.cell9.text=pgStats.statsTO;
+                cell.cell10.text=pgStats.statsBS;
+                
+                break;
+            }
+            else{
+                point++;
+                i++;
+            }
+        }
+        if (i==1){
+            if(round<[self.SGStats count]){
+                playerStats *sgStats=[self.SGStats objectAtIndex:round];
+                cell.cell1.text=sgStats.statsNumber;
+                cell.cell2.text = [NSString stringWithFormat:@"%@/%@",sgStats.statsFGM,sgStats.statsFGA];
+                cell.cell3.text = [NSString stringWithFormat:@"%@/%@",sgStats.stats3PM,sgStats.stats3PA];
+                cell.cell4.text = [NSString stringWithFormat:@"%@/%@",sgStats.statsFTM,sgStats.statsFTA];
+                cell.cell5.text = [NSString stringWithFormat:@"%@/%@",sgStats.statsOffReb,sgStats.statsOffReb];
+                cell.cell6.text=sgStats.statsAST;
+                cell.cell7.text=sgStats.statsPF;
+                cell.cell8.text=sgStats.statsST;
+                cell.cell9.text=sgStats.statsTO;
+                cell.cell10.text=sgStats.statsBS;
+                break;
+            }
+            else{
+                point++;
+                i++;
+            }
+        }
+        if(i==2){
+            if(round<[self.SFStats count]){
+                playerStats *sfStats=[self.SFStats objectAtIndex:round];
+                cell.cell1.text=sfStats.statsNumber;
+                cell.cell2.text = [NSString stringWithFormat:@"%@/%@",sfStats.statsFGM,sfStats.statsFGA];
+                cell.cell3.text = [NSString stringWithFormat:@"%@/%@",sfStats.stats3PM,sfStats.stats3PA];
+                cell.cell4.text = [NSString stringWithFormat:@"%@/%@",sfStats.statsFTM,sfStats.statsFTA];
+                cell.cell5.text = [NSString stringWithFormat:@"%@/%@",sfStats.statsOffReb,sfStats.statsOffReb];
+                cell.cell6.text=sfStats.statsAST;
+                cell.cell7.text=sfStats.statsPF;
+                cell.cell8.text=sfStats.statsST;
+                cell.cell9.text=sfStats.statsTO;
+                cell.cell10.text=sfStats.statsBS;
+                break;
+            }
+            else{
+                point++;
+                i++;
+            }
+        }
+        if(i==3){
+            if(round<[self.PFStats count]){
+                playerStats *pfStats=[self.PFStats objectAtIndex:round];
+                cell.cell1.text=pfStats.statsNumber;
+                cell.cell2.text = [NSString stringWithFormat:@"%@/%@",pfStats.statsFGM,pfStats.statsFGA];
+                cell.cell3.text = [NSString stringWithFormat:@"%@/%@",pfStats.stats3PM,pfStats.stats3PA];
+                cell.cell4.text = [NSString stringWithFormat:@"%@/%@",pfStats.statsFTM,pfStats.statsFTA];
+                cell.cell5.text = [NSString stringWithFormat:@"%@/%@",pfStats.statsOffReb,pfStats.statsOffReb];
+                cell.cell6.text=pfStats.statsAST;
+                cell.cell7.text=pfStats.statsPF;
+                cell.cell8.text=pfStats.statsST;
+                cell.cell9.text=pfStats.statsTO;
+                cell.cell10.text=pfStats.statsBS;
+                break;
+            }
+            else{
+                point++;
+                i++;
+            }
+        }
+        if(i==4){
+            if(round<[self.CenterStats count]){
+                playerStats *centerStats=[self.CenterStats objectAtIndex:round];
+                cell.cell1.text=centerStats.statsNumber;
+                cell.cell2.text = [NSString stringWithFormat:@"%@/%@",centerStats.statsFGM,centerStats.statsFGA];
+                cell.cell3.text = [NSString stringWithFormat:@"%@/%@",centerStats.stats3PM,centerStats.stats3PA];
+                cell.cell4.text = [NSString stringWithFormat:@"%@/%@",centerStats.statsFTM,centerStats.statsFTA];
+                cell.cell5.text = [NSString stringWithFormat:@"%@/%@",centerStats.statsOffReb,centerStats.statsOffReb];
+                cell.cell6.text=centerStats.statsAST;
+                cell.cell7.text=centerStats.statsPF;
+                cell.cell8.text=centerStats.statsST;
+                cell.cell9.text=centerStats.statsTO;
+                cell.cell10.text=centerStats.statsBS;
+                break;
+            }
+            else{
+                point++;
+                i++;
+            }
+            round++;
+        }
+        
+        
     }
+
+    }
+    
 	
     return cell;
 }
@@ -124,11 +254,19 @@
 -(IBAction)changeStatsMode:(id)sender{
     if(statsModeControl.selectedSegmentIndex==1){
         scoreboardTeamStatsViewController *modalViewController=[[scoreboardTeamStatsViewController alloc]initWithNibName:@"scoreboardTeamStatsViewController" bundle:nil];
+        
         [self presentModalViewController:modalViewController animated:NO];
     }
 }
 
--(void)drawRect:(CGRect)rect{
+-(IBAction)backButtonClicked:(id)sender{
+    [self dismissModalViewControllerAnimated:YES];
+    //int i=[self.PGStats count];
+    //self.test.text=[NSString stringWithFormat:@"%d",i];
+    
+}
+
+-(void)setPlayerStats:(playerStats*)playerStats{
     
 }
 

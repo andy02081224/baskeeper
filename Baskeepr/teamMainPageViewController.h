@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "teamAddTeamViewController.h"
+#import "Team.h"
 
-@interface teamMainPageViewController : UITableViewController
+@interface teamMainPageViewController : UITableViewController<addTeamDelegate>
 
 @property(strong, nonatomic)NSMutableArray *dataSource;
 @property(strong, nonatomic)NSString *sectionTitleKey;
+@property(strong, nonatomic)NSMutableArray *teams;
 
+-(void)newTeamAdded:(Team*)team;
+-(void)loadTeams;
+-(void)saveTeams;
+-(NSString*)teamFilePath;
 
 @end

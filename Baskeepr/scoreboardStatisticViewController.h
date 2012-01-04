@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "playerStats.h"
 #import "scoreboardStatisticOptionViewController.h"
 #import "scoreboardPlayerStatsViewController.h"
 #import "scoreboardTeamStatsViewController.h"
 
+@protocol statsViewControllerDelegate <NSObject>
 
+-(void)setPlayerStats:(playerStats*)playerStats;
+
+@end
 
 
 @interface scoreboardStatisticViewController : UIViewController<statisticOptionDelegate,UIAccelerometerDelegate>{
@@ -25,6 +30,7 @@
 
 }
 
+@property(strong, nonatomic)id<statsViewControllerDelegate>delegate;
 @property(strong, nonatomic)IBOutlet UIScrollView *scrollView;
 @property(strong, nonatomic)IBOutlet UILabel *labelPG;
 @property(strong, nonatomic)IBOutlet UILabel *labelSG;
@@ -119,8 +125,21 @@
 
 @property(strong, nonatomic)IBOutlet UIStepper *periodControl;
 @property(strong, nonatomic)NSTimer *countDownTimer;
+//@property(strong,nonatomic)NSMutableArray *playerStats;
 
-@property(strong, nonatomic)scoreboardTeamStatsViewController *teamStatsViewController;
+@property(strong,nonatomic)NSMutableArray *PGStats;
+@property(strong,nonatomic)NSMutableArray *SGStats;
+@property(strong,nonatomic)NSMutableArray *SFStats;
+@property(strong,nonatomic)NSMutableArray *PFStats;
+@property(strong,nonatomic)NSMutableArray *CenterStats;
+
+
+//@property(strong, nonatomic)scoreboardTeamStatsViewController *teamStatsViewController;
+
+
+-(NSString*)statsFilePath;
+-(void)loadStats;
+-(void)saveStats;
 
 
 -(IBAction)optionButtonClicked:(id)sender;
@@ -137,6 +156,24 @@
 
 -(IBAction)changePGStats:(id)sender;
 -(IBAction)changeSGStats:(id)sender;
+
+-(void)updatePGStats;
+-(void)updateSGStats;
+-(void)updateSFStats;
+-(void)updatePFStats;
+-(void)updateCenterStats;
+
+-(void)addPGStats;
+-(void)addSGStats;
+-(void)addSFStats;
+-(void)addPFStats;
+-(void)addCenterStats;
+
+-(void)loadPGStats;
+-(void)loadSGStats;
+-(void)loadSFStats;
+-(void)loadPFStats;
+-(void)loadCenterStats;
 
 -(void)setPositionNumbers:(NSArray*)position;
 -(void)setClock;
