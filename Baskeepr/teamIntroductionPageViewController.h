@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Team.h"
 @interface teamIntroductionPageViewController : UITableViewController
 
+
+@property(strong, nonatomic)Team *teams;
 @end

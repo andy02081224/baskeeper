@@ -85,7 +85,8 @@
 }
 
 -(IBAction)homeButtonClicked:(id)sender{
-    [self dismissModalViewControllerAnimated:YES];
+    ViewController *modalViewController=[[ViewController alloc]initWithNibName:@"ViewController_iPhone" bundle:nil];
+    [self presentModalViewController:modalViewController animated:YES];
 }
 
 @end

@@ -9,12 +9,13 @@
 #import "teamIntroductionPageViewController.h"
 
 @implementation teamIntroductionPageViewController
-
+@synthesize teams;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -38,6 +39,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.title=@"Introduction";
 }
 
 - (void)viewDidUnload
@@ -70,7 +72,15 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if(interfaceOrientation==UIInterfaceOrientationLandscapeLeft){
+        return YES;
+    }
+    else if(interfaceOrientation==UIInterfaceOrientationLandscapeRight){
+        return YES;
+    }
+    else{
+        return NO;
+    }
 }
 
 #pragma mark - Table view data source
@@ -79,14 +89,14 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,6 +109,22 @@
     }
     
     // Configure the cell...
+    switch (indexPath.row) {
+        case 0:
+            cell.textLabel.text=[NSString stringWithFormat:@"Name: %@",self.teams.name];
+            break;
+         case 1:
+            cell.textLabel.text=[NSString stringWithFormat:@"Location: %@",self.teams.location];
+            break;
+        case 2:
+            cell.textLabel.text=[NSString stringWithFormat:@"Coach: %@",self.teams.coach];
+            break;
+        case 3:
+            cell.textLabel.text=[NSString stringWithFormat:@"Captain: %@",self.teams.captain];
+            break;
+        default:
+            break;
+    }
     
     return cell;
 }

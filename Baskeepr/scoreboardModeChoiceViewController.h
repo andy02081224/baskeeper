@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "scoreboardMainPageViewController.h"
 #import "scoreboardStatisticViewController.h"
+#import "ViewController.h"
 
 @interface scoreboardModeChoiceViewController : UIViewController
 

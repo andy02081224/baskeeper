@@ -36,8 +36,7 @@
 
 @synthesize scrollView;
 @synthesize countDownClock;
-@synthesize statisticViewController;
-@synthesize teamStatsViewController;
+
 
 
 

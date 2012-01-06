@@ -15,6 +15,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -32,7 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.title=@"Games";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -70,7 +71,15 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if(interfaceOrientation==UIInterfaceOrientationLandscapeLeft){
+        return YES;
+    }
+    else if(interfaceOrientation==UIInterfaceOrientationLandscapeRight){
+        return YES;
+    }
+    else{
+        return NO;
+    }
 }
 
 #pragma mark - Table view data source

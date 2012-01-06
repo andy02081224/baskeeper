@@ -11,6 +11,7 @@
 #import "scoreboardStatisticOptionViewController.h"
 #import "scoreboardPlayerStatsViewController.h"
 #import "scoreboardTeamStatsViewController.h"
+#import "scoreboardModeChoiceViewController.h"
 
 @protocol statsViewControllerDelegate <NSObject>
 
@@ -137,7 +138,13 @@
 //@property(strong, nonatomic)scoreboardTeamStatsViewController *teamStatsViewController;
 
 
--(NSString*)statsFilePath;
+-(NSString*)PGFilePath;
+-(NSString*)SGFilePath;
+-(NSString*)SFFilePath;
+-(NSString*)PFFilePath;
+-(NSString*)CenterFilePath;
+
+
 -(void)loadStats;
 -(void)saveStats;
 
@@ -150,13 +157,17 @@
 -(IBAction)changeSFNumbers:(id)sender;
 -(IBAction)changePFNumbers:(id)sender;
 -(IBAction)changeCenterNumbers:(id)sender;
+
 -(IBAction)countDownClockClicked:(id)sender;
 -(IBAction)changePeriod:(id)sender;
 -(IBAction)nextPage:(id)sender;
 
 -(IBAction)changePGStats:(id)sender;
 -(IBAction)changeSGStats:(id)sender;
-
+-(IBAction)changeSFStats:(id)sender;
+-(IBAction)changePFStats:(id)sender;
+-(IBAction)changeCenterStats:(id)sender;
+-(IBAction)deleteAllNumbers:(id)sender;
 -(void)updatePGStats;
 -(void)updateSGStats;
 -(void)updateSFStats;
@@ -174,6 +185,7 @@
 -(void)loadSFStats;
 -(void)loadPFStats;
 -(void)loadCenterStats;
+
 
 -(void)setPositionNumbers:(NSArray*)position;
 -(void)setClock;

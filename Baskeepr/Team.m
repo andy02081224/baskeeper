@@ -14,6 +14,7 @@
 @synthesize coach;
 @synthesize captain;
 @synthesize introduction;
+@synthesize player;
 
 -(void)encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeObject:self.name forKey:@"name"];
@@ -21,6 +22,7 @@
     [aCoder encodeObject:self.coach forKey:@"coach"];
     [aCoder encodeObject:self.captain forKey:@"captain"];
     [aCoder encodeObject:self.introduction forKey:@"introduction"];
+    [aCoder encodeObject:self.player forKey:@"player"];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder{
@@ -30,6 +32,7 @@
         self.coach=[aDecoder decodeObjectForKey:@"coach"];
         self.captain=[aDecoder decodeObjectForKey:@"caption"];
         self.introduction=[aDecoder decodeObjectForKey:@"introduction"];
+        self.player=[aDecoder decodeObjectForKey:@"player"];
     }
     return self;
 }

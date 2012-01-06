@@ -14,4 +14,5 @@
 @property(strong, nonatomic)NSString* coach;
 @property(strong, nonatomic)NSString *captain;
 @property(strong, nonatomic)NSString *introduction;
+@property(strong, nonatomic)NSMutableArray *player;
 @end

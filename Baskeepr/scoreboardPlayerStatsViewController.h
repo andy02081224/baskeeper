@@ -15,6 +15,11 @@
 @interface scoreboardPlayerStatsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     int point;
     int round;
+    int indexPG;
+    int indexSG;
+    int indexSF;
+    int indexPF;
+    int indexCenter;
 }
 
 
@@ -36,6 +41,8 @@
 -(void)setPlayerStats:(playerStats*)playerStats;
 
 -(IBAction)backButtonClicked:(id)sender;
+
+
 
 
 

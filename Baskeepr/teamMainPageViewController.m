@@ -15,6 +15,7 @@
 @synthesize teams;
 
 
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -224,13 +225,20 @@ self.title=@"Team";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if(indexPath.row==0){
+        teamIntroductionPageViewController *introductionPageViewController=[[teamIntroductionPageViewController alloc]initWithNibName:@"teamIntroductionPageViewController" bundle:nil];
+        introductionPageViewController.teams=[self.teams objectAtIndex:indexPath.section];
+        [self.navigationController pushViewController:introductionPageViewController animated:YES];
+    }
+    if (indexPath.row==1) {
+        teamPlayerPageViewController *playerPageViewController=[[teamPlayerPageViewController alloc]initWithNibName:@"teamPlayerPageViewController" bundle:nil];
+        [self.navigationController pushViewController:playerPageViewController animated:YES];
+    }
+    if(indexPath.row==2){
+        teamGamePageVIewController *gamePageViewController=[[teamGamePageVIewController alloc]initWithNibName:@"teamGamePageVIewController" bundle:nil];
+        [self.navigationController pushViewController:gamePageViewController animated:YES]; 
+    }
+    
 }
 
 -(void)addButtonClicked:(id)sender{

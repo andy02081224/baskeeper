@@ -40,57 +40,68 @@
             // Add labels for the three cells
             cell1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, cell1Width, cellHeight)];
             cell1.textAlignment = UITextAlignmentCenter;
+            cell1.textColor=[UIColor whiteColor];
             cell1.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
             [self addSubview:cell1];
             
             cell2 = [[UILabel alloc] initWithFrame:CGRectMake(cell1Width, 0, cell2Width, cellHeight)];
             cell2.textAlignment = UITextAlignmentCenter;
+            cell2.textColor=[UIColor whiteColor];       
             cell2.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
             [self addSubview:cell2];
         
             cell3 = [[UILabel alloc] initWithFrame:CGRectMake(cell1Width+ cell2Width, 0, cell3Width, cellHeight)];
-                cell3.textAlignment = UITextAlignmentCenter;
+            cell3.textAlignment = UITextAlignmentCenter;
+            cell3.textColor=[UIColor whiteColor];
             cell3.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
             [self addSubview:cell3];
         
             cell4 = [[UILabel alloc] initWithFrame:CGRectMake(cell1Width+ cell2Width+cell3Width, 0, cell4Width, cellHeight)];
             cell4.textAlignment = UITextAlignmentCenter;
+            cell4.textColor=[UIColor whiteColor];
             cell4.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
             [self addSubview:cell4];
             
             cell5 = [[UILabel alloc] initWithFrame:CGRectMake(cell1Width+ cell2Width+cell3Width+cell4Width, 0, cell5Width, cellHeight)];
             cell5.textAlignment = UITextAlignmentCenter;
+            cell5.textColor=[UIColor whiteColor];
             cell5.numberOfLines=2;
             cell5.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
             [self addSubview:cell5];
         
             cell6 = [[UILabel alloc] initWithFrame:CGRectMake(cell1Width+ cell2Width+cell3Width+cell4Width+cell5Width, 0, cell6Width, cellHeight)];
             cell6.textAlignment = UITextAlignmentCenter;
+            cell6.textColor=[UIColor whiteColor];
             cell6.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
             [self addSubview:cell6];
         
             cell7 = [[UILabel alloc] initWithFrame:CGRectMake(cell1Width+ cell2Width+cell3Width+cell4Width+cell5Width+cell6Width, 0, cell7Width, cellHeight)];
             cell7.textAlignment = UITextAlignmentCenter;
+            cell7.textColor=[UIColor whiteColor];
             cell7.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
             [self addSubview:cell7];
         
             cell8 = [[UILabel alloc] initWithFrame:CGRectMake(cell1Width+ cell2Width+cell3Width+cell4Width+cell5Width+cell6Width+cell7Width, 0, cell8Width, cellHeight)];
             cell8.textAlignment = UITextAlignmentCenter;
+            cell8.textColor=[UIColor whiteColor];
             cell8.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
             [self addSubview:cell8];
         
             cell9 = [[UILabel alloc] initWithFrame:CGRectMake(cell1Width+ cell2Width+cell3Width+cell4Width+cell5Width+cell6Width+cell7Width+cell8Width, 0, cell9Width, cellHeight)];
             cell9.textAlignment = UITextAlignmentCenter;
+            cell9.textColor=[UIColor whiteColor];
             cell9.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
             [self addSubview:cell9];
         
             cell10 = [[UILabel alloc] initWithFrame:CGRectMake(cell1Width+ cell2Width+cell3Width+cell4Width+cell5Width+cell6Width+cell7Width+cell8Width+cell9Width, 0, cell10Width, cellHeight)];
             cell10.textAlignment = UITextAlignmentCenter;
+            cell10.textColor=[UIColor whiteColor];
             cell10.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
             [self addSubview:cell10];
         
             cell11 = [[UILabel alloc] initWithFrame:CGRectMake(cell1Width+ cell2Width+cell3Width+cell4Width+cell5Width+cell6Width+cell7Width+cell8Width+cell9Width+cell10Width, 0, cell11Width, cellHeight)];
             cell11.textAlignment = UITextAlignmentCenter;
+            cell11.textColor=[UIColor whiteColor];
             cell11.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
             [self addSubview:cell11];
         
