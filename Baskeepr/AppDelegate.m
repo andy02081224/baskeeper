@@ -26,6 +26,9 @@
         self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
     }
     
+    [AddThisSDK setAddThisPubId:@"ra-4f08073b039467c9"];
+    [AddThisSDK setAddThisApplicationId:@"4f0807b47f52cb9c"];
+    
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];

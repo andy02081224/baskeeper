@@ -73,6 +73,7 @@
         NSString *n;
         n=[NSString stringWithFormat:@"%d",i];
         [numbers addObject:n];
+        self.numberChosen=@"0";
     }
     
 
@@ -166,21 +167,21 @@
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
 
     if([self.position.text isEqualToString:@"PG"]){
-        numberChosen=[NSString stringWithFormat:@"%d",row];
-        //self.labelPGChosen.text=numberChosen;
+        self.numberChosen=[NSString stringWithFormat:@"%d",row];
+
         
     }
     if([self.position.text isEqualToString:@"SG"]){
-              numberChosen=[NSString stringWithFormat:@"%d",row];
+              self.numberChosen=[NSString stringWithFormat:@"%d",row];
     }
     if([self.position.text isEqualToString:@"SF"]){
-             numberChosen=[NSString stringWithFormat:@"%d",row]; 
+             self.numberChosen=[NSString stringWithFormat:@"%d",row]; 
     }
     if([self.position.text isEqualToString:@"PF"]){
-              numberChosen=[NSString stringWithFormat:@"%d",row];
+              self.numberChosen=[NSString stringWithFormat:@"%d",row];
     }
     if([self.position.text isEqualToString:@"C"]){
-             numberChosen=[NSString stringWithFormat:@"%d",row]; 
+              self.numberChosen=[NSString stringWithFormat:@"%d",row]; 
     }
 }
 
@@ -191,12 +192,7 @@
 }
 
 -(IBAction)addButtonClicked:(id)sender{
-//    CATransition *transition=[CATransition animation];
-//    [transition setDelegate:self];
-//    [transition setDuration:0.5f];
-//    [transition setType:@"rippleEffect"];
-//    [[self.view layer]addAnimation:transition forKey:@"SomeAnim"];
-//    //[[self.labelPGChosen layer]addAnimation:transition forKey:@"test"];
+
     
     
     

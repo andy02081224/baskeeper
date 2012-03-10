@@ -7,14 +7,19 @@
 //
 
 #import "teamPlayerPageViewController.h"
+#import "teamPlayerInformationPageViewController.h"
 
 @implementation teamPlayerPageViewController
+@synthesize players;
+@synthesize delegate;
+@synthesize teams;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+
         
     }
     return self;
@@ -34,6 +39,8 @@
 {
     [super viewDidLoad];
     self.title=@"Players";
+    //players=[[NSMutableArray alloc]init];
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonClicked:)];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -47,6 +54,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -89,14 +97,14 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.players count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -109,8 +117,34 @@
     }
     
     // Configure the cell...
+    //self.players=teams.players;
+    Player *player=[self.players objectAtIndex:indexPath.row];
+    cell.textLabel.text=player.number;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    teamPlayerInformationPageViewController *playerInformationViewController=[[teamPlayerInformationPageViewController alloc]initWithNibName:@"teamPlayerInformationPageViewController" bundle:nil];
+    playerInformationViewController.players=[self.players objectAtIndex:indexPath.section];
+    [self.navigationController pushViewController:playerInformationViewController animated:YES];
+    
+}
+
+
+
+-(void)addButtonClicked:(id)sender{
+    teamAddPlayerViewController *addPlayerViewController=[[teamAddPlayerViewController alloc]initWithNibName:@"teamAddPlayerViewController" bundle:nil];
+    addPlayerViewController.delegate=self;
+    UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:addPlayerViewController];
+    [self presentModalViewController:navController animated:YES];
+}
+
+-(void)newPlayerAdded:(Player *)player{
+    [self.players addObject:player];
+    [self.tableView reloadData];
+    [delegate newPlayerAddedToTeam];
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 /*
@@ -154,15 +188,6 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
+
 
 @end

@@ -12,6 +12,7 @@
 
 @property(strong, nonatomic)NSString *name;
 @property(strong, nonatomic)NSString *number;
+@property(strong, nonatomic)NSString *position;
 @property(strong, nonatomic)NSString *height;
 @property(strong, nonatomic)NSString *weight;
 

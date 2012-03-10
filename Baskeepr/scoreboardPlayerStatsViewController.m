@@ -8,9 +8,12 @@
 
 #import "scoreboardPlayerStatsViewController.h"
 #import "statsTableViewCell.h"
+#import "AddThis.h"
 
 @implementation scoreboardPlayerStatsViewController
 @synthesize statsModeControl;
+@synthesize gameMode;
+@synthesize teamName;
 @synthesize statsTable;
 @synthesize PGStats;
 @synthesize SGStats;
@@ -19,12 +22,16 @@
 @synthesize CenterStats;
 @synthesize test;
 
+@synthesize myView;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [self.statsModeControl setSelectedSegmentIndex:0];        
+
+ 
+                
 
     }
     return self;
@@ -44,16 +51,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [AddThisSDK setFacebookAuthenticationMode:ATFacebookAuthenticationTypeFBConnect];
+    [AddThisSDK setFacebookAPIKey:@"155431987899543"];
+    [AddThisSDK setFavoriteMenuServices:@"facebook",nil];
+
     self.statsTable.separatorColor=[UIColor whiteColor];//分隔線顏色
-    self.statsModeControl.selectedSegmentIndex=0;
+
     
-    
+
+
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    [self.statsModeControl setSelectedSegmentIndex:0];
+    //[self.statsModeControl setSelectedSegmentIndex:0];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -143,6 +155,7 @@
                 cell.cell8.text=pgStats.statsST;
                 cell.cell9.text=pgStats.statsTO;
                 cell.cell10.text=pgStats.statsBS;
+                cell.cell11.text=[NSString stringWithFormat:@"%d",[self calculatePlayerScoreWith:pgStats.statsFGM And:pgStats.stats3PM And:pgStats.statsFTM]];
                 indexPG++;
                 break;
             }
@@ -164,6 +177,7 @@
                 cell.cell8.text=sgStats.statsST;
                 cell.cell9.text=sgStats.statsTO;
                 cell.cell10.text=sgStats.statsBS;
+                cell.cell11.text=[NSString stringWithFormat:@"%d",[self calculatePlayerScoreWith:sgStats.statsFGM And:sgStats.stats3PM And:sgStats.statsFTM]];
                 indexSG++;
                 break;
             }
@@ -185,6 +199,7 @@
                 cell.cell8.text=sfStats.statsST;
                 cell.cell9.text=sfStats.statsTO;
                 cell.cell10.text=sfStats.statsBS;
+                cell.cell11.text=[NSString stringWithFormat:@"%d",[self calculatePlayerScoreWith:sfStats.statsFGM And:sfStats.stats3PM And:sfStats.statsFTM]];
                 indexSF++;
                 break;
             }
@@ -206,6 +221,7 @@
                 cell.cell8.text=pfStats.statsST;
                 cell.cell9.text=pfStats.statsTO;
                 cell.cell10.text=pfStats.statsBS;
+                cell.cell11.text=[NSString stringWithFormat:@"%d",[self calculatePlayerScoreWith:pfStats.statsFGM And:pfStats.stats3PM And:pfStats.statsFTM]];
                 indexPF++;
                 break;
             }
@@ -228,6 +244,7 @@
                 cell.cell8.text=centerStats.statsST;
                 cell.cell9.text=centerStats.statsTO;
                 cell.cell10.text=centerStats.statsBS;
+                cell.cell11.text=[NSString stringWithFormat:@"%d",[self calculatePlayerScoreWith:centerStats.statsFGM And:centerStats.stats3PM And:centerStats.statsFTM]];
                 round++;
                 break;
             }
@@ -238,8 +255,6 @@
             }
             
         }
-        
-        
     }
 
     }
@@ -252,14 +267,24 @@
     
 }
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-
+-(int)calculatePlayerScoreWith:(NSString *)FGM And:(NSString *)_3PM And:(NSString *)FTM{
+    int points;
+    
+    int FieldGoal=[FGM intValue];
+    int ThreePointer=[_3PM intValue];
+    int FreeThrow=[FTM intValue];
+    
+    points=FieldGoal*2+ThreePointer+FreeThrow;
+    
+    return points;
 }
 
 
 -(IBAction)changeStatsMode:(id)sender{
-    if(self.statsModeControl.selectedSegmentIndex==2){
+    if(self.statsModeControl.selectedSegmentIndex==3){
         scoreboardTeamStatsViewController *modalViewController=[[scoreboardTeamStatsViewController alloc]initWithNibName:@"scoreboardTeamStatsViewController" bundle:nil];
+        modalViewController.gameMode=self.gameMode;
+        modalViewController.teamName=self.teamName;
         modalViewController.PGStats=self.PGStats;
         modalViewController.SGStats=self.SGStats;
         modalViewController.SFStats=self.SFStats;
@@ -275,13 +300,42 @@
         scoreboardStatisticViewController *modalViewController=[[scoreboardStatisticViewController alloc]initWithNibName:@"scoreboardStatisticViewController" bundle:nil];
         [self presentModalViewController:modalViewController animated:YES];
     }
+    
+}
+
+-(IBAction)shareButtonClicked:(id)sender{
+    if(self.statsModeControl.selectedSegmentIndex==2){
+    UIImage* image = nil;
+    
+    UIGraphicsBeginImageContext(self.statsTable.contentSize);
+    {   //截圖
+        CGPoint savedContentOffset = self.statsTable.contentOffset;
+        CGRect savedFrame = self.statsTable.frame;
+        
+        self.statsTable.contentOffset = CGPointZero;
+        self.statsTable.frame = CGRectMake(0, 0, self.statsTable.contentSize.width,self.statsTable.contentSize.height);
+        
+        [self.statsTable.layer renderInContext: UIGraphicsGetCurrentContext()];     
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        self.statsTable.contentOffset = savedContentOffset;
+        self.statsTable.frame = savedFrame;
+    }
+    UIGraphicsEndImageContext();
+        //Using AddThis SDK
+        [AddThisSDK shareImage:image
+                    withService:@"facebook"
+                    title:@"www.baskeeper.com"   
+                    description:@""];
+    
+
+    
+    }
 
     
 }
 
--(void)setPlayerStats:(playerStats*)playerStats{
-    
-}
+
 
 
 

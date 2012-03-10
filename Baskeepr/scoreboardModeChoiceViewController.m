@@ -63,9 +63,9 @@
     if(interfaceOrientation==UIInterfaceOrientationLandscapeLeft){
         return YES;
     }
-    else if(interfaceOrientation==UIInterfaceOrientationLandscapeRight){
-        return YES;
-    }
+//    else if(interfaceOrientation==UIInterfaceOrientationLandscapeRight){
+//        return YES;
+//    }
     else{
         return NO;
     }
@@ -86,6 +86,7 @@
 
 -(IBAction)homeButtonClicked:(id)sender{
     ViewController *modalViewController=[[ViewController alloc]initWithNibName:@"ViewController_iPhone" bundle:nil];
+    [modalViewController setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
     [self presentModalViewController:modalViewController animated:YES];
 }
 

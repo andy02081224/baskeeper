@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "teamAddPlayerViewController.h"
+#import "Team.h"
 
-@interface teamPlayerPageViewController : UITableViewController
+@protocol playerPageDelegate <NSObject>
 
+-(void)newPlayerAddedToTeam;
+
+@end
+
+@interface teamPlayerPageViewController : UITableViewController<addPlayerDelegate>
+
+@property(strong, nonatomic)id<playerPageDelegate>delegate;
+@property(strong, nonatomic)NSMutableArray *players;
+
+@property(strong, nonatomic)Team *teams;
+-(void)newPlayerAdded:(Player *)player;
 @end

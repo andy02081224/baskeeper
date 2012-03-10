@@ -7,16 +7,18 @@
 //
 
 #import "scoreboardStatisticViewController.h"
-#import "scoreboardStatisticOptionViewController.h"
-#import "scoreboardOptionPageViewController.h"
-#import "playerStats.h"
-#import <QuartzCore/QuartzCore.h>
+//#import "scoreboardStatisticOptionViewController.h"
+//#import "scoreboardOptionPageViewController.h"
+//#import "playerStats.h"
+//#import <QuartzCore/QuartzCore.h>
 
 
 @implementation scoreboardStatisticViewController
 
 @synthesize delegate;
 @synthesize scrollView;
+@synthesize gameMode;
+@synthesize teamName;
 @synthesize labelPG;
 @synthesize labelSG;
 @synthesize labelSF;
@@ -29,7 +31,7 @@
 @synthesize countDownTimer;
 @synthesize periodControl;
 
-
+@synthesize positionFromTeam;
 @synthesize PG;
 @synthesize SG;
 @synthesize SF;
@@ -133,13 +135,10 @@
         self.labelSF.text=@"SF";
         self.labelPF.text=@"PF";
         self.labelCenter.text=@"C";
-        
+        self.gameMode=@"scoreboard";
+        self.teamName=@"Team";
         time=600;
-        //[self loadStats];
- 
-        
-        //self.playerStatsViewController=[[scoreboardPlayerStatsViewController alloc]init];
-        //playerStatsViewController.playerStats=self.playerStats;
+
         
 
 
@@ -167,6 +166,10 @@
     accelerometer.delegate=self;
     accelerometer.updateInterval=1.0f/60.f;
           [self loadStats];
+    [self setPositionNumbersFromTeam];
+    
+
+    
 }
 
 - (void)viewDidUnload
@@ -174,6 +177,10 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [self saveStats];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -332,6 +339,15 @@
                 [[self.view layer]addAnimation:transition forKey:@"test"];
             
             scoreboardPlayerStatsViewController *modalViewController=[[scoreboardPlayerStatsViewController alloc]initWithNibName:@"scoreboardPlayerStatsViewController" bundle:nil];
+            [self saveStats];
+            //Share Object
+            modalViewController.gameMode=self.gameMode;
+            modalViewController.teamName=self.teamName;
+            modalViewController.PGStats=self.PGStats;
+            modalViewController.SGStats=self.SGStats;
+            modalViewController.SFStats=self.SFStats;
+            modalViewController.PFStats=self.PFStats;
+            modalViewController.CenterStats=self.CenterStats;
             [self presentModalViewController:modalViewController animated:YES];
             
             
@@ -345,6 +361,13 @@
     }
 }                
 
+-(void)setPositionNumbersFromTeam{
+    if([self.positionFromTeam count]>0){
+        [self deleteAllNumbers:nil];
+        [self setPositionNumbers:self.positionFromTeam];
+        self.gameMode=@"team";
+    }
+}
 
 -(void)setPositionNumbers:(NSArray *)position{
     self.PG=[position objectAtIndex:0];
@@ -352,6 +375,8 @@
     self.SF=[position objectAtIndex:2];
     self.PF=[position objectAtIndex:3];
     self.Center=[position objectAtIndex:4];
+    
+
        
     if([self.PG count]>0){
         [self addPGStats];
@@ -1297,6 +1322,8 @@
 
     [self saveStats];
     //Share Object
+    modalViewController.gameMode=self.gameMode;
+    modalViewController.teamName=self.teamName;
     modalViewController.PGStats=self.PGStats;
     modalViewController.SGStats=self.SGStats;
     modalViewController.SFStats=self.SFStats;
@@ -1313,7 +1340,89 @@
     [self.SFStats removeAllObjects];
     [self.PFStats removeAllObjects];
     [self.CenterStats removeAllObjects];
+    
+    [self resetAllNumbers];
     [self saveStats];
+
+    
+}
+
+-(void)resetAllNumbers{
+    self.labelPG.text=@"";
+    self.labelSG.text=@"";
+    self.labelSF.text=@"";
+    self.labelPF.text=@"";
+    self.labelCenter.text=@"";
+    
+    self.pgFGA.text=@"0";
+    self.pgFGM.text=@"0";
+    self.pg3PA.text=@"0";
+    self.pg3PM.text=@"0";
+    self.pgFTA.text=@"0";
+    self.pgFTM.text=@"0";
+    self.pgDefReb.text=@"0";
+    self.pgOffReb.text=@"0";
+    self.pgAST.text=@"0";
+    self.pgPF.text=@"0";
+    self.pgST.text=@"0";
+    self.pgTO.text=@"0";
+    self.pgBS.text=@"0";
+    
+    self.sgFGA.text=@"0";
+    self.sgFGM.text=@"0";
+    self.sg3PA.text=@"0";
+    self.sg3PM.text=@"0";
+    self.sgFTA.text=@"0";
+    self.sgFTM.text=@"0";
+    self.sgDefReb.text=@"0";
+    self.sgOffReb.text=@"0";
+    self.sgAST.text=@"0";
+    self.sgPF.text=@"0";
+    self.sgST.text=@"0";
+    self.sgTO.text=@"0";
+    self.sgBS.text=@"0";
+    
+    self.sfFGA.text=@"0";
+    self.sfFGM.text=@"0";
+    self.sf3PA.text=@"0";
+    self.sf3PM.text=@"0";
+    self.sfFTA.text=@"0";
+    self.sfFTM.text=@"0";
+    self.sfDefReb.text=@"0";
+    self.sfOffReb.text=@"0";
+    self.sfAST.text=@"0";
+    self.sfPF.text=@"0";
+    self.sfST.text=@"0";
+    self.sfTO.text=@"0";
+    self.sfBS.text=@"0";
+    
+    self.pfFGA.text=@"0";
+    self.pfFGM.text=@"0";
+    self.pf3PA.text=@"0";
+    self.pf3PM.text=@"0";
+    self.pfFTA.text=@"0";
+    self.pfFTM.text=@"0";
+    self.pfDefReb.text=@"0";
+    self.pfOffReb.text=@"0";
+    self.pfAST.text=@"0";
+    self.pfPF.text=@"0";
+    self.pfST.text=@"0";
+    self.pfTO.text=@"0";
+    self.pfBS.text=@"0";
+    
+    self.centerFGA.text=@"0";
+    self.centerFGM.text=@"0";
+    self.center3PA.text=@"0";
+    self.center3PM.text=@"0";
+    self.centerFTA.text=@"0";
+    self.centerFTM.text=@"0";
+    self.centerDefReb.text=@"0";
+    self.centerOffReb.text=@"0";
+    self.centerAST.text=@"0";
+    self.centerPF.text=@"0";
+    self.centerST.text=@"0";
+    self.centerTO.text=@"0";
+    self.centerBS.text=@"0";
 
     
 }

@@ -11,7 +11,7 @@
 @implementation teamAddTeamViewController
 @synthesize delegate;
 @synthesize nameField, locationField, coachField, captainField; 
-//@synthesize introductionView;
+@synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +39,8 @@
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonClicked:)];
     
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(addButtonClicked:)];
+    
+    self.scrollView.contentSize=CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height*1.3);
 }
 
 - (void)viewDidUnload

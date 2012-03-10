@@ -16,10 +16,11 @@
 
 @property(strong, nonatomic)IBOutlet UIButton *scoreoardButton;
 @property(strong, nonatomic)IBOutlet UIButton *teamButton;
-@property(strong, nonatomic)IBOutlet UIButton *optionButton;
 
-@property(strong, nonatomic)teamMainPageViewController *teamViewController;
+//@property(strong, nonatomic)teamMainPageViewController *teamViewController;
+
 
 -(IBAction)scoreboardButtonClicked:(id)sender;
 -(IBAction)teamButtonClicked:(id)sender;
+-(IBAction)infoButtonClicked:(id)sender;
 @end

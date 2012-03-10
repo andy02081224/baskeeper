@@ -9,14 +9,15 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "scoreboardMainPageViewController.h"
-#import "teamMainPageViewController.h"
+#import "baskeeperInfoViewController.h"
+
 
 @implementation ViewController
 
 @synthesize scoreoardButton;
 @synthesize teamButton;
-@synthesize optionButton;
-@synthesize teamViewController;
+
+//@synthesize teamViewController;
 
 
 - (void)didReceiveMemoryWarning
@@ -36,19 +37,15 @@
     // Reference:http://stackoverflow.com/questions/8162411/how-to-create-border-in-uibutton
     
     //Set scoreboard Button appearance
-    [[scoreoardButton layer]setCornerRadius:8.0f];
-    [[scoreoardButton layer]setBorderWidth:1.2f];
-    [[scoreoardButton layer]setBorderColor:[UIColor whiteColor].CGColor ];
+    [[self.scoreoardButton layer]setCornerRadius:8.0f];
+    [[self.scoreoardButton layer]setBorderWidth:1.2f];
+    [[self.scoreoardButton layer]setBorderColor:[UIColor whiteColor].CGColor ];
     
     //Set team Button appearance
-    [[teamButton layer]setCornerRadius:8.0f];
-    [[teamButton layer]setBorderWidth:1.2f];
-    [[teamButton layer]setBorderColor:[UIColor whiteColor].CGColor ];
-    
-    //Set option button appearance
-    [[optionButton layer]setCornerRadius:8.0f];
-    [[optionButton layer]setBorderWidth:1.2f];
-    [[optionButton layer]setBorderColor:[UIColor whiteColor].CGColor ];
+    [[self.teamButton layer]setCornerRadius:8.0f];
+    [[self.teamButton layer]setBorderWidth:1.2f];
+    [[self.teamButton layer]setBorderColor:[UIColor whiteColor].CGColor ];
+
     
     
     
@@ -90,9 +87,9 @@
         if(interfaceOrientation==UIInterfaceOrientationLandscapeLeft){
             return YES;
         }
-        else if(interfaceOrientation==UIInterfaceOrientationLandscapeRight){
-            return YES;
-        }
+//        else if(interfaceOrientation==UIInterfaceOrientationLandscapeRight){
+//            return YES;
+//        }
         else{
             return NO;
         }
@@ -111,12 +108,19 @@
 }
 
 -(IBAction)teamButtonClicked:(id)sender{
-    self.teamViewController=[[teamMainPageViewController alloc]initWithStyle:UITableViewStyleGrouped];
-//    teamMainPageViewController *modalViewController=[[teamMainPageViewController 
-//                                                      alloc]initWithNibName:@"teamMainPageViewController" bundle:nil];
-    UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:self.teamViewController];
+    
+    teamMainPageViewController *teamViewController=[[teamMainPageViewController alloc]initWithStyle:UITableViewStyleGrouped];
+
+    UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:teamViewController];
     [navController  setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
     [self presentModalViewController:navController animated:YES];
+    
+}
+
+-(IBAction)infoButtonClicked:(id)sender{
+    baskeeperInfoViewController *modalViewController=[[baskeeperInfoViewController alloc]initWithNibName:@"baskeeperInfoViewController" bundle:nil];
+    //[modalViewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentModalViewController:modalViewController animated:YES];
     
 }
 

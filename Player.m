@@ -9,11 +9,15 @@
 #import "Player.h"
 
 @implementation Player
-@synthesize name, number, height, weight;
+@synthesize name, number, position, height, weight;
+
+
+
 
 -(void)encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeObject:self.name forKey:@"name"];
     [aCoder encodeObject:self.number forKey:@"number"];
+    [aCoder encodeObject:self.position forKey:@"position"];
     [aCoder encodeObject:self.height forKey:@"height"];
     [aCoder encodeObject:self.weight forKey:@"weight"];
 }
@@ -22,6 +26,7 @@
     if(self=[super init]){
         self.name=[aDecoder decodeObjectForKey:@"name"];
         self.number=[aDecoder decodeObjectForKey:@"number"];
+        self.position=[aDecoder decodeObjectForKey:@"position"];
         self.height=[aDecoder decodeObjectForKey:@"height"];
         self.weight=[aDecoder decodeObjectForKey:@"weight"];
     }

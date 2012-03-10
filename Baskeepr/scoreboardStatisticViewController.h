@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "playerStats.h"
+
+
+#import "teamGamePageVIewController.h"
 #import "scoreboardStatisticOptionViewController.h"
 #import "scoreboardPlayerStatsViewController.h"
 #import "scoreboardTeamStatsViewController.h"
 #import "scoreboardModeChoiceViewController.h"
+
 
 @protocol statsViewControllerDelegate <NSObject>
 
@@ -33,6 +38,8 @@
 
 @property(strong, nonatomic)id<statsViewControllerDelegate>delegate;
 @property(strong, nonatomic)IBOutlet UIScrollView *scrollView;
+@property(strong, nonatomic)NSString *gameMode;
+@property(strong, nonatomic)NSString *teamName;
 @property(strong, nonatomic)IBOutlet UILabel *labelPG;
 @property(strong, nonatomic)IBOutlet UILabel *labelSG;
 @property(strong, nonatomic)IBOutlet UILabel *labelSF;
@@ -46,7 +53,7 @@
 @property(strong, nonatomic)IBOutlet UILabel*mylabel;
 
 
-
+@property(copy)NSArray *positionFromTeam;
 @property(strong, nonatomic)NSMutableArray *PG;
 @property(strong, nonatomic)NSMutableArray *SG;
 @property(strong, nonatomic)NSMutableArray *SF;
@@ -168,6 +175,8 @@
 -(IBAction)changePFStats:(id)sender;
 -(IBAction)changeCenterStats:(id)sender;
 -(IBAction)deleteAllNumbers:(id)sender;
+-(void)resetAllNumbers;
+
 -(void)updatePGStats;
 -(void)updateSGStats;
 -(void)updateSFStats;
@@ -186,7 +195,7 @@
 -(void)loadPFStats;
 -(void)loadCenterStats;
 
-
+-(void)setPositionNumbersFromTeam;
 -(void)setPositionNumbers:(NSArray*)position;
 -(void)setClock;
 -(void)countDown;

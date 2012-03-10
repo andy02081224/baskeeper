@@ -28,6 +28,9 @@
 @property(strong, nonatomic)IBOutlet UISegmentedControl *statsModeControl;
 @property(strong, nonatomic)IBOutlet UITableView *statsTable;
 
+@property(strong, nonatomic)UIImageView *myView;
+@property(strong, nonatomic)NSString *gameMode;
+@property(strong, nonatomic)NSString *teamName;
 @property(strong,nonatomic)NSMutableArray *PGStats;
 @property(strong,nonatomic)NSMutableArray *SGStats;
 @property(strong,nonatomic)NSMutableArray *SFStats;
@@ -35,12 +38,10 @@
 @property(strong,nonatomic)NSMutableArray *CenterStats;
 @property(strong, nonatomic)IBOutlet UILabel *test;
 
-
+-(int)calculatePlayerScoreWith:(NSString*)FGM And:(NSString*)_3PM And:(NSString*)FTM;
 -(IBAction)changeStatsMode:(id)sender;
-
--(void)setPlayerStats:(playerStats*)playerStats;
-
 -(IBAction)backButtonClicked:(id)sender;
+-(IBAction)shareButtonClicked:(id)sender;
 
 
 

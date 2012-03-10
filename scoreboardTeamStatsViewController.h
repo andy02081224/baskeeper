@@ -6,12 +6,22 @@
 //  Copyright (c) 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "scoreboardPlayerStatsViewController.h"
-#import "scoreboardStatisticViewController.h"
-#import "playerStats.h"
 
-@interface scoreboardTeamStatsViewController : UIViewController{
+
+#import <UIKit/UIKit.h>
+#import "Game.h"
+
+
+@protocol teamStatsDelegate <NSObject>
+
+-(void)newGameAddedToTeam:(Game*)game;
+
+@end
+
+
+
+
+@interface scoreboardTeamStatsViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>{
     float FGA;
     float FGM;
     float _3PA;
@@ -33,10 +43,14 @@
     int teamTotalReb;
 }
 
+@property(strong, nonatomic)id<teamStatsDelegate>delegate;
 @property(strong, nonatomic)IBOutlet UISegmentedControl *statsModeControl;
 @property(strong, nonatomic)IBOutlet UIScrollView *scrollView;
-
+@property(strong, nonatomic)IBOutlet UITableView *statsTable;
+@property(strong, nonatomic)NSString *gameMode;
+@property(strong, nonatomic)NSString *teamName;
 @property(strong, nonatomic)IBOutlet UILabel *Score;
+@property(strong, nonatomic)IBOutlet UILabel *team;
 @property(strong, nonatomic)IBOutlet UILabel *labelPoints;
 @property(strong, nonatomic)IBOutlet UILabel *labelFG;
 @property(strong, nonatomic)IBOutlet UILabel *labelFGPercent;
@@ -51,6 +65,9 @@
 @property(strong, nonatomic)IBOutlet UILabel *labelSteals;
 @property(strong, nonatomic)IBOutlet UILabel *labelTurnouvers;
 @property(strong, nonatomic)IBOutlet UILabel *labelBlocks;
+@property(strong, nonatomic)IBOutlet UIButton *saveButton;
+@property(strong, nonatomic)UITextField *opponentNameField;
+@property(strong, nonatomic)UITextField *opponentScoreField;
 
 @property(strong,nonatomic)NSMutableArray *PGStats;
 @property(strong,nonatomic)NSMutableArray *SGStats;
@@ -61,9 +78,12 @@
 
 -(IBAction)changeStatsMode:(id)sender;
 -(IBAction)backButtonClicked:(id)sender;
+-(IBAction)shareClicked:(id)sender;
+-(IBAction)saveButtonClicked:(id)sender;
 
 -(void)setTeamStats;
 -(void)calculateTeamStats;
 -(void)showTeamStats;
+
 
 @end

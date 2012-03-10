@@ -21,6 +21,7 @@
 @property(strong, nonatomic)IBOutlet UITextField *locationField;
 @property(strong, nonatomic)IBOutlet UITextField *coachField;
 @property(strong, nonatomic)IBOutlet UITextField *captainField;
+@property(strong, nonatomic)IBOutlet UIScrollView *scrollView;
 //@property(strong, nonatomic)IBOutlet UITextView *introductionView;
 
 -(IBAction)doEditField:(id)sender;
