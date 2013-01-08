@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1536</int>
-		<string key="IBDocument.SystemVersion">12B19</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2840</string>
-		<string key="IBDocument.AppKitVersion">1187</string>
-		<string key="IBDocument.HIToolboxVersion">624.00</string>
+		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
+		<string key="IBDocument.AppKitVersion">1187.34</string>
+		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">1926</string>
+			<string key="NS.object.0">1930</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
@@ -228,7 +228,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{256, 8}, {34, 44}}</string>
 								<reference key="NSSuperview" ref="221932859"/>
-								<reference key="NSNextKeyView" ref="647175866"/>
+								<reference key="NSNextKeyView" ref="951195009"/>
 								<string key="NSReuseIdentifierKey">_NS:225</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -335,7 +335,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{23, 54}, {85, 85}}</string>
 								<reference key="NSSuperview" ref="221932859"/>
-								<reference key="NSNextKeyView" ref="951195009"/>
+								<reference key="NSNextKeyView" ref="517197369"/>
 								<string key="NSReuseIdentifierKey">_NS:225</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -408,7 +408,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{21, 54}, {89, 85}}</string>
 								<reference key="NSSuperview" ref="221932859"/>
-								<reference key="NSNextKeyView" ref="517197369"/>
+								<reference key="NSNextKeyView" ref="647175866"/>
 								<string key="NSReuseIdentifierKey">_NS:328</string>
 								<object class="NSColor" key="IBUIBackgroundColor" id="953796799">
 									<int key="NSColorSpace">1</int>
@@ -462,7 +462,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{375, 60}, {81, 79}}</string>
 								<reference key="NSSuperview" ref="221932859"/>
-								<reference key="NSNextKeyView" ref="845826946"/>
+								<reference key="NSNextKeyView" ref="398156377"/>
 								<string key="NSReuseIdentifierKey">_NS:225</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -515,7 +515,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{371, 55}, {89, 85}}</string>
 								<reference key="NSSuperview" ref="221932859"/>
-								<reference key="NSNextKeyView" ref="398156377"/>
+								<reference key="NSNextKeyView" ref="789206264"/>
 								<string key="NSReuseIdentifierKey">_NS:328</string>
 								<reference key="IBUIBackgroundColor" ref="953796799"/>
 								<bool key="IBUIOpaque">NO</bool>
@@ -558,7 +558,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{197, 113}, {78, 52}}</string>
 								<reference key="NSSuperview" ref="221932859"/>
-								<reference key="NSNextKeyView" ref="789206264"/>
+								<reference key="NSNextKeyView" ref="845826946"/>
 								<string key="NSReuseIdentifierKey">_NS:328</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -630,6 +630,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{437, 268}, {32, 32}}</string>
 								<reference key="NSSuperview" ref="221932859"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:225</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -1553,6 +1554,6 @@
 			<string key="minus-icons.png">{32, 32}</string>
 			<string key="options-icon.png">{128, 128}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">1926</string>
+		<string key="IBCocoaTouchPluginVersion">1930</string>
 	</data>
 </archive>

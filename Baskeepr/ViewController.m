@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "scoreboardMainPageViewController.h"
 #import "baskeeperInfoViewController.h"
+#import "OnlineMenuViewController.h"
 
 
 @implementation ViewController
@@ -37,6 +38,11 @@
     // By implementing QuartzCore.framework(#import <QuartzCore/QuartzCore.h>)
     // Reference:http://stackoverflow.com/questions/8162411/how-to-create-border-in-uibutton
     
+    //Set online Button appearance
+    [[self.onlineButton layer]setCornerRadius:8.0f];
+    [[self.onlineButton layer]setBorderWidth:1.2f];
+    [[self.onlineButton layer]setBorderColor:[UIColor whiteColor].CGColor ];
+    
     //Set scoreboard Button appearance
     [[self.scoreoardButton layer]setCornerRadius:8.0f];
     [[self.scoreoardButton layer]setBorderWidth:1.2f];
@@ -54,6 +60,7 @@
 
 - (void)viewDidUnload
 {
+    [self setOnlineButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -99,6 +106,12 @@
     }
 }
 
+
+- (IBAction)onlineButtonClicked:(id)sender {
+    OnlineMenuViewController *onlineMunuViewController = [[OnlineMenuViewController alloc]initWithNibName:@"OnlineMenuViewController" bundle:nil];
+    
+    [self presentViewController:onlineMunuViewController animated:YES completion:nil];
+}
 
 -(IBAction)scoreboardButtonClicked:(id)sender{
     

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1280</int>
-		<string key="IBDocument.SystemVersion">11C74</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
-		<string key="IBDocument.AppKitVersion">1138.23</string>
-		<string key="IBDocument.HIToolboxVersion">567.00</string>
+		<int key="IBDocument.SystemTarget">1536</int>
+		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
+		<string key="IBDocument.AppKitVersion">1187.34</string>
+		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">933</string>
+			<string key="NS.object.0">1930</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
-			<string>IBUIPickerView</string>
+			<string>IBProxyObject</string>
 			<string>IBUIButton</string>
+			<string>IBUILabel</string>
+			<string>IBUIPickerView</string>
 			<string>IBUISegmentedControl</string>
 			<string>IBUIView</string>
-			<string>IBUILabel</string>
-			<string>IBProxyObject</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -213,6 +213,7 @@
 						<object class="NSColor" key="IBUITextColor" id="836439938">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwIDAAA</bytes>
+							<string key="IBUIColorCocoaTouchKeyPath">darkTextColor</string>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -229,6 +230,7 @@
 							<double key="NSSize">40</double>
 							<int key="NSfFlags">16</int>
 						</object>
+						<double key="preferredMaxLayoutWidth">85</double>
 					</object>
 					<object class="IBUILabel" id="447764386">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -251,6 +253,7 @@
 						<int key="IBUINumberOfLines">0</int>
 						<reference key="IBUIFontDescription" ref="767838028"/>
 						<reference key="IBUIFont" ref="236671409"/>
+						<double key="preferredMaxLayoutWidth">85</double>
 					</object>
 					<object class="IBUILabel" id="1043674693">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -273,6 +276,7 @@
 						<int key="IBUINumberOfLines">0</int>
 						<reference key="IBUIFontDescription" ref="767838028"/>
 						<reference key="IBUIFont" ref="236671409"/>
+						<double key="preferredMaxLayoutWidth">85</double>
 					</object>
 					<object class="IBUILabel" id="1039599549">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -295,6 +299,7 @@
 						<int key="IBUINumberOfLines">0</int>
 						<reference key="IBUIFontDescription" ref="767838028"/>
 						<reference key="IBUIFont" ref="236671409"/>
+						<double key="preferredMaxLayoutWidth">85</double>
 					</object>
 					<object class="IBUILabel" id="847432997">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -317,6 +322,7 @@
 						<int key="IBUINumberOfLines">0</int>
 						<reference key="IBUIFontDescription" ref="767838028"/>
 						<reference key="IBUIFont" ref="236671409"/>
+						<double key="preferredMaxLayoutWidth">85</double>
 					</object>
 					<object class="IBUIButton" id="276210846">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -492,13 +498,14 @@
 							<integer value="1"/>
 							<integer value="3"/>
 						</array>
-						<array class="NSMutableArray" key="dict.values">
+						<array key="dict.values">
 							<string>{320, 480}</string>
 							<string>{480, 320}</string>
 						</array>
 					</object>
 					<string key="IBUITargetRuntime">IBCocoaTouchFramework</string>
-					<string key="IBUIDisplayName">iPhone/iPod touch Full Screen</string>
+					<string key="IBUIDisplayName">Retina 3.5 Full Screen</string>
+					<int key="IBUIType">0</int>
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
@@ -912,6 +919,6 @@
 			<string key="Add2-icon.png">{48, 48}</string>
 			<string key="go-back-icon.png">{128, 128}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">933</string>
+		<string key="IBCocoaTouchPluginVersion">1930</string>
 	</data>
 </archive>

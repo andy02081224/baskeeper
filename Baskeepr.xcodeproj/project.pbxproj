@@ -80,6 +80,25 @@
 		B16B78B014BA1F7900B59047 /* Baskeeper-InfoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B16B78AF14BA1F7900B59047 /* Baskeeper-InfoImage.png */; };
 		B16B78B214BA1FFD00B59047 /* Baskeeper-InfoImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = B16B78B114BA1FFD00B59047 /* Baskeeper-InfoImage2.png */; };
 		B16F84DB14ADFAF90053FAB5 /* statsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F84DA14ADFAF80053FAB5 /* statsTableViewCell.m */; };
+		B173449616980A1200B85D64 /* OnlineMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B173449416980A1200B85D64 /* OnlineMenuViewController.m */; };
+		B173449716980A1200B85D64 /* OnlineMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B173449516980A1200B85D64 /* OnlineMenuViewController.xib */; };
+		B173449A16980C7700B85D64 /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = B173449916980C7700B85D64 /* basketball.png */; };
+		B173449C16980CFA00B85D64 /* basketball_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B173449B16980CFA00B85D64 /* basketball_2.png */; };
+		B173449E16980CFE00B85D64 /* Basketball_3.png in Resources */ = {isa = PBXBuildFile; fileRef = B173449D16980CFE00B85D64 /* Basketball_3.png */; };
+		B17344A016980EE900B85D64 /* black-floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B173449F16980EE900B85D64 /* black-floor.jpg */; };
+		B17344AE1698105600B85D64 /* CreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B17344AC1698105600B85D64 /* CreateGameViewController.m */; };
+		B17344AF1698105600B85D64 /* CreateGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17344AD1698105600B85D64 /* CreateGameViewController.xib */; };
+		B17344B31698106E00B85D64 /* JoinGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B17344B11698106E00B85D64 /* JoinGameViewController.m */; };
+		B17344B41698106E00B85D64 /* JoinGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17344B21698106E00B85D64 /* JoinGameViewController.xib */; };
+		B17344BC169873B200B85D64 /* OnlineScoreboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B17344BA169873B100B85D64 /* OnlineScoreboardViewController.m */; };
+		B17344BD169873B200B85D64 /* OnlineScoreboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17344BB169873B100B85D64 /* OnlineScoreboardViewController.xib */; };
+		B17344BF1698759700B85D64 /* BlueLine.png in Resources */ = {isa = PBXBuildFile; fileRef = B17344BE1698759700B85D64 /* BlueLine.png */; };
+		B17344C116987C8400B85D64 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = B17344C016987C8400B85D64 /* minus.png */; };
+		B17344C31698814B00B85D64 /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B17344C21698814B00B85D64 /* bookmark.png */; };
+		B17344C51698825E00B85D64 /* Alarm-Play-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B17344C41698825E00B85D64 /* Alarm-Play-icon.png */; };
+		B17344C71698826100B85D64 /* Alarm-Pause-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B17344C61698826100B85D64 /* Alarm-Pause-icon.png */; };
+		B17344C91698893B00B85D64 /* yellow line.png in Resources */ = {isa = PBXBuildFile; fileRef = B17344C81698893B00B85D64 /* yellow line.png */; };
+		B17344CB1698894400B85D64 /* greenline.png in Resources */ = {isa = PBXBuildFile; fileRef = B17344CA1698894400B85D64 /* greenline.png */; };
 		B17A310C1495065A0038328C /* scoreboardOptionPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B17A310A1495065A0038328C /* scoreboardOptionPageViewController.m */; };
 		B17A310D1495065A0038328C /* scoreboardOptionPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17A310B1495065A0038328C /* scoreboardOptionPageViewController.xib */; };
 		B1863922149DF2BC009E0863 /* teamMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1863920149DF2BC009E0863 /* teamMainPageViewController.m */; };
@@ -246,6 +265,29 @@
 		B16B78B114BA1FFD00B59047 /* Baskeeper-InfoImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Baskeeper-InfoImage2.png"; sourceTree = "<group>"; };
 		B16F84D914ADFAF80053FAB5 /* statsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = statsTableViewCell.h; sourceTree = "<group>"; };
 		B16F84DA14ADFAF80053FAB5 /* statsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = statsTableViewCell.m; sourceTree = "<group>"; };
+		B173449316980A1200B85D64 /* OnlineMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineMenuViewController.h; sourceTree = "<group>"; };
+		B173449416980A1200B85D64 /* OnlineMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineMenuViewController.m; sourceTree = "<group>"; };
+		B173449516980A1200B85D64 /* OnlineMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnlineMenuViewController.xib; sourceTree = "<group>"; };
+		B173449916980C7700B85D64 /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball.png; sourceTree = "<group>"; };
+		B173449B16980CFA00B85D64 /* basketball_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball_2.png; sourceTree = "<group>"; };
+		B173449D16980CFE00B85D64 /* Basketball_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Basketball_3.png; sourceTree = "<group>"; };
+		B173449F16980EE900B85D64 /* black-floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "black-floor.jpg"; sourceTree = "<group>"; };
+		B17344AB1698105600B85D64 /* CreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateGameViewController.h; sourceTree = "<group>"; };
+		B17344AC1698105600B85D64 /* CreateGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGameViewController.m; sourceTree = "<group>"; };
+		B17344AD1698105600B85D64 /* CreateGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateGameViewController.xib; sourceTree = "<group>"; };
+		B17344B01698106E00B85D64 /* JoinGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinGameViewController.h; sourceTree = "<group>"; };
+		B17344B11698106E00B85D64 /* JoinGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinGameViewController.m; sourceTree = "<group>"; };
+		B17344B21698106E00B85D64 /* JoinGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinGameViewController.xib; sourceTree = "<group>"; };
+		B17344B9169873B100B85D64 /* OnlineScoreboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineScoreboardViewController.h; sourceTree = "<group>"; };
+		B17344BA169873B100B85D64 /* OnlineScoreboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineScoreboardViewController.m; sourceTree = "<group>"; };
+		B17344BB169873B100B85D64 /* OnlineScoreboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnlineScoreboardViewController.xib; sourceTree = "<group>"; };
+		B17344BE1698759700B85D64 /* BlueLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueLine.png; sourceTree = "<group>"; };
+		B17344C016987C8400B85D64 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
+		B17344C21698814B00B85D64 /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark.png; sourceTree = "<group>"; };
+		B17344C41698825E00B85D64 /* Alarm-Play-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alarm-Play-icon.png"; sourceTree = "<group>"; };
+		B17344C61698826100B85D64 /* Alarm-Pause-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alarm-Pause-icon.png"; sourceTree = "<group>"; };
+		B17344C81698893B00B85D64 /* yellow line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow line.png"; sourceTree = "<group>"; };
+		B17344CA1698894400B85D64 /* greenline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenline.png; sourceTree = "<group>"; };
 		B17A31091495065A0038328C /* scoreboardOptionPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoreboardOptionPageViewController.h; sourceTree = "<group>"; };
 		B17A310A1495065A0038328C /* scoreboardOptionPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreboardOptionPageViewController.m; sourceTree = "<group>"; };
 		B17A310B1495065A0038328C /* scoreboardOptionPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreboardOptionPageViewController.xib; sourceTree = "<group>"; };
@@ -477,6 +519,44 @@
 			name = AddThis;
 			sourceTree = "<group>";
 		};
+		B1734492169809E000B85D64 /* Online */ = {
+			isa = PBXGroup;
+			children = (
+				B173449816980C6700B85D64 /* Resource */,
+				B173449316980A1200B85D64 /* OnlineMenuViewController.h */,
+				B173449416980A1200B85D64 /* OnlineMenuViewController.m */,
+				B173449516980A1200B85D64 /* OnlineMenuViewController.xib */,
+				B17344AB1698105600B85D64 /* CreateGameViewController.h */,
+				B17344AC1698105600B85D64 /* CreateGameViewController.m */,
+				B17344AD1698105600B85D64 /* CreateGameViewController.xib */,
+				B17344B01698106E00B85D64 /* JoinGameViewController.h */,
+				B17344B11698106E00B85D64 /* JoinGameViewController.m */,
+				B17344B21698106E00B85D64 /* JoinGameViewController.xib */,
+				B17344B9169873B100B85D64 /* OnlineScoreboardViewController.h */,
+				B17344BA169873B100B85D64 /* OnlineScoreboardViewController.m */,
+				B17344BB169873B100B85D64 /* OnlineScoreboardViewController.xib */,
+			);
+			name = Online;
+			sourceTree = "<group>";
+		};
+		B173449816980C6700B85D64 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B17344CA1698894400B85D64 /* greenline.png */,
+				B17344C81698893B00B85D64 /* yellow line.png */,
+				B17344C61698826100B85D64 /* Alarm-Pause-icon.png */,
+				B17344C41698825E00B85D64 /* Alarm-Play-icon.png */,
+				B17344C21698814B00B85D64 /* bookmark.png */,
+				B17344C016987C8400B85D64 /* minus.png */,
+				B17344BE1698759700B85D64 /* BlueLine.png */,
+				B173449F16980EE900B85D64 /* black-floor.jpg */,
+				B173449D16980CFE00B85D64 /* Basketball_3.png */,
+				B173449B16980CFA00B85D64 /* basketball_2.png */,
+				B173449916980C7700B85D64 /* basketball.png */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		B1D65D64148E37EA003901B3 = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +604,7 @@
 				B1D65D85148E37EA003901B3 /* ViewController.h */,
 				B1D65D86148E37EA003901B3 /* ViewController.m */,
 				B1D65D88148E37EA003901B3 /* ViewController_iPhone.xib */,
+				B1734492169809E000B85D64 /* Online */,
 				B16B78AA14BA1EBD00B59047 /* baskeeperInfoViewController.h */,
 				B16B78AB14BA1EBF00B59047 /* baskeeperInfoViewController.m */,
 				B16B78AC14BA1EC100B59047 /* baskeeperInfoViewController.xib */,
@@ -736,6 +817,21 @@
 				B16B78AE14BA1EC300B59047 /* baskeeperInfoViewController.xib in Resources */,
 				B16B78B014BA1F7900B59047 /* Baskeeper-InfoImage.png in Resources */,
 				B16B78B214BA1FFD00B59047 /* Baskeeper-InfoImage2.png in Resources */,
+				B173449716980A1200B85D64 /* OnlineMenuViewController.xib in Resources */,
+				B173449A16980C7700B85D64 /* basketball.png in Resources */,
+				B173449C16980CFA00B85D64 /* basketball_2.png in Resources */,
+				B173449E16980CFE00B85D64 /* Basketball_3.png in Resources */,
+				B17344A016980EE900B85D64 /* black-floor.jpg in Resources */,
+				B17344AF1698105600B85D64 /* CreateGameViewController.xib in Resources */,
+				B17344B41698106E00B85D64 /* JoinGameViewController.xib in Resources */,
+				B17344BD169873B200B85D64 /* OnlineScoreboardViewController.xib in Resources */,
+				B17344BF1698759700B85D64 /* BlueLine.png in Resources */,
+				B17344C116987C8400B85D64 /* minus.png in Resources */,
+				B17344C31698814B00B85D64 /* bookmark.png in Resources */,
+				B17344C51698825E00B85D64 /* Alarm-Play-icon.png in Resources */,
+				B17344C71698826100B85D64 /* Alarm-Pause-icon.png in Resources */,
+				B17344C91698893B00B85D64 /* yellow line.png in Resources */,
+				B17344CB1698894400B85D64 /* greenline.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,6 +916,10 @@
 				B16B789C14B9D12A00B59047 /* Game.m in Sources */,
 				B16B78A814BA090E00B59047 /* teamPlayerInformationPageViewController.m in Sources */,
 				B16B78AD14BA1EC300B59047 /* baskeeperInfoViewController.m in Sources */,
+				B173449616980A1200B85D64 /* OnlineMenuViewController.m in Sources */,
+				B17344AE1698105600B85D64 /* CreateGameViewController.m in Sources */,
+				B17344B31698106E00B85D64 /* JoinGameViewController.m in Sources */,
+				B17344BC169873B200B85D64 /* OnlineScoreboardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,11 +1030,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Baskeepr/Baskeepr-Prefix.pch";
 				INFOPLIST_FILE = "Baskeepr/Baskeepr-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -945,11 +1048,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Baskeepr/Baskeepr-Prefix.pch";
 				INFOPLIST_FILE = "Baskeepr/Baskeepr-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

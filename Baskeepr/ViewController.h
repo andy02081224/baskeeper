@@ -13,13 +13,13 @@
 
 
 @interface ViewController : UIViewController
-
+@property (strong, nonatomic) IBOutlet UIButton *onlineButton;
 @property(strong, nonatomic)IBOutlet UIButton *scoreoardButton;
 @property(strong, nonatomic)IBOutlet UIButton *teamButton;
 
 //@property(strong, nonatomic)teamMainPageViewController *teamViewController;
 
-
+- (IBAction)onlineButtonClicked:(id)sender;
 -(IBAction)scoreboardButtonClicked:(id)sender;
 -(IBAction)teamButtonClicked:(id)sender;
 -(IBAction)infoButtonClicked:(id)sender;
