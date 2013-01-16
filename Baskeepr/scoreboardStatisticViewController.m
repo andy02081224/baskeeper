@@ -7,10 +7,8 @@
 //
 
 #import "scoreboardStatisticViewController.h"
-//#import "scoreboardStatisticOptionViewController.h"
-//#import "scoreboardOptionPageViewController.h"
-//#import "playerStats.h"
-//#import <QuartzCore/QuartzCore.h>
+#import "MPFlipTransition.h"
+#import "MPFlipEnumerations.h"
 
 
 @implementation scoreboardStatisticViewController
@@ -168,8 +166,20 @@
           [self loadStats];
     [self setPositionNumbersFromTeam];
     
-
+    // Add swipe right recognizer
+    UISwipeGestureRecognizer *swipeRightRecognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeRight:)];
     
+    swipeRightRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    
+    [self.view addGestureRecognizer:swipeRightRecognizer];
+    
+}
+
+- (void)swipeRight:(UISwipeGestureRecognizer *)recognizer
+{
+    [self.delegate updateScore:self.labelScore.text];
+    [self.delegate updatePeriod:self.labelPeriod.text];
+    [self.delegate dismissBoxView];
 }
 
 - (void)viewDidUnload
@@ -507,7 +517,7 @@
     self.pgPF.text=stats.statsPF;
     self.pgST.text=stats.statsST;
     self.pgTO.text=stats.statsTO;
-    self.pgBS.text=stats.statsBS; 
+    self.pgBS.text=stats.statsBS;
 }
 
 -(void)loadSGStats{
@@ -587,7 +597,7 @@
     scoreboardStatisticOptionViewController *modalViewController=[[scoreboardStatisticOptionViewController alloc]initWithNibName:@"scoreboardStatisticOptionViewController" bundle:nil];
     modalViewController.delegate=self;
         [modalViewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    [self presentModalViewController:modalViewController animated:YES];
+    [self presentViewController:modalViewController animated:YES completion:nil];
     //[(UIViewController *)[[[[self view] superview] superview] nextResponder] presentModalViewController:modalViewController animated:YES];
     
 }
@@ -626,6 +636,7 @@
             FGM++;
             self.pgFGM.text=[NSString stringWithFormat:@"%d",FGM];
             [self updatePGStats];
+            [self updateScoreLabel:2];
             break;
         case 2:
             FGA++;
@@ -640,6 +651,7 @@
             self.pgFGM.text=[NSString stringWithFormat:@"%d",FGM];
             self.pg3PM.text=[NSString stringWithFormat:@"%d",_3PM];
             [self updatePGStats];
+            [self updateScoreLabel:3];
             break;
         case 4:
             FTA++;
@@ -650,6 +662,7 @@
             FTM++;
             self.pgFTM.text=[NSString stringWithFormat:@"%d",FTM];
             [self updatePGStats];
+            [self updateScoreLabel:1];
             break;
         case 6:
             DefReb++;
@@ -723,6 +736,7 @@
             FGM++;
             self.sgFGM.text=[NSString stringWithFormat:@"%d",FGM];
             [self updateSGStats];
+            [self updateScoreLabel:2];
             break;
         case 2:
             FGA++;
@@ -737,6 +751,7 @@
             self.sgFGA.text=[NSString stringWithFormat:@"%d",FGM];
             self.sg3PM.text=[NSString stringWithFormat:@"%d",_3PM];
             [self updateSGStats];
+            [self updateScoreLabel:3];
             break;
         case 4:
             FTA++;
@@ -747,6 +762,7 @@
             FTM++;
             self.sgFTM.text=[NSString stringWithFormat:@"%d",FTM];
             [self updateSGStats];
+            [self updateScoreLabel:1];
             break;
         case 6:
             DefReb++;
@@ -820,6 +836,7 @@
                 FGM++;
                 self.sfFGM.text=[NSString stringWithFormat:@"%d",FGM];
                 [self updateSFStats];
+                [self updateScoreLabel:2];
                 break;
             case 2:
                 FGA++;
@@ -834,6 +851,7 @@
                 self.sfFGM.text=[NSString stringWithFormat:@"%d",FGM];
                 self.sf3PM.text=[NSString stringWithFormat:@"%d",_3PM];
                 [self updateSFStats];
+                [self updateScoreLabel:3];
                 break;
             case 4:
                 FTA++;
@@ -844,6 +862,7 @@
                 FTM++;
                 self.sfFTM.text=[NSString stringWithFormat:@"%d",FTM];
                 [self updateSFStats];
+                [self updateScoreLabel:1];
                 break;
             case 6:
                 DefReb++;
@@ -917,6 +936,7 @@
                 FGM++;
                 self.pfFGM.text=[NSString stringWithFormat:@"%d",FGM];
                 [self updatePFStats];
+                [self updateScoreLabel:2];
                 break;
             case 2:
                 FGA++;
@@ -931,6 +951,7 @@
                 self.pfFGM.text=[NSString stringWithFormat:@"%d",FGM];
                 self.pf3PM.text=[NSString stringWithFormat:@"%d",_3PM];
                 [self updatePFStats];
+                [self updateScoreLabel:3];
                 break;
             case 4:
                 FTA++;
@@ -941,6 +962,7 @@
                 FTM++;
                 self.pfFTM.text=[NSString stringWithFormat:@"%d",FTM];
                 [self updatePFStats];
+                [self updateScoreLabel:1];
                 break;
             case 6:
                 DefReb++;
@@ -1014,6 +1036,7 @@
                 FGM++;
                 self.centerFGM.text=[NSString stringWithFormat:@"%d",FGM];
                 [self updateCenterStats];
+                [self updateScoreLabel:2];
                 break;
             case 2:
                 FGA++;
@@ -1028,6 +1051,7 @@
                 self.centerFGM.text=[NSString stringWithFormat:@"%d",FGM];
                 self.center3PM.text=[NSString stringWithFormat:@"%d",_3PM];
                 [self updateCenterStats];
+                [self updateScoreLabel:3];
                 break;
             case 4:
                 FTA++;
@@ -1038,6 +1062,7 @@
                 FTM++;
                 self.centerFTM.text=[NSString stringWithFormat:@"%d",FTM];
                 [self updateCenterStats];
+                [self updateScoreLabel:1];
                 break;
             case 6:
                 DefReb++;
@@ -1306,6 +1331,13 @@
     stats.statsBS=self.centerBS.text;
 }
 
+- (void)updateScoreLabel:(int)score
+{
+    int currentScore = [self.labelScore.text intValue];
+    currentScore += score;
+    self.labelScore.text = [NSString stringWithFormat:@"%d", currentScore];
+}
+
 -(IBAction)countDownClockClicked:(id)sender{
     if([countDownTimer isValid]){
         
@@ -1348,6 +1380,8 @@
 }
 
 -(void)resetAllNumbers{
+    self.labelScore.text = @"0";
+    
     self.labelPG.text=@"";
     self.labelSG.text=@"";
     self.labelSF.text=@"";

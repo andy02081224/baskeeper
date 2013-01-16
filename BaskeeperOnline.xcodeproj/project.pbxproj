@@ -99,12 +99,18 @@
 		B17344C71698826100B85D64 /* Alarm-Pause-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B17344C61698826100B85D64 /* Alarm-Pause-icon.png */; };
 		B17344C91698893B00B85D64 /* yellow line.png in Resources */ = {isa = PBXBuildFile; fileRef = B17344C81698893B00B85D64 /* yellow line.png */; };
 		B17344CB1698894400B85D64 /* greenline.png in Resources */ = {isa = PBXBuildFile; fileRef = B17344CA1698894400B85D64 /* greenline.png */; };
+		B17344DB169C81B100B85D64 /* MPAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B17344D2169C81B100B85D64 /* MPAnimation.m */; };
+		B17344DC169C81B100B85D64 /* MPFlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = B17344D5169C81B100B85D64 /* MPFlipTransition.m */; };
+		B17344DD169C81B100B85D64 /* MPFlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B17344D7169C81B100B85D64 /* MPFlipViewController.m */; };
+		B17344DE169C81B100B85D64 /* MPTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = B17344D9169C81B100B85D64 /* MPTransition.m */; };
 		B17A310C1495065A0038328C /* scoreboardOptionPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B17A310A1495065A0038328C /* scoreboardOptionPageViewController.m */; };
 		B17A310D1495065A0038328C /* scoreboardOptionPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17A310B1495065A0038328C /* scoreboardOptionPageViewController.xib */; };
 		B1863922149DF2BC009E0863 /* teamMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1863920149DF2BC009E0863 /* teamMainPageViewController.m */; };
 		B1863923149DF2BC009E0863 /* teamMainPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1863921149DF2BC009E0863 /* teamMainPageViewController.xib */; };
 		B186393C149E341B009E0863 /* scoreboardTeamStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B186393A149E341B009E0863 /* scoreboardTeamStatsViewController.m */; };
 		B186393D149E341B009E0863 /* scoreboardTeamStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B186393B149E341B009E0863 /* scoreboardTeamStatsViewController.xib */; };
+		B1A71DC316A59E050001B91F /* OnlineSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A71DC116A59E050001B91F /* OnlineSettingsViewController.m */; };
+		B1A71DC416A59E050001B91F /* OnlineSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A71DC216A59E050001B91F /* OnlineSettingsViewController.xib */; };
 		B1B0152E14A732BA0040C770 /* scoreboardModeChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B0152C14A732BA0040C770 /* scoreboardModeChoiceViewController.m */; };
 		B1B0152F14A732BA0040C770 /* scoreboardModeChoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1B0152D14A732BA0040C770 /* scoreboardModeChoiceViewController.xib */; };
 		B1B0153214A73E150040C770 /* back-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B1B0153114A73E150040C770 /* back-icon.png */; };
@@ -135,6 +141,22 @@
 		B1D65D97148E37EA003901B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D65D75148E37EA003901B3 /* Foundation.framework */; };
 		B1D65D9F148E37EA003901B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1D65D9D148E37EA003901B3 /* InfoPlist.strings */; };
 		B1D65DA2148E37EA003901B3 /* BaskeeprTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D65DA1148E37EA003901B3 /* BaskeeprTests.m */; };
+		BAC365FB16A6EE7F00A90957 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365DE16A6EE7F00A90957 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BAC365FC16A6EE7F00A90957 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365E116A6EE7F00A90957 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BAC365FD16A6EE7F00A90957 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365E316A6EE7F00A90957 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BAC365FE16A6EE7F00A90957 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365E516A6EE7F00A90957 /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BAC365FF16A6EE7F00A90957 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365E716A6EE7F00A90957 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BAC3660016A6EE7F00A90957 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365E916A6EE7F00A90957 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BAC3660116A6EE7F00A90957 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365ED16A6EE7F00A90957 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BAC3660216A6EE7F00A90957 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365EF16A6EE7F00A90957 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BAC3660316A6EE7F00A90957 /* BoxScore.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365F216A6EE7F00A90957 /* BoxScore.m */; };
+		BAC3660416A6EE7F00A90957 /* DataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365F416A6EE7F00A90957 /* DataAccess.m */; };
+		BAC3660516A6EE7F00A90957 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365F616A6EE7F00A90957 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BAC3660616A6EE7F00A90957 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365F816A6EE7F00A90957 /* Room.m */; };
+		BAC3660716A6EE7F00A90957 /* Stats.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC365FA16A6EE7F00A90957 /* Stats.m */; };
+		BAC3660A16A6EF3A00A90957 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC3660916A6EF3A00A90957 /* CFNetwork.framework */; };
+		BAC3660C16A6EF4700A90957 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC3660B16A6EF4700A90957 /* libz.dylib */; };
+		BAC3660E16A6EF7300A90957 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC3660D16A6EF7300A90957 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +310,16 @@
 		B17344C61698826100B85D64 /* Alarm-Pause-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alarm-Pause-icon.png"; sourceTree = "<group>"; };
 		B17344C81698893B00B85D64 /* yellow line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow line.png"; sourceTree = "<group>"; };
 		B17344CA1698894400B85D64 /* greenline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenline.png; sourceTree = "<group>"; };
+		B17344D1169C81B100B85D64 /* MPAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAnimation.h; sourceTree = "<group>"; };
+		B17344D2169C81B100B85D64 /* MPAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAnimation.m; sourceTree = "<group>"; };
+		B17344D3169C81B100B85D64 /* MPFlipEnumerations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFlipEnumerations.h; sourceTree = "<group>"; };
+		B17344D4169C81B100B85D64 /* MPFlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFlipTransition.h; sourceTree = "<group>"; };
+		B17344D5169C81B100B85D64 /* MPFlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFlipTransition.m; sourceTree = "<group>"; };
+		B17344D6169C81B100B85D64 /* MPFlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFlipViewController.h; sourceTree = "<group>"; };
+		B17344D7169C81B100B85D64 /* MPFlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFlipViewController.m; sourceTree = "<group>"; };
+		B17344D8169C81B100B85D64 /* MPTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTransition.h; sourceTree = "<group>"; };
+		B17344D9169C81B100B85D64 /* MPTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTransition.m; sourceTree = "<group>"; };
+		B17344DA169C81B100B85D64 /* MPTransitionEnumerations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTransitionEnumerations.h; sourceTree = "<group>"; };
 		B17A31091495065A0038328C /* scoreboardOptionPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoreboardOptionPageViewController.h; sourceTree = "<group>"; };
 		B17A310A1495065A0038328C /* scoreboardOptionPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreboardOptionPageViewController.m; sourceTree = "<group>"; };
 		B17A310B1495065A0038328C /* scoreboardOptionPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreboardOptionPageViewController.xib; sourceTree = "<group>"; };
@@ -297,6 +329,9 @@
 		B1863939149E341B009E0863 /* scoreboardTeamStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoreboardTeamStatsViewController.h; path = ../scoreboardTeamStatsViewController.h; sourceTree = "<group>"; };
 		B186393A149E341B009E0863 /* scoreboardTeamStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = scoreboardTeamStatsViewController.m; path = ../scoreboardTeamStatsViewController.m; sourceTree = "<group>"; };
 		B186393B149E341B009E0863 /* scoreboardTeamStatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = scoreboardTeamStatsViewController.xib; path = ../scoreboardTeamStatsViewController.xib; sourceTree = "<group>"; };
+		B1A71DC016A59E050001B91F /* OnlineSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineSettingsViewController.h; sourceTree = "<group>"; };
+		B1A71DC116A59E050001B91F /* OnlineSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineSettingsViewController.m; sourceTree = "<group>"; };
+		B1A71DC216A59E050001B91F /* OnlineSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnlineSettingsViewController.xib; sourceTree = "<group>"; };
 		B1B0152B14A732BA0040C770 /* scoreboardModeChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoreboardModeChoiceViewController.h; sourceTree = "<group>"; };
 		B1B0152C14A732BA0040C770 /* scoreboardModeChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreboardModeChoiceViewController.m; sourceTree = "<group>"; };
 		B1B0152D14A732BA0040C770 /* scoreboardModeChoiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreboardModeChoiceViewController.xib; sourceTree = "<group>"; };
@@ -318,26 +353,59 @@
 		B1D1546314A2094F0070627E /* scoreboardOptionCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreboardOptionCustomViewController.m; sourceTree = "<group>"; };
 		B1D1546414A2094F0070627E /* scoreboardOptionCustomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreboardOptionCustomViewController.xib; sourceTree = "<group>"; };
 		B1D1546814A223060070627E /* go-back-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go-back-icon.png"; sourceTree = "<group>"; };
-		B1D65D6F148E37EA003901B3 /* Baskeepr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baskeepr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D65D6F148E37EA003901B3 /* BaskeeperOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaskeeperOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D65D73148E37EA003901B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B1D65D75148E37EA003901B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B1D65D77148E37EA003901B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B1D65D7B148E37EA003901B3 /* Baskeepr-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baskeepr-Info.plist"; sourceTree = "<group>"; };
+		B1D65D7B148E37EA003901B3 /* BaskeeperOnline-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaskeeperOnline-Info.plist"; sourceTree = "<group>"; };
 		B1D65D7D148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1D65D7F148E37EA003901B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B1D65D81148E37EA003901B3 /* Baskeepr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Baskeepr-Prefix.pch"; sourceTree = "<group>"; };
+		B1D65D81148E37EA003901B3 /* BaskeeperOnline-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaskeeperOnline-Prefix.pch"; sourceTree = "<group>"; };
 		B1D65D82148E37EA003901B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1D65D83148E37EA003901B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B1D65D85148E37EA003901B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B1D65D86148E37EA003901B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B1D65D89148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		B1D65D8C148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
-		B1D65D93148E37EA003901B3 /* BaskeeprTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaskeeprTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D65D93148E37EA003901B3 /* BaskeeperOnlineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaskeeperOnlineTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D65D94148E37EA003901B3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		B1D65D9C148E37EA003901B3 /* BaskeeprTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaskeeprTests-Info.plist"; sourceTree = "<group>"; };
+		B1D65D9C148E37EA003901B3 /* BaskeeperOnlineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaskeeperOnlineTests-Info.plist"; sourceTree = "<group>"; };
 		B1D65D9E148E37EA003901B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1D65DA0148E37EA003901B3 /* BaskeeprTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaskeeprTests.h; sourceTree = "<group>"; };
 		B1D65DA1148E37EA003901B3 /* BaskeeprTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaskeeprTests.m; sourceTree = "<group>"; };
+		BAC365DD16A6EE7F00A90957 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		BAC365DE16A6EE7F00A90957 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		BAC365DF16A6EE7F00A90957 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		BAC365E016A6EE7F00A90957 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		BAC365E116A6EE7F00A90957 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		BAC365E216A6EE7F00A90957 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		BAC365E316A6EE7F00A90957 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		BAC365E416A6EE7F00A90957 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		BAC365E516A6EE7F00A90957 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		BAC365E616A6EE7F00A90957 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		BAC365E716A6EE7F00A90957 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		BAC365E816A6EE7F00A90957 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		BAC365E916A6EE7F00A90957 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		BAC365EA16A6EE7F00A90957 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		BAC365EB16A6EE7F00A90957 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		BAC365EC16A6EE7F00A90957 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		BAC365ED16A6EE7F00A90957 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		BAC365EE16A6EE7F00A90957 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		BAC365EF16A6EE7F00A90957 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		BAC365F016A6EE7F00A90957 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		BAC365F116A6EE7F00A90957 /* BoxScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxScore.h; sourceTree = "<group>"; };
+		BAC365F216A6EE7F00A90957 /* BoxScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxScore.m; sourceTree = "<group>"; };
+		BAC365F316A6EE7F00A90957 /* DataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAccess.h; sourceTree = "<group>"; };
+		BAC365F416A6EE7F00A90957 /* DataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAccess.m; sourceTree = "<group>"; };
+		BAC365F516A6EE7F00A90957 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		BAC365F616A6EE7F00A90957 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		BAC365F716A6EE7F00A90957 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		BAC365F816A6EE7F00A90957 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		BAC365F916A6EE7F00A90957 /* Stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stats.h; sourceTree = "<group>"; };
+		BAC365FA16A6EE7F00A90957 /* Stats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stats.m; sourceTree = "<group>"; };
+		BAC3660916A6EF3A00A90957 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BAC3660B16A6EF4700A90957 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BAC3660D16A6EF7300A90957 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +413,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC3660E16A6EF7300A90957 /* MobileCoreServices.framework in Frameworks */,
+				BAC3660C16A6EF4700A90957 /* libz.dylib in Frameworks */,
+				BAC3660A16A6EF3A00A90957 /* CFNetwork.framework in Frameworks */,
 				B16B786E14B82E9000B59047 /* MessageUI.framework in Frameworks */,
 				B16B786C14B82E7700B59047 /* SystemConfiguration.framework in Frameworks */,
 				B16B786A14B82E6A00B59047 /* CoreData.framework in Frameworks */,
@@ -522,6 +593,7 @@
 		B1734492169809E000B85D64 /* Online */ = {
 			isa = PBXGroup;
 			children = (
+				BAC3660816A6EE8700A90957 /* Model */,
 				B173449816980C6700B85D64 /* Resource */,
 				B173449316980A1200B85D64 /* OnlineMenuViewController.h */,
 				B173449416980A1200B85D64 /* OnlineMenuViewController.m */,
@@ -535,6 +607,9 @@
 				B17344B9169873B100B85D64 /* OnlineScoreboardViewController.h */,
 				B17344BA169873B100B85D64 /* OnlineScoreboardViewController.m */,
 				B17344BB169873B100B85D64 /* OnlineScoreboardViewController.xib */,
+				B1A71DC016A59E050001B91F /* OnlineSettingsViewController.h */,
+				B1A71DC116A59E050001B91F /* OnlineSettingsViewController.m */,
+				B1A71DC216A59E050001B91F /* OnlineSettingsViewController.xib */,
 			);
 			name = Online;
 			sourceTree = "<group>";
@@ -557,12 +632,30 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		B17344D0169C81B100B85D64 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				B17344D1169C81B100B85D64 /* MPAnimation.h */,
+				B17344D2169C81B100B85D64 /* MPAnimation.m */,
+				B17344D3169C81B100B85D64 /* MPFlipEnumerations.h */,
+				B17344D4169C81B100B85D64 /* MPFlipTransition.h */,
+				B17344D5169C81B100B85D64 /* MPFlipTransition.m */,
+				B17344D6169C81B100B85D64 /* MPFlipViewController.h */,
+				B17344D7169C81B100B85D64 /* MPFlipViewController.m */,
+				B17344D8169C81B100B85D64 /* MPTransition.h */,
+				B17344D9169C81B100B85D64 /* MPTransition.m */,
+				B17344DA169C81B100B85D64 /* MPTransitionEnumerations.h */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
 		B1D65D64148E37EA003901B3 = {
 			isa = PBXGroup;
 			children = (
 				B16B78A314BA04CB00B59047 /* Default@2x.png */,
 				B16B78A114B9FC5100B59047 /* Baskeeper-icons2.png */,
 				B16B789F14B9FB6000B59047 /* Baskeeper-icons.png */,
+				B17344D0169C81B100B85D64 /* Container */,
 				B16B786F14B832F500B59047 /* AddThis */,
 				B1D65D79148E37EA003901B3 /* Baskeepr */,
 				B1D65D9A148E37EA003901B3 /* BaskeeprTests */,
@@ -574,8 +667,8 @@
 		B1D65D70148E37EA003901B3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1D65D6F148E37EA003901B3 /* Baskeepr.app */,
-				B1D65D93148E37EA003901B3 /* BaskeeprTests.octest */,
+				B1D65D6F148E37EA003901B3 /* BaskeeperOnline.app */,
+				B1D65D93148E37EA003901B3 /* BaskeeperOnlineTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -583,6 +676,9 @@
 		B1D65D72148E37EA003901B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAC3660D16A6EF7300A90957 /* MobileCoreServices.framework */,
+				BAC3660B16A6EF4700A90957 /* libz.dylib */,
+				BAC3660916A6EF3A00A90957 /* CFNetwork.framework */,
 				B16B786D14B82E9000B59047 /* MessageUI.framework */,
 				B16B786B14B82E7700B59047 /* SystemConfiguration.framework */,
 				B16B786914B82E6A00B59047 /* CoreData.framework */,
@@ -663,6 +759,7 @@
 		B1D65D7A148E37EA003901B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BAC365DB16A6EDDB00A90957 /* ASI */,
 				B1BE3E2C14A9DB55001AA4E7 /* playerStats.h */,
 				B1BE3E2D14A9DB55001AA4E7 /* playerStats.m */,
 				B1C70D13149F11D30071E893 /* Team.h */,
@@ -671,10 +768,10 @@
 				B136878B14B6FC0900AB0F6E /* Player.m */,
 				B16B789A14B9D12900B59047 /* Game.h */,
 				B16B789B14B9D12A00B59047 /* Game.m */,
-				B1D65D7B148E37EA003901B3 /* Baskeepr-Info.plist */,
+				B1D65D7B148E37EA003901B3 /* BaskeeperOnline-Info.plist */,
 				B1D65D7C148E37EA003901B3 /* InfoPlist.strings */,
 				B1D65D7F148E37EA003901B3 /* main.m */,
-				B1D65D81148E37EA003901B3 /* Baskeepr-Prefix.pch */,
+				B1D65D81148E37EA003901B3 /* BaskeeperOnline-Prefix.pch */,
 				B16F84D914ADFAF80053FAB5 /* statsTableViewCell.h */,
 				B16F84DA14ADFAF80053FAB5 /* statsTableViewCell.m */,
 				B1566268149C534B004F7651 /* GameMode.h */,
@@ -696,18 +793,62 @@
 		B1D65D9B148E37EA003901B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B1D65D9C148E37EA003901B3 /* BaskeeprTests-Info.plist */,
+				B1D65D9C148E37EA003901B3 /* BaskeeperOnlineTests-Info.plist */,
 				B1D65D9D148E37EA003901B3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BAC365DB16A6EDDB00A90957 /* ASI */ = {
+			isa = PBXGroup;
+			children = (
+				BAC365DD16A6EE7F00A90957 /* ASIAuthenticationDialog.h */,
+				BAC365DE16A6EE7F00A90957 /* ASIAuthenticationDialog.m */,
+				BAC365DF16A6EE7F00A90957 /* ASICacheDelegate.h */,
+				BAC365E016A6EE7F00A90957 /* ASIDataCompressor.h */,
+				BAC365E116A6EE7F00A90957 /* ASIDataCompressor.m */,
+				BAC365E216A6EE7F00A90957 /* ASIDataDecompressor.h */,
+				BAC365E316A6EE7F00A90957 /* ASIDataDecompressor.m */,
+				BAC365E416A6EE7F00A90957 /* ASIDownloadCache.h */,
+				BAC365E516A6EE7F00A90957 /* ASIDownloadCache.m */,
+				BAC365E616A6EE7F00A90957 /* ASIFormDataRequest.h */,
+				BAC365E716A6EE7F00A90957 /* ASIFormDataRequest.m */,
+				BAC365E816A6EE7F00A90957 /* ASIHTTPRequest.h */,
+				BAC365E916A6EE7F00A90957 /* ASIHTTPRequest.m */,
+				BAC365EA16A6EE7F00A90957 /* ASIHTTPRequestConfig.h */,
+				BAC365EB16A6EE7F00A90957 /* ASIHTTPRequestDelegate.h */,
+				BAC365EC16A6EE7F00A90957 /* ASIInputStream.h */,
+				BAC365ED16A6EE7F00A90957 /* ASIInputStream.m */,
+				BAC365EE16A6EE7F00A90957 /* ASINetworkQueue.h */,
+				BAC365EF16A6EE7F00A90957 /* ASINetworkQueue.m */,
+				BAC365F016A6EE7F00A90957 /* ASIProgressDelegate.h */,
+				BAC365F516A6EE7F00A90957 /* Reachability.h */,
+				BAC365F616A6EE7F00A90957 /* Reachability.m */,
+			);
+			name = ASI;
+			sourceTree = "<group>";
+		};
+		BAC3660816A6EE8700A90957 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAC365F116A6EE7F00A90957 /* BoxScore.h */,
+				BAC365F216A6EE7F00A90957 /* BoxScore.m */,
+				BAC365F316A6EE7F00A90957 /* DataAccess.h */,
+				BAC365F416A6EE7F00A90957 /* DataAccess.m */,
+				BAC365F716A6EE7F00A90957 /* Room.h */,
+				BAC365F816A6EE7F00A90957 /* Room.m */,
+				BAC365F916A6EE7F00A90957 /* Stats.h */,
+				BAC365FA16A6EE7F00A90957 /* Stats.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B1D65D6E148E37EA003901B3 /* Baskeepr */ = {
+		B1D65D6E148E37EA003901B3 /* BaskeeperOnline */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1D65DA5148E37EA003901B3 /* Build configuration list for PBXNativeTarget "Baskeepr" */;
+			buildConfigurationList = B1D65DA5148E37EA003901B3 /* Build configuration list for PBXNativeTarget "BaskeeperOnline" */;
 			buildPhases = (
 				B1D65D6B148E37EA003901B3 /* Sources */,
 				B1D65D6C148E37EA003901B3 /* Frameworks */,
@@ -717,14 +858,14 @@
 			);
 			dependencies = (
 			);
-			name = Baskeepr;
+			name = BaskeeperOnline;
 			productName = Baskeepr;
-			productReference = B1D65D6F148E37EA003901B3 /* Baskeepr.app */;
+			productReference = B1D65D6F148E37EA003901B3 /* BaskeeperOnline.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B1D65D92148E37EA003901B3 /* BaskeeprTests */ = {
+		B1D65D92148E37EA003901B3 /* BaskeeperOnlineTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1D65DA8148E37EA003901B3 /* Build configuration list for PBXNativeTarget "BaskeeprTests" */;
+			buildConfigurationList = B1D65DA8148E37EA003901B3 /* Build configuration list for PBXNativeTarget "BaskeeperOnlineTests" */;
 			buildPhases = (
 				B1D65D8E148E37EA003901B3 /* Sources */,
 				B1D65D8F148E37EA003901B3 /* Frameworks */,
@@ -736,9 +877,9 @@
 			dependencies = (
 				B1D65D99148E37EA003901B3 /* PBXTargetDependency */,
 			);
-			name = BaskeeprTests;
+			name = BaskeeperOnlineTests;
 			productName = BaskeeprTests;
-			productReference = B1D65D93148E37EA003901B3 /* BaskeeprTests.octest */;
+			productReference = B1D65D93148E37EA003901B3 /* BaskeeperOnlineTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -749,7 +890,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = B1D65D69148E37EA003901B3 /* Build configuration list for PBXProject "Baskeepr" */;
+			buildConfigurationList = B1D65D69148E37EA003901B3 /* Build configuration list for PBXProject "BaskeeperOnline" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -761,8 +902,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1D65D6E148E37EA003901B3 /* Baskeepr */,
-				B1D65D92148E37EA003901B3 /* BaskeeprTests */,
+				B1D65D6E148E37EA003901B3 /* BaskeeperOnline */,
+				B1D65D92148E37EA003901B3 /* BaskeeperOnlineTests */,
 			);
 		};
 /* End PBXProject section */
@@ -832,6 +973,7 @@
 				B17344C71698826100B85D64 /* Alarm-Pause-icon.png in Resources */,
 				B17344C91698893B00B85D64 /* yellow line.png in Resources */,
 				B17344CB1698894400B85D64 /* greenline.png in Resources */,
+				B1A71DC416A59E050001B91F /* OnlineSettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,6 +1062,24 @@
 				B17344AE1698105600B85D64 /* CreateGameViewController.m in Sources */,
 				B17344B31698106E00B85D64 /* JoinGameViewController.m in Sources */,
 				B17344BC169873B200B85D64 /* OnlineScoreboardViewController.m in Sources */,
+				B17344DB169C81B100B85D64 /* MPAnimation.m in Sources */,
+				B17344DC169C81B100B85D64 /* MPFlipTransition.m in Sources */,
+				B17344DD169C81B100B85D64 /* MPFlipViewController.m in Sources */,
+				B17344DE169C81B100B85D64 /* MPTransition.m in Sources */,
+				B1A71DC316A59E050001B91F /* OnlineSettingsViewController.m in Sources */,
+				BAC365FB16A6EE7F00A90957 /* ASIAuthenticationDialog.m in Sources */,
+				BAC365FC16A6EE7F00A90957 /* ASIDataCompressor.m in Sources */,
+				BAC365FD16A6EE7F00A90957 /* ASIDataDecompressor.m in Sources */,
+				BAC365FE16A6EE7F00A90957 /* ASIDownloadCache.m in Sources */,
+				BAC365FF16A6EE7F00A90957 /* ASIFormDataRequest.m in Sources */,
+				BAC3660016A6EE7F00A90957 /* ASIHTTPRequest.m in Sources */,
+				BAC3660116A6EE7F00A90957 /* ASIInputStream.m in Sources */,
+				BAC3660216A6EE7F00A90957 /* ASINetworkQueue.m in Sources */,
+				BAC3660316A6EE7F00A90957 /* BoxScore.m in Sources */,
+				BAC3660416A6EE7F00A90957 /* DataAccess.m in Sources */,
+				BAC3660516A6EE7F00A90957 /* Reachability.m in Sources */,
+				BAC3660616A6EE7F00A90957 /* Room.m in Sources */,
+				BAC3660716A6EE7F00A90957 /* Stats.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,7 +1096,7 @@
 /* Begin PBXTargetDependency section */
 		B1D65D99148E37EA003901B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B1D65D6E148E37EA003901B3 /* Baskeepr */;
+			target = B1D65D6E148E37EA003901B3 /* BaskeeperOnline */;
 			targetProxy = B1D65D98148E37EA003901B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -997,7 +1157,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1016,7 +1176,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1027,16 +1187,19 @@
 		B1D65DA6148E37EA003901B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Edawrd Hsiao (93PK9H9TYS)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Baskeepr/Baskeepr-Prefix.pch";
-				INFOPLIST_FILE = "Baskeepr/Baskeepr-Info.plist";
+				GCC_PREFIX_HEADER = "Baskeepr/BaskeeperOnline-Prefix.pch";
+				INFOPLIST_FILE = "Baskeepr/BaskeeperOnline-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BaskeeperOnline;
+				PROVISIONING_PROFILE = "67B7323B-E93A-4EF2-BE4D-80E716F25D1D";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1045,16 +1208,19 @@
 		B1D65DA7148E37EA003901B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Edawrd Hsiao (93PK9H9TYS)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Baskeepr/Baskeepr-Prefix.pch";
-				INFOPLIST_FILE = "Baskeepr/Baskeepr-Info.plist";
+				GCC_PREFIX_HEADER = "Baskeepr/BaskeeperOnline-Prefix.pch";
+				INFOPLIST_FILE = "Baskeepr/BaskeeperOnline-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BaskeeperOnline;
+				PROVISIONING_PROFILE = "67B7323B-E93A-4EF2-BE4D-80E716F25D1D";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1070,8 +1236,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Baskeepr/Baskeepr-Prefix.pch";
-				INFOPLIST_FILE = "BaskeeprTests/BaskeeprTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "BaskeeprTests/BaskeeperOnlineTests-Info.plist";
+				PRODUCT_NAME = BaskeeperOnlineTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1087,8 +1253,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Baskeepr/Baskeepr-Prefix.pch";
-				INFOPLIST_FILE = "BaskeeprTests/BaskeeprTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "BaskeeprTests/BaskeeperOnlineTests-Info.plist";
+				PRODUCT_NAME = BaskeeperOnlineTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1097,7 +1263,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B1D65D69148E37EA003901B3 /* Build configuration list for PBXProject "Baskeepr" */ = {
+		B1D65D69148E37EA003901B3 /* Build configuration list for PBXProject "BaskeeperOnline" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1D65DA3148E37EA003901B3 /* Debug */,
@@ -1106,7 +1272,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1D65DA5148E37EA003901B3 /* Build configuration list for PBXNativeTarget "Baskeepr" */ = {
+		B1D65DA5148E37EA003901B3 /* Build configuration list for PBXNativeTarget "BaskeeperOnline" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1D65DA6148E37EA003901B3 /* Debug */,
@@ -1115,7 +1281,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1D65DA8148E37EA003901B3 /* Build configuration list for PBXNativeTarget "BaskeeprTests" */ = {
+		B1D65DA8148E37EA003901B3 /* Build configuration list for PBXNativeTarget "BaskeeperOnlineTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1D65DA9148E37EA003901B3 /* Debug */,

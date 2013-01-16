@@ -20,7 +20,12 @@
 
 @protocol statsViewControllerDelegate <NSObject>
 
--(void)setPlayerStats:(playerStats*)playerStats;
+@optional
+
+- (void)setPlayerStats:(playerStats*)playerStats;
+- (void)updateScore:(NSString *)score;
+- (void)updatePeriod:(NSString *)period;
+- (void)dismissBoxView;
 
 @end
 
@@ -33,7 +38,6 @@
     int indexSF;
     int indexPF;
     int indexCenter;
-
 }
 
 @property(strong, nonatomic)id<statsViewControllerDelegate>delegate;
@@ -182,6 +186,7 @@
 -(void)updateSFStats;
 -(void)updatePFStats;
 -(void)updateCenterStats;
+- (void)updateScoreLabel:(int)score;
 
 -(void)addPGStats;
 -(void)addSGStats;

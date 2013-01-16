@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1536</int>
-		<string key="IBDocument.SystemVersion">12B19</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2840</string>
-		<string key="IBDocument.AppKitVersion">1187</string>
-		<string key="IBDocument.HIToolboxVersion">624.00</string>
+		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
+		<string key="IBDocument.AppKitVersion">1187.34</string>
+		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">1926</string>
+			<string key="NS.object.0">1930</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
@@ -52,7 +52,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">basketball-court.jpg</string>
+							<string key="NSResourceName">black-floor.jpg</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="227822405">
@@ -564,7 +564,7 @@
 								<bool key="IBUIWraps">YES</bool>
 								<double key="IBUIValue">1</double>
 								<double key="IBUIMinimumValue">1</double>
-								<double key="IBUIMaximumValue">10</double>
+								<double key="IBUIMaximumValue">4</double>
 							</object>
 							<object class="IBUILabel" id="485923149">
 								<reference key="NSNextResponder" ref="134974189"/>
@@ -578,7 +578,7 @@
 								<int key="IBUIContentMode">7</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<string key="IBUIText">0</string>
+								<string key="IBUIText">1</string>
 								<reference key="IBUITextColor" ref="799328689"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
@@ -3615,7 +3615,7 @@
 					</object>
 					<object class="IBUIButton" id="917847421">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{2, 1}, {43, 44}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="720607767"/>
@@ -6267,486 +6267,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">546</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">scoreboardStatisticViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="backButtonClicked:">id</string>
-						<string key="changeCenterNumbers:">id</string>
-						<string key="changeCenterStats:">id</string>
-						<string key="changePFNumbers:">id</string>
-						<string key="changePFStats:">id</string>
-						<string key="changePGNumbers:">id</string>
-						<string key="changePGStats:">id</string>
-						<string key="changePeriod:">id</string>
-						<string key="changeSFNumbers:">id</string>
-						<string key="changeSFStats:">id</string>
-						<string key="changeSGNumbers:">id</string>
-						<string key="changeSGStats:">id</string>
-						<string key="countDownClockClicked:">id</string>
-						<string key="deleteAllNumbers:">id</string>
-						<string key="nextPage:">id</string>
-						<string key="optionButtonClicked:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="backButtonClicked:">
-							<string key="name">backButtonClicked:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeCenterNumbers:">
-							<string key="name">changeCenterNumbers:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeCenterStats:">
-							<string key="name">changeCenterStats:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changePFNumbers:">
-							<string key="name">changePFNumbers:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changePFStats:">
-							<string key="name">changePFStats:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changePGNumbers:">
-							<string key="name">changePGNumbers:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changePGStats:">
-							<string key="name">changePGStats:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changePeriod:">
-							<string key="name">changePeriod:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeSFNumbers:">
-							<string key="name">changeSFNumbers:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeSFStats:">
-							<string key="name">changeSFStats:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeSGNumbers:">
-							<string key="name">changeSGNumbers:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeSGStats:">
-							<string key="name">changeSGStats:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="countDownClockClicked:">
-							<string key="name">countDownClockClicked:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="deleteAllNumbers:">
-							<string key="name">deleteAllNumbers:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="nextPage:">
-							<string key="name">nextPage:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="optionButtonClicked:">
-							<string key="name">optionButtonClicked:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="center3PA">UILabel</string>
-						<string key="center3PM">UILabel</string>
-						<string key="centerAST">UILabel</string>
-						<string key="centerBS">UILabel</string>
-						<string key="centerDefReb">UILabel</string>
-						<string key="centerFGA">UILabel</string>
-						<string key="centerFGM">UILabel</string>
-						<string key="centerFTA">UILabel</string>
-						<string key="centerFTM">UILabel</string>
-						<string key="centerOffReb">UILabel</string>
-						<string key="centerPF">UILabel</string>
-						<string key="centerST">UILabel</string>
-						<string key="centerTO">UILabel</string>
-						<string key="labelCenter">UILabel</string>
-						<string key="labelPF">UILabel</string>
-						<string key="labelPG">UILabel</string>
-						<string key="labelPeriod">UILabel</string>
-						<string key="labelSF">UILabel</string>
-						<string key="labelSG">UILabel</string>
-						<string key="labelScore">UILabel</string>
-						<string key="labelTime">UILabel</string>
-						<string key="mylabel">UILabel</string>
-						<string key="periodControl">UIStepper</string>
-						<string key="pf3PA">UILabel</string>
-						<string key="pf3PM">UILabel</string>
-						<string key="pfAST">UILabel</string>
-						<string key="pfBS">UILabel</string>
-						<string key="pfDefReb">UILabel</string>
-						<string key="pfFGA">UILabel</string>
-						<string key="pfFGM">UILabel</string>
-						<string key="pfFTA">UILabel</string>
-						<string key="pfFTM">UILabel</string>
-						<string key="pfOffReb">UILabel</string>
-						<string key="pfPF">UILabel</string>
-						<string key="pfST">UILabel</string>
-						<string key="pfTO">UILabel</string>
-						<string key="pg3PA">UILabel</string>
-						<string key="pg3PM">UILabel</string>
-						<string key="pgAST">UILabel</string>
-						<string key="pgBS">UILabel</string>
-						<string key="pgDefReb">UILabel</string>
-						<string key="pgFGA">UILabel</string>
-						<string key="pgFGM">UILabel</string>
-						<string key="pgFTA">UILabel</string>
-						<string key="pgFTM">UILabel</string>
-						<string key="pgOffReb">UILabel</string>
-						<string key="pgPF">UILabel</string>
-						<string key="pgST">UILabel</string>
-						<string key="pgTO">UILabel</string>
-						<string key="scrollView">UIScrollView</string>
-						<string key="sf3PA">UILabel</string>
-						<string key="sf3PM">UILabel</string>
-						<string key="sfAST">UILabel</string>
-						<string key="sfBS">UILabel</string>
-						<string key="sfDefReb">UILabel</string>
-						<string key="sfFGA">UILabel</string>
-						<string key="sfFGM">UILabel</string>
-						<string key="sfFTA">UILabel</string>
-						<string key="sfFTM">UILabel</string>
-						<string key="sfOffReb">UILabel</string>
-						<string key="sfPF">UILabel</string>
-						<string key="sfST">UILabel</string>
-						<string key="sfTO">UILabel</string>
-						<string key="sg3PA">UILabel</string>
-						<string key="sg3PM">UILabel</string>
-						<string key="sgAST">UILabel</string>
-						<string key="sgBS">UILabel</string>
-						<string key="sgDefReb">UILabel</string>
-						<string key="sgFGA">UILabel</string>
-						<string key="sgFGM">UILabel</string>
-						<string key="sgFTA">UILabel</string>
-						<string key="sgFTM">UILabel</string>
-						<string key="sgOffReb">UILabel</string>
-						<string key="sgPF">UILabel</string>
-						<string key="sgST">UILabel</string>
-						<string key="sgTO">UILabel</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="center3PA">
-							<string key="name">center3PA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="center3PM">
-							<string key="name">center3PM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="centerAST">
-							<string key="name">centerAST</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="centerBS">
-							<string key="name">centerBS</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="centerDefReb">
-							<string key="name">centerDefReb</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="centerFGA">
-							<string key="name">centerFGA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="centerFGM">
-							<string key="name">centerFGM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="centerFTA">
-							<string key="name">centerFTA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="centerFTM">
-							<string key="name">centerFTM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="centerOffReb">
-							<string key="name">centerOffReb</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="centerPF">
-							<string key="name">centerPF</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="centerST">
-							<string key="name">centerST</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="centerTO">
-							<string key="name">centerTO</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="labelCenter">
-							<string key="name">labelCenter</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="labelPF">
-							<string key="name">labelPF</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="labelPG">
-							<string key="name">labelPG</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="labelPeriod">
-							<string key="name">labelPeriod</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="labelSF">
-							<string key="name">labelSF</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="labelSG">
-							<string key="name">labelSG</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="labelScore">
-							<string key="name">labelScore</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="labelTime">
-							<string key="name">labelTime</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="mylabel">
-							<string key="name">mylabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="periodControl">
-							<string key="name">periodControl</string>
-							<string key="candidateClassName">UIStepper</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pf3PA">
-							<string key="name">pf3PA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pf3PM">
-							<string key="name">pf3PM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pfAST">
-							<string key="name">pfAST</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pfBS">
-							<string key="name">pfBS</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pfDefReb">
-							<string key="name">pfDefReb</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pfFGA">
-							<string key="name">pfFGA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pfFGM">
-							<string key="name">pfFGM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pfFTA">
-							<string key="name">pfFTA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pfFTM">
-							<string key="name">pfFTM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pfOffReb">
-							<string key="name">pfOffReb</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pfPF">
-							<string key="name">pfPF</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pfST">
-							<string key="name">pfST</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pfTO">
-							<string key="name">pfTO</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pg3PA">
-							<string key="name">pg3PA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pg3PM">
-							<string key="name">pg3PM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pgAST">
-							<string key="name">pgAST</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pgBS">
-							<string key="name">pgBS</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pgDefReb">
-							<string key="name">pgDefReb</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pgFGA">
-							<string key="name">pgFGA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pgFGM">
-							<string key="name">pgFGM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pgFTA">
-							<string key="name">pgFTA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pgFTM">
-							<string key="name">pgFTM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pgOffReb">
-							<string key="name">pgOffReb</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pgPF">
-							<string key="name">pgPF</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pgST">
-							<string key="name">pgST</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pgTO">
-							<string key="name">pgTO</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="scrollView">
-							<string key="name">scrollView</string>
-							<string key="candidateClassName">UIScrollView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sf3PA">
-							<string key="name">sf3PA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sf3PM">
-							<string key="name">sf3PM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sfAST">
-							<string key="name">sfAST</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sfBS">
-							<string key="name">sfBS</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sfDefReb">
-							<string key="name">sfDefReb</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sfFGA">
-							<string key="name">sfFGA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sfFGM">
-							<string key="name">sfFGM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sfFTA">
-							<string key="name">sfFTA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sfFTM">
-							<string key="name">sfFTM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sfOffReb">
-							<string key="name">sfOffReb</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sfPF">
-							<string key="name">sfPF</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sfST">
-							<string key="name">sfST</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sfTO">
-							<string key="name">sfTO</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sg3PA">
-							<string key="name">sg3PA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sg3PM">
-							<string key="name">sg3PM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sgAST">
-							<string key="name">sgAST</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sgBS">
-							<string key="name">sgBS</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sgDefReb">
-							<string key="name">sgDefReb</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sgFGA">
-							<string key="name">sgFGA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sgFGM">
-							<string key="name">sgFGM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sgFTA">
-							<string key="name">sgFTA</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sgFTM">
-							<string key="name">sgFTM</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sgOffReb">
-							<string key="name">sgOffReb</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sgPF">
-							<string key="name">sgPF</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sgST">
-							<string key="name">sgST</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sgTO">
-							<string key="name">sgTO</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/scoreboardStatisticViewController.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
@@ -6755,9 +6276,9 @@
 			<string key="Close-icon.png">{128, 128}</string>
 			<string key="Settings-icon.png">{256, 256}</string>
 			<string key="back-icon.png">{128, 128}</string>
-			<string key="basketball-court.jpg">{1024, 768}</string>
+			<string key="black-floor.jpg">{1440, 900}</string>
 			<string key="table-icon.png">{128, 128}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">1926</string>
+		<string key="IBCocoaTouchPluginVersion">1930</string>
 	</data>
 </archive>
